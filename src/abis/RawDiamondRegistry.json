@@ -6545,12 +6545,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x699c381CE4ecCa0C8a1DfB8B59Cc5DBA4D5b473F",
-      "transactionHash": "0x0b6557bdda825ab0a37074c8328ba42e14b72f76e8b6c1c3c3dbb2aecb2f4a5b"
+      "address": "0x0660e84635BE7d0fa2b2223a119e3b4FcCC55216",
+      "transactionHash": "0xaacdc37400ac6bae8f56243ababa65b9b3563a0c91b9bd1c6b255e3fd33194cc"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-11-10T11:04:52.253Z",
+  "updatedAt": "2023-11-10T19:47:29.913Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

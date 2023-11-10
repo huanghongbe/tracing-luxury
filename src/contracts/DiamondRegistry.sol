@@ -22,7 +22,7 @@ contract DiamondRegistry {
         return diamondItems[uniqueId];
     }
 
-    function diamondGrading(uint256 rowId) public returns (uint256) {
+    function diamondRegister(uint256 rowId) public returns (uint256) {
         RawDiamondRegistry.RawDiamond memory rawDiamond = rawDiamondRegistry.getRawDiamond(rowId);
         uint256 uniqueId = diamondCounts++;
         Diamond memory newDiamond = Diamond(uniqueId, rawDiamond);
