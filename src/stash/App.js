@@ -17,6 +17,7 @@ import GemCutting from './GemCutting';
 import GemScoring from './GemScoring';
 import MyJewelry from './MyJewelry';
 import JewelryRegistration from './JewelryRegistration';
+import CompanyRegistry from './CompanyRegistry'
 
 const { Header, Sider, Content } = Layout;
 
@@ -34,20 +35,22 @@ const App = () => {
       case '1':
         return <JewelryVerification />;
       case '2':
-        return <GemRegistration />;
+        return <CompanyRegistry />;
       case '3':
-        return <GemCutting />;
+        return <GemRegistration />;
       case '4':
-        return <GemScoring />;
+        return <GemCutting />;
       case '5':
-        return <MyJewelry />;
+        return <GemScoring />;
       case '6':
+        return <MyJewelry />;
+      case '7':
         return <JewelryRegistration />;
       default:
         return null;
     }
   };
-  
+
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -66,26 +69,31 @@ const App = () => {
             },
             {
               key: '2',
+              icon: <UserOutlined />,
+              label: '公司注册',
+            },
+            {
+              key: '3',
               icon: <VideoCameraOutlined />,
               label: '原石注册',
             },
             {
-              key: '3',
+              key: '4',
               icon: <UploadOutlined />,
               label: '原石切割',
             },
             {
-              key: '4',
+              key: '5',
               icon: <StrikethroughOutlined />,
               label: '原石打分',
             },
             {
-              key: '5',
+              key: '6',
               icon: <HeatMapOutlined />,
               label: '我的珠宝',
             },
             {
-              key: '6',
+              key: '7',
               icon: <SketchOutlined />,
               label: '珠宝注册',
             },
