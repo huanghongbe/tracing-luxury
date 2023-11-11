@@ -8,7 +8,7 @@ module.exports = function (deployer) {
         .then(() => CompanyRegistry.deployed())
         .then(() => deployer.deploy(RawDiamondRegistry, CompanyRegistry.address))
         .then(() => RawDiamondRegistry.deployed())
-        .then(() => deployer.deploy(DiamondRegistry, RawDiamondRegistry.address))
+        .then(() => deployer.deploy(DiamondRegistry, RawDiamondRegistry.address, CompanyRegistry.address))
         .then(() => DiamondRegistry.deployed())
         .then(() => deployer.deploy(JewelryShop, CompanyRegistry.address, RawDiamondRegistry.address))
 

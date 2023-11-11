@@ -32,7 +32,7 @@ contract JewelryShop {
         _;
     }
 
-    function diamondDesigning(uint256 uniqueId) public onlyManufacturer {
+    function diamondDesigning(uint256 uniqueId) public onlyManufacturer { // todo ：珠宝注册
         Jewelry memory newJewelry;
         newJewelry.diamond = diamondRegistry.getDiamond(uniqueId);
         newJewelry.manufacturer = msg.sender;

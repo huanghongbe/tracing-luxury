@@ -8,7 +8,7 @@ contract RawDiamondRegistry {
         uint256 rawId;
         address miningCompany;
         address cuttingCompany;
-        address gradingLab;
+        // address gradingLab;
     }
 
     mapping(uint256 => RawDiamond) public rawDiamondItems;
@@ -37,10 +37,7 @@ contract RawDiamondRegistry {
         return rowId;
     }
 
-    function diamondGrading(uint256 rowId) public onlyGradingCompany returns (uint256) {
-        rawDiamondItems[rowId].gradingLab = msg.sender;
-        return rowId;
-    }
+
 
     modifier onlyMiningCompany() {
         require(
@@ -54,14 +51,6 @@ contract RawDiamondRegistry {
         require(
             companyRegistry.getCompanyType(msg.sender) == CompanyRegistry.CompanyType.Cutting,
             "You are not the Cutters!"
-        );
-        _;
-    }
-
-    modifier onlyGradingCompany() {
-        require(
-            companyRegistry.getCompanyType(msg.sender) == CompanyRegistry.CompanyType.Grading,
-            "You are not the graders!"
         );
         _;
     }
