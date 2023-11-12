@@ -28,7 +28,7 @@ class Jewels extends Component {
         return (
             <div className="vertical">
                 <div className="card bg-dark text-white">
-                    <div className="card-header">Diamonds</div>
+                    <div className="card-header">Jewels</div>
                     <div className="card-body">
                         <table className="table table-dark table-sm small">
                             <thead>
