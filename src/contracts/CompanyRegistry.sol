@@ -10,20 +10,39 @@ contract CompanyRegistry {
     }
 
     struct Company {
+        uint256 companyId;
         CompanyType companyType;
         address addr;
     }
 
     mapping(address => Company) public companies;
+
+    mapping(uint256=>address) public indexMap;
     uint256 public companiesCount;
 
+    function getAllCompanies() public view returns (Company[] memory) {
+        Company[] memory allCompanies = new Company[](companiesCount);
+        uint256 index = 0;
+        for (uint256 i = 0; i < companiesCount; i++) {
+            if (companies[indexMap[i]].addr != address(0)) {
+                allCompanies[index] = companies[indexMap[i]];
+                index++;
+            }
+        }
+        return allCompanies;
+    }
+
     function companyRegister(CompanyType companyType) public {
-        Company memory newCompany = Company(companyType, msg.sender);
+        //todo 相同地址重复注册
+        Company memory newCompany = Company(companiesCount,companyType, msg.sender);
         companies[msg.sender] = newCompany;
+        indexMap[companiesCount] = msg.sender;
         companiesCount++;
     }
 
-    function getCompanyType(address companyAddress) public view returns (CompanyType) {
+    function getCompanyType(
+        address companyAddress
+    ) public view returns (CompanyType) {
         return companies[companyAddress].companyType;
     }
 
@@ -62,5 +81,4 @@ contract CompanyRegistry {
         );
         _;
     }
-
 }

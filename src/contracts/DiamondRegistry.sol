@@ -22,6 +22,14 @@ contract DiamondRegistry {
         companyRegistry = CompanyRegistry(_companyRegistry);
     }
 
+    function getAllDiamonds() public view returns (Diamond[] memory) {
+        Diamond[] memory allDiamonds = new Diamond[](diamondCounts);
+        for (uint i = 0; i < diamondCounts; i++) {
+            allDiamonds[i] = diamondItems[i];
+        }
+        return allDiamonds;
+    }
+
     function getDiamond(uint256 uniqueId) public view returns (Diamond memory) {
         return diamondItems[uniqueId];
     }

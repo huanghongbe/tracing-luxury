@@ -10,13 +10,13 @@ import {
     loadRawDiamondRegistry
 } from '../store/interaction';
 import { accountSelector, contractsLoadedSelector } from '../store/selectors'
-import Navbar from './Navbar'
-import Content from './Content'
+import Navbar from './navibar/Navbar';
+import Content from './content/Content';
 
 
 class App extends Component {
 
-    componentWillMount() {
+    componentDidMount() {
 
         this.loadBlockchainData(this.props.dispatch);
     }

@@ -40,3 +40,33 @@ export function rawDiamondRegistryLoaded(contract) {
         contract
     }
 }
+
+export function allCompaniesLoaded(allCompanies){
+    return{
+        type: "ALL_COMPANIES_LOADED",
+        allCompanies
+    }
+}
+
+export function allRawDiamondsLoaded(allRawDiamonds){
+    return{
+        type: "ALL_RAW_DIAMONDS_LOADED",
+        allRawDiamonds
+    }
+}
+
+export function allDiamondsLoaded(allDiamonds){
+    return{
+        type: "ALL_DIAMONDS_LOADED",
+        allDiamonds
+    }
+}
+
+export function allJewelsLoaded(allJewels){
+    return{
+        type: "ALL_JEWELS_LOADED",
+        allJewels
+    }
+}
+
+

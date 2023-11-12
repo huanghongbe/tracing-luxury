@@ -10,6 +10,6 @@ module.exports = function (deployer) {
         .then(() => RawDiamondRegistry.deployed())
         .then(() => deployer.deploy(DiamondRegistry, RawDiamondRegistry.address, CompanyRegistry.address))
         .then(() => DiamondRegistry.deployed())
-        .then(() => deployer.deploy(JewelryShop, CompanyRegistry.address, RawDiamondRegistry.address))
+        .then(() => deployer.deploy(JewelryShop, CompanyRegistry.address, DiamondRegistry.address))
 
 };

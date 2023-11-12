@@ -31,6 +31,13 @@ contract JewelryShop {
         );
         _;
     }
+    function getAllJewels() public view returns (Jewelry[] memory) {
+        Jewelry[] memory allJewels = new Jewelry[](jewelryCounts);
+        for (uint i = 0; i < jewelryCounts; i++) {
+            allJewels[i] = jewelryItems[i];
+        }
+        return allJewels;
+    }
 
     function diamondDesigning(uint256 uniqueId) public onlyManufacturer { // todo ：珠宝注册
         Jewelry memory newJewelry;
