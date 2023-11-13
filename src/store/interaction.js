@@ -93,9 +93,9 @@ export const loadAllCompanies = async (companyRegistry, dispatch) => {
 
 const decorateCompines = (companies) => {
     return (
-            companies.map((company) => {
-                return company = decorateCompany(company);
-            }
+        companies.map((company) => {
+            return company = decorateCompany(company);
+        }
         )
     )
 }
@@ -104,19 +104,19 @@ const decorateCompany = (company) => {
     const cuttingCompany = '1';
     const gradingCompany = '2';
     const manufacturer = '3';
-  
+
     switch (company.companyType.toString()) {
-        case miningCompany: company.companyType = "Mining Company";break;
-        case cuttingCompany: company.companyType = "Cutting Company";break;
-        case gradingCompany: company.companyType = "Grading Company";break;
-        case manufacturer: company.companyType = "Manufacturer";break;
+        case miningCompany: company.companyType = "Mining Company"; break;
+        case cuttingCompany: company.companyType = "Cutting Company"; break;
+        case gradingCompany: company.companyType = "Grading Company"; break;
+        case manufacturer: company.companyType = "Manufacturer"; break;
     }
     return company;
 }
 
 
 export const loadAllRawDiamonds = async (rawDiamondRegistry, dispatch) => {
-    
+
     let allRawDiamonds = await rawDiamondRegistry.methods.getAllRawDiamonds().call();
     console.log("所有原石列表---->", allRawDiamonds);
 
@@ -124,7 +124,7 @@ export const loadAllRawDiamonds = async (rawDiamondRegistry, dispatch) => {
 }
 
 export const loadAllDiamonds = async (diamondRegistry, dispatch) => {
-    
+
     let allDiamonds = await diamondRegistry.methods.getAllDiamonds().call();
     console.log("所有钻石列表---->", allDiamonds);
 
@@ -132,10 +132,22 @@ export const loadAllDiamonds = async (diamondRegistry, dispatch) => {
 };
 
 
-export const loadAllJewels= async (jewelryShop, dispatch) => {
-    
-    let allJewels= await jewelryShop.methods.getAllJewels().call();
+export const loadAllJewels = async (jewelryShop, dispatch) => {
+
+    let allJewels = await jewelryShop.methods.getAllJewels().call();
     console.log("所有珠宝列表---->", allJewels);
 
     dispatch(allJewelsLoaded(allJewels))
 };
+
+export const companyRegister = async (account, companyRegistry, companyType) => {
+   
+  
+    companyRegistry.methods.companyRegister(companyType).send({ from: account})
+    //companyRegistry.methods.companyRegister(companyType).send({ from: account,gas: 500000})
+    .on('error', (error) => {
+        console.error(error)
+        window.alert('fill order wrong ')
+      })
+    console.log("companyRegister")
+}

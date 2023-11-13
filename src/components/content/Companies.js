@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { allCompaniesLoadedSelector, allCompaniesSelector } from "../../store/selectors"
 import Spinner from "../utils/Spinner"
+import CompanyRegister from "./CompanyRegister"
 
 const showAllCompanies = (allCompanies) => {
     //console.log("showAllCompanies",allCompanies)
@@ -24,11 +25,23 @@ const showAllCompanies = (allCompanies) => {
 }
 class Companies extends Component {
 
+   
+	handleOnClick = ()=>{
+		this.CompanyRegister.isShow();
+	}
+
     render() {
         return (
             <div className="vertical">
                 <div className="card bg-dark text-white">
                     <div className="card-header">All Companies</div>
+                    <div>
+                        <button onClick={this.handleOnClick}>
+                            Register
+                        </button>
+                        
+                        <CompanyRegister onRef = {node =>this.CompanyRegister = node} />
+                    </div>
                     <div className="card-body">
                         <table className="table table-dark table-sm small">
                             <thead>
