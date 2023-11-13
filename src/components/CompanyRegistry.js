@@ -134,9 +134,15 @@ const CompanyRegistry = () => {
 
 
     <div>
-      <h1>Companies
-
-      </h1>
+    <div style={{ position: 'relative' }}>
+      <Button
+        style={{ position: 'absolute', top: '5px', right: '150px' }}
+        onClick={handleButtonClick}
+      >
+        register
+      </Button>
+      <h1>Companies</h1>
+    </div>
       <Modal
         title="选择公司类型"
         open={modalVisible}
@@ -154,7 +160,7 @@ const CompanyRegistry = () => {
           <Select.Option value="3">Manufacturer</Select.Option>
         </Select>
       </Modal>
-      <Button onClick={handleButtonClick}>register</Button>
+      
       <Table
         columns={columns}
         dataSource={companyData}
