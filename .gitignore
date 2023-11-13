@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/abis/CompanyRegistry.json
+src/abis/JewelryShop.json
+src/abis/RawDiamondRegistry.json
+src/abis/RawDiamondRegistry.json
