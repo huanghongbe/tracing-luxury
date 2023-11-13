@@ -45,7 +45,11 @@ const CompanyRegistry = () => {
       console.log('公司注册成功');
 
       // 更新公司数据或执行其他操作
-      // ...
+      const companies = await contract.methods.getAllCompanies().call();
+      console.log('公司数组:', companies);
+      //更新react组件状态
+      setCompanyData(companies);
+      // window.location.reload();
 
     } catch (error) {
       console.error('注册失败:', error);
@@ -130,7 +134,9 @@ const CompanyRegistry = () => {
 
 
     <div>
-      <h1>Companies</h1>
+      <h1>Companies
+
+      </h1>
       <Modal
         title="选择公司类型"
         open={modalVisible}
