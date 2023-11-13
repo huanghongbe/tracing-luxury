@@ -1,41 +1,85 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'antd';
+import { Table, Button, Select, Modal } from 'antd';
 import Web3 from 'web3';
-
+import CompanyRegistryABI from '../abis/CompanyRegistry.json'
 const CompanyRegistry = () => {
   const [companyData, setCompanyData] = useState([]);
-
-  const [account, setAccount] = useState('');
-  const [balance, setBalance] = useState('');
-  useEffect(() => {
-    // 获取公司信息的数据，假设从后端API获取
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/api/companies');
-        const data = await response.json();
-        setCompanyData(data);
-      } catch (error) {
-        console.error('Error fetching company data:', error);
+  const [contract, setContract] = useState(null);
+  const [selectedCompanyType, setSelectedCompanyType] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false);
+  const handleButtonClick = async () => {
+    try {
+      if (!contract) {
+        console.error('合约实例不存在');
+        return;
       }
-    };
 
+      // 添加以下代码
+      setSelectedCompanyType(null); // 重置选中的公司类型
+      setModalVisible(true); // 打开下拉框弹窗
+    } catch (error) {
+      console.error('companyRegister 函数调用失败:', error);
+    }
+  };
+  const handleModalOk = () => {
+    if (selectedCompanyType !== null) {
+      setModalVisible(false);
+      handleRegister(selectedCompanyType);
+    }
+  };
+  const handleRegister = async (companyType) => {
+    try {
+      // 确保合约实例存在
+      if (!contract) {
+        console.error('合约实例不存在');
+        return;
+      }
+
+      // 获取当前用户的账户地址
+      const userAddress = window.ethereum.selectedAddress;
+
+      // 调用合约的 companyRegister 函数
+      await contract.methods.companyRegister(companyType).send({ from: userAddress });
+
+      // 注册成功后的处理逻辑
+      console.log('公司注册成功');
+
+      // 更新公司数据或执行其他操作
+      // ...
+
+    } catch (error) {
+      console.error('注册失败:', error);
+    }
+  };
+  const handleCompanyTypeChange = (value) => {
+    setSelectedCompanyType(value);
+  };
+
+
+  useEffect(() => {
     const connectToWeb3 = async () => {
       // 检查Web3对象是否已经存在
       if (window.ethereum) {
         try {
-          // 请求用户授权连接到以太坊网络
-          await window.ethereum.enable();
-          // 创建Web3实例
+          // 连接到以太坊网络
           const web3 = new Web3(window.ethereum);
-         // 获取当前账户地址
-         const accounts = await web3.eth.getAccounts();
-         setAccount(accounts[0]);
+          await window.ethereum.enable();
 
-         // 获取账户余额
-         const balance = await web3.eth.getBalance(accounts[0]);
-         setBalance(web3.utils.fromWei(balance, 'ether'));
-          console.log(accounts);
-          console.log(balance);
+          // 获取合约实例
+          const networkId = await web3.eth.net.getId();
+          const deployedNetwork = CompanyRegistryABI.networks[networkId];
+          const contract = new web3.eth.Contract(
+            CompanyRegistryABI.abi,
+            deployedNetwork && deployedNetwork.address
+          );
+
+          // 调用合约函数获取公司数组
+          const companies = await contract.methods.getAllCompanies().call();
+          console.log('公司数组:', companies);
+
+          // 更新React组件的状态
+          setCompanyData(companies);
+          setContract(contract);
         } catch (error) {
           console.error('连接到以太坊网络时出错:', error);
         }
@@ -43,33 +87,73 @@ const CompanyRegistry = () => {
         console.error('未检测到以太坊提供者');
       }
     };
-    fetchData();
     connectToWeb3();
   }, []);
 
   const columns = [
     {
-      title: '公司名称',
-      dataIndex: 'name',
-      key: 'name',
+      title: '地址',
+      dataIndex: 'addr',
+      key: 'addr',
     },
     {
-      title: '所在地',
-      dataIndex: 'location',
-      key: 'location',
+      title: '公司类型',
+      dataIndex: 'companyType',
+      key: 'companyType',
+      render: (companyType, record) => {
+        let typeLabel = '';
+
+        switch (companyType.toString()) {
+          case '0':
+            typeLabel = 'Mining';
+            break;
+          case '1':
+            typeLabel = 'Cutting';
+            break;
+          case '2':
+            typeLabel = 'Grading';
+            break;
+          case '3':
+            typeLabel = 'Manufacturer';
+            break;
+          default:
+            typeLabel = '';
+            break;
+        }
+
+        return <span key={record.companyId}>{typeLabel}</span>;
+      },
     },
-    {
-      title: '行业',
-      dataIndex: 'industry',
-      key: 'industry',
-    },
-    // 可根据实际情况添加更多列
   ];
 
   return (
+
+
     <div>
-      <h1>公司信息</h1>
-      <Table dataSource={companyData} columns={columns} />
+      <h1>Companies</h1>
+      <Modal
+        title="选择公司类型"
+        open={modalVisible}
+        onCancel={() => setModalVisible(false)}
+        onOk={handleModalOk}
+      >
+        <Select
+          style={{ width: '100%' }}
+          value={selectedCompanyType}
+          onChange={handleCompanyTypeChange}
+        >
+          <Select.Option value="0">Mining</Select.Option>
+          <Select.Option value="1">Cutting</Select.Option>
+          <Select.Option value="2">Grading</Select.Option>
+          <Select.Option value="3">Manufacturer</Select.Option>
+        </Select>
+      </Modal>
+      <Button onClick={handleButtonClick}>register</Button>
+      <Table
+        columns={columns}
+        dataSource={companyData}
+        rowKey={(record) => record.companyId}
+      />
     </div>
   );
 };
