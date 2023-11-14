@@ -154,7 +154,7 @@ const GemScoring = () => {
       >
         <Form>
           <Form.Item label="RawId" name="rawId" rules={[{ required: true, message: 'input your raw dimond id' }]}>
-            <InputNumber onChange={(value) => setDiamondInput(value)} value={diamondInput} />
+          <Input onChange={(e) => setDiamondInput(e.target.value)} value={diamondInput} />
           </Form.Item>
           <Form.Item label="Score" name="score" rules={[{ required: true, message: 'Input the diamond score' }]}>
             <InputNumber onChange={(value) => setScoreInput(value)} value={scoreInput} />
