@@ -37,14 +37,12 @@ const App = () => {
       case '2':
         return <CompanyRegistry />;
       case '3':
-        return <GemRegistration />;
-      case '4':
         return <GemCutting />;
-      case '5':
+      case '4':
         return <GemScoring />;
-      case '6':
+      case '5':
         return <MyJewelry />;
-      case '7':
+      case '6':
         return <JewelryRegistration />;
       default:
         return null;
@@ -77,26 +75,21 @@ const App = () => {
             },
             {
               key: '3',
-              icon: <VideoCameraOutlined />,
+              icon: <UploadOutlined />,
               label: '原石注册',
             },
             {
               key: '4',
-              icon: <UploadOutlined />,
-              label: '原石切割',
-            },
-            {
-              key: '5',
               icon: <StrikethroughOutlined />,
               label: '原石打分',
             },
             {
-              key: '6',
+              key: '5',
               icon: <HeatMapOutlined />,
               label: '我的珠宝',
             },
             {
-              key: '7',
+              key: '6',
               icon: <SketchOutlined />,
               label: '珠宝注册',
             },
