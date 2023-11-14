@@ -69,6 +69,8 @@ const GemScoring = () => {
     } catch (error) {
       console.error('注册失败:', error);
       message.error('钻石注册失败');
+      setDiamondInput(null);
+      setScoreInput(null);
     }
   };
 
