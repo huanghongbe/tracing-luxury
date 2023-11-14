@@ -36,30 +36,40 @@ const GemScoring = () => {
       handleRegister(diamondInput, scoreInput);
     }
   };
-  
-  const handleRegister = async (diamondInput, score) => {
+
+  const handleRegister = async (diamondInput, scoreInput) => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
         return;
       }
-      //todo rawdiamond加名字参数
+      console.log(diamondInput)
+      console.log(scoreInput)
+  
+      const parsedDiamondInput = parseInt(diamondInput, 10);
+      const parsedScore = parseInt(scoreInput, 10);
+  
+      if (isNaN(parsedDiamondInput) || isNaN(parsedScore)) {
+        console.log(parsedDiamondInput)
+        console.log(parsedScore)
+        console.error('输入无效');
+        return;
+      }
+  
       const userAddress = window.ethereum.selectedAddress;
-      await contract.methods.diamondRegister().send(diamondInput,{ from: userAddress });
+      await contract.methods.diamondRegister(parsedDiamondInput, parsedScore).send({ from: userAddress });
+  
       console.log('钻石注册成功');
       // 更新公司数据或执行其他操作
       const diamonds = await contract.methods.getAllDiamonds().call();
       console.log('钻石数组:', diamonds);
-      //更新react组件状态
+      // 更新react组件状态
       setDiamondData(diamonds);
       message.success('钻石注册成功');
     } catch (error) {
       console.error('注册失败:', error);
       message.error('钻石注册失败');
     }
-  };
-  const handleInputChange = (value) => {
-    setDiamondInput(value);
   };
 
 
@@ -100,32 +110,26 @@ const GemScoring = () => {
   const columns = [
     {
       title: 'Diamond Id',
-      dataIndex: 'diamondId',
-      key: 'diamondId',
-      render: (diamondId, record) => {
-        let typeLabel = diamondId.toString();
-        return <span key={record.diamondId}>{typeLabel}</span>;
+      dataIndex: 'uniqueId',
+      key: 'uniqueId',
+      render: (uniqueId, record) => {
+        let typeLabel = uniqueId.toString();
+        return <span key={record.uniqueId}>{typeLabel}</span>;
       }
     },
     {
-      title: 'Grading Company',
-      dataIndex: 'gradingCompany',
-      key: 'gradingCompany',
+      title: 'Grading Lab',
+      dataIndex: 'gradingLab',
+      key: 'gradingLab',
     },
     {
       title: 'Grade',
+      dataIndex: 'grade',
       key: 'grade',
-      render: (_, record) => (
-        <>
-      <InputNumber
-        min={0}
-        onChange={(value) => setScoreInput(value)}
-        value={scoreInput}
-        placeholder="输入分数"
-      />
-      <Button onClick={() => handleRegister(record.name, scoreInput)}>Register</Button>
-    </>
-      ),
+      render: (grade) => {
+        let typeLabel = grade.toString();
+        return <span key={grade}>{typeLabel}</span>;
+      }
     },
   ];
 
@@ -149,8 +153,8 @@ const GemScoring = () => {
         onOk={handleModalOk}
       >
         <Form>
-          <Form.Item label="name" name="name" rules={[{ required: true, message: 'input your diamond name' }]}>
-            <Input onChange={handleInputChange} value={diamondInput} />
+          <Form.Item label="RawId" name="rawId" rules={[{ required: true, message: 'input your raw dimond id' }]}>
+            <InputNumber onChange={(value) => setDiamondInput(value)} value={diamondInput} />
           </Form.Item>
           <Form.Item label="Score" name="score" rules={[{ required: true, message: 'Input the diamond score' }]}>
             <InputNumber onChange={(value) => setScoreInput(value)} value={scoreInput} />

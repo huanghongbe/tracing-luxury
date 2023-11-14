@@ -8,6 +8,7 @@ contract DiamondRegistry {
     struct Diamond {
         uint256 uniqueId;
         address gradingLab;
+        uint256 grade;
         RawDiamondRegistry.RawDiamond rawDiamond;
     }
 
@@ -35,12 +36,12 @@ contract DiamondRegistry {
     }
 
     function diamondRegister(
-        uint256 rawId
+        uint256 rawId,uint256 grade
     ) public onlyGradingCompany returns (uint256) {
         RawDiamondRegistry.RawDiamond memory rawDiamond = rawDiamondRegistry
             .getRawDiamond(rawId);
         uint256 uniqueId = diamondCounts++;
-        Diamond memory newDiamond = Diamond(uniqueId, msg.sender, rawDiamond);
+        Diamond memory newDiamond = Diamond(uniqueId, msg.sender, grade, rawDiamond);
         diamondItems[uniqueId] = newDiamond;
         return uniqueId;
     }
