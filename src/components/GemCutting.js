@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Table, Button, Select, Modal, Input, Form } from 'antd';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Table, Button, Modal, Input, Form, message } from 'antd';
 import Web3 from 'web3';
 import RawDiamondRegistry from '../abis/RawDiamondRegistry.json'
 const GenCutting = () => {
@@ -7,26 +7,74 @@ const GenCutting = () => {
   const [contract, setContract] = useState(null);
   const [rawDiamondInput, setRawDiamondInput] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+  
   const handleButtonClick = async () => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
         return;
       }
-
-      // 添加以下代码
       setRawDiamondInput(null); // 重置选中的公司类型
       setModalVisible(true); // 打开下拉框弹窗
     } catch (error) {
       console.error('rawDiamondRegister 函数调用失败:', error);
     }
   };
+  
+  const handleCuttingClick = useCallback(async (record) => {
+    try {
+      if (!contract) {
+        console.error('合约实例不存在');
+        return;
+      }
+  
+      const userAddress = window.ethereum.selectedAddress;
+      await contract.methods.rawDiamondCutting(record.rawId).send({ from: userAddress });
+      console.log('原石切割成功');
+  
+      // Update the cutting company for the selected raw diamond
+      const updatedRawDiamondData = rawDiamondData.map((diamond) => {
+        if (diamond.rawId === record.rawId) {
+          return { ...diamond, cuttingCompany: userAddress };
+        }
+        return diamond;
+      });
+  
+      setRawDiamondData(updatedRawDiamondData);
+  
+      message.success('原石切割成功');
+    } catch (error) {
+      console.error('切割失败:', error);
+      message.error('切割失败');
+    }
+  }, [contract, rawDiamondData]);
+  
   const handleModalOk = () => {
     if (rawDiamondInput !== null) {
       setModalVisible(false);
       handleRegister(rawDiamondInput);
     }
   };
+  // const handleRegister = async (rawDiamondInput) => {
+  //   try {
+  //     if (!contract) {
+  //       console.error('合约实例不存在');
+  //       return;
+  //     }
+  //     //todo rawdiamond加名字参数
+  //     const userAddress = window.ethereum.selectedAddress;
+  //     await contract.methods.rawDiamondRegister().send({ from: userAddress });
+  //     console.log('原石注册成功');
+  //     // 更新公司数据或执行其他操作
+  //     const rawDiamonds = await contract.methods.getAllRawDiamonds().call();
+  //     console.log('原石数组:', rawDiamonds);
+  //     //更新react组件状态
+  //     setRawDiamondData(rawDiamonds);
+  //     // window.location.reload();
+  //   } catch (error) {
+  //     console.error('注册失败:', error);
+  //   }
+  // };
   const handleRegister = async (rawDiamondInput) => {
     try {
       if (!contract) {
@@ -42,9 +90,10 @@ const GenCutting = () => {
       console.log('原石数组:', rawDiamonds);
       //更新react组件状态
       setRawDiamondData(rawDiamonds);
-      // window.location.reload();
+      message.success('原石注册成功');
     } catch (error) {
       console.error('注册失败:', error);
+      message.error('原石注册失败');
     }
   };
   const handleInputChange = (value) => {
@@ -105,6 +154,13 @@ const GenCutting = () => {
       title: 'Grading Company',
       dataIndex: 'gradingCompany',
       key: 'gradingCompany',
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (_, record) => (
+        <Button onClick={() => handleCuttingClick(record)}>Cutting</Button>
+      ),
     },
   ];
 
