@@ -26,11 +26,13 @@ contract JewelryShop {
 
     modifier onlyManufacturer() {
         require(
-            companyRegistry.getCompanyType(msg.sender) == CompanyRegistry.CompanyType.Manufacturer,
+            companyRegistry.getCompanyType(msg.sender) ==
+                CompanyRegistry.CompanyType.Manufacturer,
             "You are not the manufacturers!"
         );
         _;
     }
+
     function getAllJewels() public view returns (Jewelry[] memory) {
         Jewelry[] memory allJewels = new Jewelry[](jewelryCounts);
         for (uint i = 0; i < jewelryCounts; i++) {
@@ -39,12 +41,18 @@ contract JewelryShop {
         return allJewels;
     }
 
-    function diamondDesigning(uint256 uniqueId) public onlyManufacturer { // todo ：珠宝注册
+    function diamondDesigning(
+        uint256 uniqueId,
+        uint256 price
+    ) public onlyManufacturer {
+        // todo ：珠宝注册
         Jewelry memory newJewelry;
         newJewelry.diamond = diamondRegistry.getDiamond(uniqueId);
         newJewelry.manufacturer = msg.sender;
-        uint256 jewelryId = jewelryCounts++;
-        jewelryItems[jewelryId] = newJewelry;
+        newJewelry.owner = msg.sender;
+        newJewelry.price = price;
+        newJewelry.jewelryId = jewelryCounts;
+        jewelryItems[jewelryCounts++] = newJewelry;
     }
 
     function jewelryPurchase(uint256 jewelryId) public payable {
@@ -53,7 +61,9 @@ contract JewelryShop {
         jewelryItems[jewelryId].owner = msg.sender;
     }
 
-    function jewelryVerify(uint256 jewelryId) public view returns (Jewelry memory) {
+    function jewelryVerify(
+        uint256 jewelryId
+    ) public view returns (Jewelry memory) {
         return jewelryItems[jewelryId];
     }
 }
