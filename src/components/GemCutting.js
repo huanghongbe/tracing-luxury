@@ -151,9 +151,9 @@ const GenCutting = () => {
       key: 'miningCompany',
     },
     {
-      title: 'Grading Company',
-      dataIndex: 'gradingCompany',
-      key: 'gradingCompany',
+      title: 'Cutting Company',
+      dataIndex: 'cuttingCompany',
+      key: 'cuttingCompany',
     },
     {
       title: 'Action',
