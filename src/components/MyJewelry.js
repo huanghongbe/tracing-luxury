@@ -15,62 +15,25 @@ const JewelryShop = () => {
   const [jewelryInput, setJewelryInput] = useState('');
   const [priceInput, setPriceInput] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
-  // const [pagination, setPagination] = useState({
-  //   pageSize: 10, // 每页显示10条数据
-  // });
+ 
   const handleButtonClick = async () => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
         return;
       }
-
-      // 添加以下代码
       setJewelryInput(null);
-      setModalVisible(true); // 打开下拉框弹窗
+      setModalVisible(true);
     } catch (error) {
       console.error('diamondDesigning函数调用失败:', error);
     }
   };
-  // const handlePurchase = async (record) => {
-  //   try {
-  //     const{ jewelryId, price} = record;
-  //     // 确保合约实例存在
-  //     if (!contract) {
-  //       console.error('合约实例不存在');
-  //       return;
-  //     }
-
-  //     // 获取当前用户的账户地址和price
-  //     const userAddress = window.ethereum.selectedAddress;
-  //     // 调用合约的 jewelryPurchase 函数
-  //     await contract.methods.jewelryPurchase(jewelryId).send({ from: userAddress, value: price });
-
-  //     // 购买成功后的处理逻辑
-  //     console.log('珠宝购买成功');
-
-  //     // 更新公司数据或执行其他操作
-  //     const jewelries = await contract.methods.getAllJewels().call();
-  //     console.log('珠宝数组:', jewelries);
-
-  //     // 更新React组件的状态
-  //     setJewelryData(jewelries);
-
-  //     // 弹出成功消息
-  //     message.success('珠宝购买成功');
-  //   } catch (error) {
-  //     console.error('购买失败:', error);
-
-  //     // 弹出错误消息
-  //     message.error('购买失败');
-  //   }
-  // };
   const handleModalOk = () => {
 
     setModalVisible(false);
     handleRegister(jewelryInput, priceInput);
   };
-  const handleRegister = async (jewelryInput, priceInput) => {
+  const handleRegister = async () => {
     try {
       // 确保合约实例存在
       if (!contract) {
@@ -78,6 +41,8 @@ const JewelryShop = () => {
         return;
       }
 
+      console.log(jewelryInput)
+      console.log(priceInput)
       // 获取当前用户的账户地址
       const userAddress = window.ethereum.selectedAddress;
 
@@ -100,37 +65,36 @@ const JewelryShop = () => {
   };
   const handlePurchase = async (record) => {
     try {
-
-      console.log("priceeeeeeeeeeee",record)
-      const { jewelryId, price } = record;
-
-  
-      const userAddress = window.ethereum.selectedAddress;
+      // 确保合约实例存在
+      if (!contract) {
+        console.error('合约实例不存在');
+        return;
+      }
       const web3 = new Web3(window.ethereum);
-      // 调用合约的 jewelryPurchase 函数
-      // 用户输入的以太币金额
-      const ethUnit = 100; // 10^18，ETH 单位的 Wei 值
-
-      const inputWeiAmount = web3.utils.toWei(price).mul(ethUnit);
-      console.log("inpppppppppppppppp",inputWeiAmount)
-      await contract.methods.jewelryPurchase(jewelryId).send({ from: userAddress, value: inputWeiAmount });
-
-      // 购买成功后的处理逻辑
-      console.log('珠宝购买成功');
-
+      // 获取当前用户的账户地址
+      const userAddress = window.ethereum.selectedAddress;
+  
+      // 获取珠宝的价格（以太币单位）
+      const jewelryPriceInEth = record.price;
+  
+      // 将以太币的值作为 wei 单位传递给支付函数
+      const jewelryPriceInWei = web3.utils.toWei(jewelryPriceInEth.toString(), 'ether');
+  
+      // 调用合约的支付函数进行付款
+      await contract.methods.jewelryPurchase(record.jewelryId).send({ from: userAddress, value: jewelryPriceInWei });
+  
+      // 支付成功后的处理逻辑
+      console.log('购买成功');
+  
       // 更新公司数据或执行其他操作
       const jewelries = await contract.methods.getAllJewels().call();
       console.log('珠宝数组:', jewelries);
-
       // 更新React组件的状态
       setJewelryData(jewelries);
-
-      // 弹出成功消息
-      message.success('珠宝购买成功');
+  
+      message.success('购买成功');
     } catch (error) {
       console.error('购买失败:', error);
-
-      // 弹出错误消息
       message.error('购买失败');
     }
   };

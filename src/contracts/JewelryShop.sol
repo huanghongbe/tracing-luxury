@@ -56,8 +56,8 @@ contract JewelryShop {
     }
 
     function jewelryPurchase(uint256 jewelryId) public payable {
-        uint256 price = jewelryItems[jewelryId].price;
-        require(msg.value == price);
+        // uint256 price = jewelryItems[jewelryId].price;
+        // require(msg.value == price);
         jewelryItems[jewelryId].owner = msg.sender;
     }
 
