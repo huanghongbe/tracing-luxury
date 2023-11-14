@@ -7,6 +7,9 @@ const CompanyRegistry = () => {
   const [contract, setContract] = useState(null);
   const [selectedCompanyType, setSelectedCompanyType] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+  const [pagination, setPagination] = useState({
+    pageSize: 10, // 每页显示10条数据
+  });
   const handleButtonClick = async () => {
     try {
       if (!contract) {
@@ -96,12 +99,12 @@ const CompanyRegistry = () => {
 
   const columns = [
     {
-      title: '地址',
+      title: 'Addr',
       dataIndex: 'addr',
       key: 'addr',
     },
     {
-      title: '公司类型',
+      title: 'Company Type',
       dataIndex: 'companyType',
       key: 'companyType',
       render: (companyType, record) => {
@@ -134,17 +137,17 @@ const CompanyRegistry = () => {
 
 
     <div>
-    <div style={{ position: 'relative' }}>
-      <Button
-        style={{ position: 'absolute', top: '5px', right: '150px' }}
-        onClick={handleButtonClick}
-      >
-        register
-      </Button>
-      <h1>Companies</h1>
-    </div>
+      <div style={{ position: 'relative' }}>
+        <Button
+          style={{ position: 'absolute', top: '5px', right: '150px' }}
+          onClick={handleButtonClick}
+        >
+          register
+        </Button>
+        <h1>Companies</h1>
+      </div>
       <Modal
-        title="选择公司类型"
+        title="choose your company type"
         open={modalVisible}
         onCancel={() => setModalVisible(false)}
         onOk={handleModalOk}
@@ -160,11 +163,15 @@ const CompanyRegistry = () => {
           <Select.Option value="3">Manufacturer</Select.Option>
         </Select>
       </Modal>
-      
+
       <Table
         columns={columns}
         dataSource={companyData}
         rowKey={(record) => record.companyId}
+        pagination={true}
+        onChange={(pagination, filters, sorter) => {
+          setPagination(pagination);
+        }}
       />
     </div>
   );
