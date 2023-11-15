@@ -66,32 +66,32 @@ const App = () => {
             {
               key: '1',
               icon: <UserOutlined />,
-              label: '验证珠宝',
+              label: 'Verify',
             },
             {
               key: '2',
               icon: <UserOutlined />,
-              label: '公司注册',
+              label: 'Company Register',
             },
             {
               key: '3',
               icon: <UploadOutlined />,
-              label: '原石注册',
+              label: 'Raw Diamonds',
             },
             {
               key: '4',
               icon: <StrikethroughOutlined />,
-              label: '原石打分',
+              label: 'Diamonds',
             },
             {
               key: '5',
               icon: <HeatMapOutlined />,
-              label: '我的珠宝',
+              label: 'My Jewels',
             },
             {
               key: '6',
               icon: <SketchOutlined />,
-              label: '珠宝注册',
+              label: 'test',
             },
           ]}
         />

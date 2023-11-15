@@ -193,7 +193,7 @@ const JewelryShop = () => {
         onOk={handleModalOk}
       >
         <Form>
-          <Form.Item label="JewelryId" name="jewelryId" rules={[{ required: true, message: 'input your jewelry id' }]}>
+          <Form.Item label="Diamong UniqueId" name="uniqueId" rules={[{ required: true, message: 'input your diamond id' }]}>
             <Input onChange={(e) => setJewelryInput(e.target.value)} value={jewelryInput} />
           </Form.Item>
           <Form.Item label="Price" name="price" rules={[{ required: true, message: 'Input the price' }]}>
