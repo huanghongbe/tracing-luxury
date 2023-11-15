@@ -71,35 +71,31 @@ const App = () => {
             {
               key: '1',
               icon: <UserOutlined />,
-              label: '验证珠宝',
+              label: 'Verify',
             },
             {
               key: '2',
-              // icon: <UsergroupAddOutlined />,
-              icon: <img className="custom-icon" src="https://img.icons8.com/external-filled-outline-geotatah/64/external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah.png" alt="external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah" />,
+              icon: <UserOutlined />,
               label: '公司注册',
             },
             {
               key: '3',
-              // icon: <UploadOutlined />,
-              icon: <img className="custom-icon" src="https://img.icons8.com/plasticine/100/stone-adze.png" alt="stone-adze" />,
+              icon: <UploadOutlined />,
               label: '原石注册',
             },
             {
               key: '4',
-              // icon: <StrikethroughOutlined />,
-              icon: <img className="custom-icon" src="https://img.icons8.com/plasticine/100/rock.png" alt="rock" />,
+              icon: <StrikethroughOutlined />,
               label: '原石打分',
             },
             {
               key: '5',
-              // icon: <SketchOutlined />,
-              icon: <img className="custom-icon" src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-diamond-award-and-success-wanicon-lineal-color-wanicon.png" alt="external-diamond-award-and-success-wanicon-lineal-color-wanicon" />,
+              icon: <HeatMapOutlined />,
               label: '我的珠宝',
             },
             {
               key: '6',
-              icon: <HeatMapOutlined />,
+              icon: <SketchOutlined />,
               label: '珠宝注册',
             },
           ]}
