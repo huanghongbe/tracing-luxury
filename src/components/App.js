@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  // createFromIconfontCN,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   UploadOutlined,
@@ -8,9 +9,10 @@ import {
   StrikethroughOutlined,
   HeatMapOutlined,
   SketchOutlined,
+  UsergroupAddOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
-
+import '../global.css'
 import JewelryVerification from './JewelryVerification';
 import GemRegistration from './GemRegistration';
 import GemCutting from './GemCutting';
@@ -30,6 +32,9 @@ const App = () => {
   const handleMenuClick = (key) => {
     setSelectedKey(key);
   };
+  // const CustomIcon = createFromIconfontCN({
+  //   scriptUrl: '//at.icons8.com/{https://img.icons8.com/plasticine/100/stone-adze.png}.js',
+  // })
   const renderContentComponent = () => {
     switch (selectedKey) {
       case '1':
@@ -70,27 +75,31 @@ const App = () => {
             },
             {
               key: '2',
-              icon: <UserOutlined />,
+              // icon: <UsergroupAddOutlined />,
+              icon: <img className="custom-icon" src="https://img.icons8.com/external-filled-outline-geotatah/64/external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah.png" alt="external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah" />,
               label: '公司注册',
             },
             {
               key: '3',
-              icon: <UploadOutlined />,
+              // icon: <UploadOutlined />,
+              icon: <img className="custom-icon" src="https://img.icons8.com/plasticine/100/stone-adze.png" alt="stone-adze" />,
               label: '原石注册',
             },
             {
               key: '4',
-              icon: <StrikethroughOutlined />,
+              // icon: <StrikethroughOutlined />,
+              icon: <img className="custom-icon" src="https://img.icons8.com/plasticine/100/rock.png" alt="rock" />,
               label: '原石打分',
             },
             {
               key: '5',
-              icon: <HeatMapOutlined />,
+              // icon: <SketchOutlined />,
+              icon: <img className="custom-icon" src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-diamond-award-and-success-wanicon-lineal-color-wanicon.png" alt="external-diamond-award-and-success-wanicon-lineal-color-wanicon" />,
               label: '我的珠宝',
             },
             {
               key: '6',
-              icon: <SketchOutlined />,
+              icon: <HeatMapOutlined />,
               label: '珠宝注册',
             },
           ]}

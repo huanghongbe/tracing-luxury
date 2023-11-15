@@ -22,3 +22,13 @@ code {
     width: 100%;
     min-height: 100%;
   }
+
+  .custom-button {
+    background-color: red;
+    color: white;
+  }
+
+  .custom-icon{
+    width: 16px;
+    height: 16px;
+  }
