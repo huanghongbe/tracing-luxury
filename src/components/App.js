@@ -26,6 +26,7 @@ const { Header, Sider, Content } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [selectedKey, setSelectedKey] = useState('1');
+  // const colorBgContainer = 'linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)';
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -89,17 +90,20 @@ const App = () => {
             {
               key: '4',
               // icon: <SketchOutlined />,
-              icon: <img className="custom-icon" src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-diamond-award-and-success-wanicon-lineal-color-wanicon.png" alt="external-diamond-award-and-success-wanicon-lineal-color-wanicon" />,
+              // icon: <img className="custom-icon" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/external-jewelry-jewellery-flatart-icons-lineal-color-flatarticons.png" alt="external-jewelry-jewellery-flatart-icons-lineal-color-flatarticons" />,
+              icon: <img className="custom-icon" src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/external-diamond-essentials-icongeek26-linear-colour-icongeek26.png" alt="external-diamond-essentials-icongeek26-linear-colour-icongeek26" />,
               label: 'Jewelry Regis',
             },
             {
               key: '5',
-              icon: <HeatMapOutlined />,
+              // icon: <HeatMapOutlined />,
+              icon: <img className="custom-icon" src="https://img.icons8.com/matisse/100/jewelry.png" alt="jewelry" />,
               label: 'My jewelry',
             },
             {
               key: '6',
-              icon: <UserOutlined />,
+              // icon: <UserOutlined />,
+              icon: <img className="custom-icon" src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-diamond-award-and-success-wanicon-lineal-color-wanicon.png" alt="external-diamond-award-and-success-wanicon-lineal-color-wanicon" />,
               label: 'Jew Verfiy',
             },
           ]}
