@@ -2,19 +2,20 @@
     height: 100%;
     margin: 0;
     padding: 0;
-  }
-  
+    background: linear-gradient(to top, #eeb5d7, #e5b8e1, #dbbcea, #cfc1f0, #c3c5f5, #b8ccfb, #acd2fe, #a2d8ff, #98e1ff, #93e9ff, #93f1fa, #9af8f2);
+}
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./fonts/CustomFont.ttf') format('truetype');
+}  
   .ant-layout {
     display: flex;
     width: 100%;
     min-height: 100%;
   }
-
-  .custom-button {
-    background-color: red;
-    color: white;
+  .custom-table {
+    background: transparent ! important;
   }
-
   .custom-icon{
     width: 36px;
     height: 36px;
@@ -26,6 +27,12 @@
 
   .custom-menu {
     background: transparent;
+  }
+
+  .custom-menu .ant-menu-item {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 15px;
+    color: pink;
   }
   
   .gradient-background {

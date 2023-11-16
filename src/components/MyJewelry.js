@@ -177,9 +177,9 @@ const JewelryShop = () => {
 
 
     <div>
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <Button
-          style={{ position: 'absolute', top: '5px', right: '150px' }}
+          style={{ position: 'absolute', top: '5px', right: '150px',fontFamily: 'CustomFont, sans-serif' }}
           onClick={handleButtonClick}
         >
           register

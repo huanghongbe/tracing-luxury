@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Button, Select, Modal } from 'antd';
 import Web3 from 'web3';
+import '../global.css'
 import CompanyRegistryABI from '../abis/CompanyRegistry.json'
 const CompanyRegistry = () => {
   const [companyData, setCompanyData] = useState([]);
@@ -137,9 +138,9 @@ const CompanyRegistry = () => {
 
 
     <div>
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <Button
-          style={{ position: 'absolute', top: '5px', right: '150px' }}
+          style={{ position: 'absolute', top: '5px', right: '150px', fontFamily: 'CustomFont, sans-serif' }}
           onClick={handleButtonClick}
         >
           register
@@ -153,7 +154,7 @@ const CompanyRegistry = () => {
         onOk={handleModalOk}
       >
         <Select
-          style={{ width: '100%' }}
+          style={{ width: '100%', fontFamily: 'CustomFont, sans-serif' }}
           value={selectedCompanyType}
           onChange={handleCompanyTypeChange}
         >
@@ -172,7 +173,9 @@ const CompanyRegistry = () => {
         onChange={(pagination, filters, sorter) => {
           setPagination(pagination);
         }}
-      />
+        className="custom-table"
+      >
+        </Table>
     </div>
   );
 };

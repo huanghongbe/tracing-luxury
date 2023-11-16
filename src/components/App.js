@@ -57,10 +57,10 @@ const App = () => {
   };
 
   return (
-    <Layout>
+    <Layout style={{ background: 'transparent'}} >
       <div>
     </div>
-      <Sider  style={{ background: 'linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)'}} trigger={null} collapsible collapsed={collapsed}>
+      <Sider  style={{ background: 'transparent'}} trigger={null} collapsible collapsed={collapsed}>
         <div className="demo-logo-vertical" />
         <Menu
           className="custom-menu"
@@ -74,47 +74,48 @@ const App = () => {
               key: '1',
               // icon: <UsergroupAddOutlined />,
               icon: <img className="custom-icon" src="https://img.icons8.com/external-filled-outline-geotatah/64/external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah.png" alt="external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah" />,
-              label: 'Company Regis',
+              label: 'Company',
             },
             {
               key: '2',
               // icon: <UploadOutlined />,
               icon: <img className="custom-icon" src="https://img.icons8.com/plasticine/100/stone-adze.png" alt="stone-adze" />,
-              label: 'Gem Mining',
+              label: 'GemMine',
             },
             {
               key: '3',
               // icon: <StrikethroughOutlined />,
               icon: <img className="custom-icon" src="https://img.icons8.com/plasticine/100/rock.png" alt="rock" />,
-              label: 'Gem Scoring',
+              label: 'GemScore',
             },
             {
               key: '4',
               // icon: <SketchOutlined />,
               // icon: <img className="custom-icon" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/external-jewelry-jewellery-flatart-icons-lineal-color-flatarticons.png" alt="external-jewelry-jewellery-flatart-icons-lineal-color-flatarticons" />,
               icon: <img className="custom-icon" src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/external-diamond-essentials-icongeek26-linear-colour-icongeek26.png" alt="external-diamond-essentials-icongeek26-linear-colour-icongeek26" />,
-              label: 'Jewelry Regis',
+              label: 'JewelryR',
             },
             {
               key: '5',
               // icon: <HeatMapOutlined />,
               icon: <img className="custom-icon" src="https://img.icons8.com/matisse/100/jewelry.png" alt="jewelry" />,
-              label: 'My jewelry',
+              label: 'Myjew',
             },
             {
               key: '6',
               // icon: <UserOutlined />,
               icon: <img className="custom-icon" src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-diamond-award-and-success-wanicon-lineal-color-wanicon.png" alt="external-diamond-award-and-success-wanicon-lineal-color-wanicon" />,
-              label: 'Jew Verfiy',
+              label: 'JewVerfiy',
             },
           ]}
         />
       </Sider>
-      <Layout >
+      {/* <Layout style={{ background: 'linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)'}} > */}
+        <Layout style={{ background: 'transparent'}}>
         <Header
           style={{
             padding: 0,
-            background: colorBgContainer,
+            background: 'transparent',
           }}
         >
           <Button
@@ -133,7 +134,7 @@ const App = () => {
             margin: '24px 16px',
             padding: 24,
             minHeight: 280,
-            background: colorBgContainer,
+            background: 'transparent',
           }}
         >
           {renderContentComponent()}
