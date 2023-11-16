@@ -11,7 +11,7 @@ import {
   SketchOutlined,
   UsergroupAddOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Button, theme } from 'antd';
+import { ConfigProvider, Layout, Menu, Button, theme } from 'antd';
 import '../global.css'
 import JewelryVerification from './JewelryVerification';
 import GemRegistration from './GemRegistration';
@@ -30,6 +30,7 @@ const App = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+  
   const handleMenuClick = (key) => {
     setSelectedKey(key);
   };
@@ -56,14 +57,14 @@ const App = () => {
   };
 
   return (
-    
     <Layout>
       <div>
     </div>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider  style={{ background: 'linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)'}} trigger={null} collapsible collapsed={collapsed}>
         <div className="demo-logo-vertical" />
         <Menu
-          theme="dark"
+          className="custom-menu"
+          // theme="light"
           mode="inline"
           // defaultSelectedKeys={['1']}
           selectedKeys={[selectedKey]}
@@ -109,7 +110,7 @@ const App = () => {
           ]}
         />
       </Sider>
-      <Layout>
+      <Layout >
         <Header
           style={{
             padding: 0,

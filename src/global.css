@@ -19,3 +19,19 @@
     width: 36px;
     height: 36px;
   }
+
+  /* .custom-menu {
+    background: linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  } */
+
+  .custom-menu {
+    background: transparent;
+  }
+  
+  .gradient-background {
+    background: linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  }
+
+  .ant-layout-sider {
+    background: linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  }
