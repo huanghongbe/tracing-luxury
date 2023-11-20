@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Select, Modal } from 'antd';
+import { Table, Button, Select, Modal, Input, Form } from 'antd';
 import Web3 from 'web3';
 import '../global.css'
 import CompanyRegistryABI from '../abis/CompanyRegistry.json'
@@ -8,9 +8,13 @@ const CompanyRegistry = () => {
   const [contract, setContract] = useState(null);
   const [selectedCompanyType, setSelectedCompanyType] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+  const [companyName, setCompanyName] = useState(null);
+  const [form] = Form.useForm();
   const [pagination, setPagination] = useState({
     pageSize: 10, // 每页显示10条数据
   });
+
+
   const handleButtonClick = async () => {
     try {
       if (!contract) {
@@ -19,6 +23,7 @@ const CompanyRegistry = () => {
       }
 
       // 添加以下代码
+      setCompanyName(null);
       setSelectedCompanyType(null); // 重置选中的公司类型
       setModalVisible(true); // 打开下拉框弹窗
     } catch (error) {
@@ -26,12 +31,13 @@ const CompanyRegistry = () => {
     }
   };
   const handleModalOk = () => {
-    if (selectedCompanyType !== null) {
+    if (selectedCompanyType !== null && companyName !== null) {
       setModalVisible(false);
-      handleRegister(selectedCompanyType);
+      handleRegister(selectedCompanyType, companyName);
+      form.resetFields();
     }
   };
-  const handleRegister = async (companyType) => {
+  const handleRegister = async (companyType, companyName) => {
     try {
       // 确保合约实例存在
       if (!contract) {
@@ -41,9 +47,8 @@ const CompanyRegistry = () => {
 
       // 获取当前用户的账户地址
       const userAddress = window.ethereum.selectedAddress;
-
       // 调用合约的 companyRegister 函数
-      await contract.methods.companyRegister(companyType).send({ from: userAddress });
+      await contract.methods.companyRegister(companyType, companyName).send({ from: userAddress });
 
       // 注册成功后的处理逻辑
       console.log('公司注册成功');
@@ -100,6 +105,11 @@ const CompanyRegistry = () => {
 
   const columns = [
     {
+      title: 'Company Name',
+      dataIndex: 'companyName',
+      key: 'companyName',
+    },
+    {
       title: 'Addr',
       dataIndex: 'addr',
       key: 'addr',
@@ -148,21 +158,31 @@ const CompanyRegistry = () => {
         <h1>Companies</h1>
       </div>
       <Modal
-        title="choose your company type"
+        title="enter your company information"
         open={modalVisible}
-        onCancel={() => setModalVisible(false)}
+        onCancel={() => {
+          form.resetFields();
+          setModalVisible(false);
+        }}
         onOk={handleModalOk}
       >
-        <Select
-          style={{ width: '100%', fontFamily: 'CustomFont, sans-serif' }}
-          value={selectedCompanyType}
-          onChange={handleCompanyTypeChange}
-        >
-          <Select.Option value="0">Mining</Select.Option>
-          <Select.Option value="1">Cutting</Select.Option>
-          <Select.Option value="2">Grading</Select.Option>
-          <Select.Option value="3">Manufacturer</Select.Option>
-        </Select>
+        <Form form={form}>
+          <Form.Item label="companyName" name="companyName" rules={[{ required: true, message: 'input your company name' }]}>
+            <Input onChange={(e) => setCompanyName(e.target.value)} value={companyName} />
+          </Form.Item>
+          <Form.Item label="companyType" name="companyType" rules={[{ required: true, message: 'select your company type' }]}>
+            <Select
+              style={{ width: '100%', fontFamily: 'CustomFont, sans-serif' }}
+              value={selectedCompanyType}
+              onChange={handleCompanyTypeChange}>
+              <Select.Option value="0">Mining</Select.Option>
+              <Select.Option value="1">Cutting</Select.Option>
+              <Select.Option value="2">Grading</Select.Option>
+              <Select.Option value="3">Manufacturer</Select.Option>
+            </Select>
+          </Form.Item>
+        </Form>
+
       </Modal>
 
       <Table
@@ -175,7 +195,7 @@ const CompanyRegistry = () => {
         }}
         className="custom-table"
       >
-        </Table>
+      </Table>
     </div>
   );
 };

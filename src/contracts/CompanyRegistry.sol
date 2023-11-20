@@ -13,11 +13,12 @@ contract CompanyRegistry {
         uint256 companyId;
         CompanyType companyType;
         address addr;
+        string companyName;
     }
 
     mapping(address => Company) public companies;
 
-    mapping(uint256=>address) public indexMap;
+    mapping(uint256 => address) public indexMap;
     uint256 public companiesCount;
 
     function getAllCompanies() public view returns (Company[] memory) {
@@ -32,9 +33,17 @@ contract CompanyRegistry {
         return allCompanies;
     }
 
-    function companyRegister(CompanyType companyType) public {
-        //todo 相同地址重复注册
-        Company memory newCompany = Company(companiesCount,companyType, msg.sender);
+    function companyRegister(
+        CompanyType companyType,
+        string calldata companyName
+    ) public {
+        require(companies[msg.sender].addr == address(0), "target address have been registered");
+        Company memory newCompany = Company(
+            companiesCount,
+            companyType,
+            msg.sender,
+            companyName
+        );
         companies[msg.sender] = newCompany;
         indexMap[companiesCount] = msg.sender;
         companiesCount++;
