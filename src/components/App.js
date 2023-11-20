@@ -17,7 +17,7 @@ import JewelryVerification from './JewelryVerification';
 import GemRegistration from './GemRegistration';
 import GemCutting from './GemCutting';
 import GemScoring from './GemScoring';
-import JewelryRegistration from './JewelryRegistration';
+import MyJewelry from './MyJewelry';
 import CompanyRegistry from './CompanyRegistry'
 import JewelryShop from './JewelryShop';
 
@@ -48,7 +48,7 @@ const App = () => {
       case '4':
         return <JewelryShop />;
       case '5':
-        return <JewelryRegistration />;
+        return <MyJewelry />;
       case '6':
         return <JewelryVerification />;
       default:
