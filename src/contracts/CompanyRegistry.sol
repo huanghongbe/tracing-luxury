@@ -49,6 +49,10 @@ contract CompanyRegistry {
         companiesCount++;
     }
 
+    function getCompany(address companyAddress) public view returns(Company memory company){
+        return companies[companyAddress];
+    }
+
     function getCompanyType(
         address companyAddress
     ) public view returns (CompanyType) {

@@ -5,77 +5,104 @@ import RawDiamondRegistry from '../abis/RawDiamondRegistry.json'
 const GenCutting = () => {
   const [rawDiamondData, setRawDiamondData] = useState([]);
   const [contract, setContract] = useState(null);
-  const [rawDiamondInput, setRawDiamondInput] = useState(null);
+  const [rawDiamondName, setRawDiamondName] = useState(null);
+  const [rawDiamondColor, setRawDiamondColor] = useState(null);
+  const [cuttingGrade, setCuttingGrade] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
-  
+  const [choosedRawId, setChoosedRawId] = useState(null);
+  const [cuttingModalVisible, setCuttingModalVisible] = useState(false);
   const handleButtonClick = async () => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
         return;
       }
-      setRawDiamondInput(null); // 重置选中的公司类型
-      setModalVisible(true); // 打开下拉框弹窗
+      setRawDiamondColor(null);
+      setRawDiamondName(null);
+      setModalVisible(true);
+
     } catch (error) {
       console.error('rawDiamondRegister 函数调用失败:', error);
     }
   };
-  
-  const handleCuttingClick = useCallback(async (record) => {
+
+
+  const handleCuttingClick = async (record) => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
         return;
       }
-  
-      const userAddress = window.ethereum.selectedAddress;
-      await contract.methods.rawDiamondCutting(record.rawId).send({ from: userAddress });
-      console.log('原石切割成功');
-  
-      // Update the cutting company for the selected raw diamond
-      const updatedRawDiamondData = rawDiamondData.map((diamond) => {
-        if (diamond.rawId === record.rawId) {
-          return { ...diamond, cuttingCompany: userAddress };
-        }
-        return diamond;
-      });
-  
-      setRawDiamondData(updatedRawDiamondData);
-  
-      message.success('原石切割成功');
+      setCuttingGrade(null);
+      setCuttingModalVisible(true);
+      setChoosedRawId(record.rawId);
     } catch (error) {
-      console.error('切割失败:', error);
-      message.error('切割失败');
-    }
-  }, [contract, rawDiamondData]);
-  
-  const handleModalOk = () => {
-    if (rawDiamondInput !== null) {
-      setModalVisible(false);
-      handleRegister(rawDiamondInput);
+      console.error('rawDiamondCutting 函数调用失败:', error);
     }
   };
-  // const handleRegister = async (rawDiamondInput) => {
+
+  // const handleCuttingClick = useCallback(async (record) => {
   //   try {
   //     if (!contract) {
   //       console.error('合约实例不存在');
   //       return;
   //     }
-  //     //todo rawdiamond加名字参数
+
   //     const userAddress = window.ethereum.selectedAddress;
-  //     await contract.methods.rawDiamondRegister().send({ from: userAddress });
-  //     console.log('原石注册成功');
-  //     // 更新公司数据或执行其他操作
+  //     await contract.methods.rawDiamondCutting(record.rawId).send({ from: userAddress });
+  //     console.log('原石切割成功');
   //     const rawDiamonds = await contract.methods.getAllRawDiamonds().call();
   //     console.log('原石数组:', rawDiamonds);
   //     //更新react组件状态
   //     setRawDiamondData(rawDiamonds);
-  //     // window.location.reload();
+
+
+  //     message.success('原石切割成功');
   //   } catch (error) {
-  //     console.error('注册失败:', error);
+  //     console.error('切割失败:', error);
+  //     message.error('切割失败');
   //   }
-  // };
-  const handleRegister = async (rawDiamondInput) => {
+  // }, [contract, rawDiamondData]);
+
+  const handleModalOk = () => {
+    if (rawDiamondName !== null && rawDiamondColor != null) {
+      setModalVisible(false);
+      handleRegister(rawDiamondName, rawDiamondColor);
+    }
+  };
+
+  const handleCuttingModalOk = () => {
+    if (cuttingGrade !== null && choosedRawId!=null) {
+      setModalVisible(false);
+      handleCutting(choosedRawId,cuttingGrade);
+    }
+  };
+
+
+  const handleCutting = async (choosedRawId, cuttingGrade) => {
+    try {
+      if (!contract) {
+        console.error('合约实例不存在');
+        return;
+      }
+
+      const userAddress = window.ethereum.selectedAddress;
+      await contract.methods.rawDiamondCutting(choosedRawId, cuttingGrade).send({ from: userAddress });
+      console.log('原石切割成功');
+      const rawDiamonds = await contract.methods.getAllRawDiamonds().call();
+      console.log('原石数组:', rawDiamonds);
+      //更新react组件状态
+      setRawDiamondData(rawDiamonds);
+
+
+      message.success('原石切割成功');
+    } catch (error) {
+      console.error('切割失败:', error);
+      message.error('切割失败');
+    }
+  };
+
+  const handleRegister = async (rawDiamondName, rawDiamondColor) => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
@@ -83,7 +110,8 @@ const GenCutting = () => {
       }
       //todo rawdiamond加名字参数
       const userAddress = window.ethereum.selectedAddress;
-      await contract.methods.rawDiamondRegister().send({ from: userAddress });
+
+      await contract.methods.rawDiamondRegister(rawDiamondName, rawDiamondColor).send({ from: userAddress });
       console.log('原石注册成功');
       // 更新公司数据或执行其他操作
       const rawDiamonds = await contract.methods.getAllRawDiamonds().call();
@@ -96,10 +124,16 @@ const GenCutting = () => {
       message.error('原石注册失败');
     }
   };
-  const handleInputChange = (value) => {
-    setRawDiamondInput(value);
+  const handleRawDiamondNameChanged = (value) => {
+    setRawDiamondName(value);
+  };
+  const handleRawDiamondColorChanged = (value) => {
+    setRawDiamondColor(value);
   };
 
+  const handleCuttingGradeChanged = (value) => {
+    setCuttingGrade(value);
+  };
 
   useEffect(() => {
     const connectToWeb3 = async () => {
@@ -146,14 +180,31 @@ const GenCutting = () => {
       }
     },
     {
+      title: 'Raw Diamond Name',
+      dataIndex: 'rawDiamondName',
+      key: 'rawDiamondName',
+    },
+    {
+      title: 'Raw Diamond Color',
+      dataIndex: 'rawDiamondColor',
+      key: 'rawDiamondColor',
+    },
+    {
       title: 'Mining Company',
       dataIndex: 'miningCompany',
-      key: 'miningCompany',
+      key: 'miningCompanyName',
+      render: (miningCompany) => miningCompany.companyName,
     },
     {
       title: 'Cutting Company',
       dataIndex: 'cuttingCompany',
-      key: 'cuttingCompany',
+      key: 'cuttingCompanyName',
+      render: (cuttingCompany) => cuttingCompany.companyName,
+    },
+    {
+      title: 'Cutting Grade',
+      dataIndex: 'cuttingGrade',
+      key: 'cuttingGrade',
     },
     {
       title: 'Action',
@@ -178,6 +229,17 @@ const GenCutting = () => {
         <h1>Raw Diamonds</h1>
       </div>
       <Modal
+        title="Raw Diamond Cutting"
+        open={cuttingModalVisible}
+        onCancel={() => setCuttingModalVisible(false)}
+        onOk={handleCuttingModalOk}>
+        <Form>
+          <Form.Item label="cuttingGrade" name="cuttingGrade" rules={[{ required: true, message: 'input your raw diamond color' }]}>
+            <Input onChange={(e) => handleCuttingGradeChanged(e.target.value)} value={cuttingGrade} />
+          </Form.Item>
+        </Form>
+      </Modal>
+      <Modal
         title="Raw Diamond Register"
         open={modalVisible}
         onCancel={() => setModalVisible(false)}
@@ -185,8 +247,12 @@ const GenCutting = () => {
       >
         <Form>
           <Form.Item label="name" name="name" rules={[{ required: true, message: 'input your raw diamond name' }]}>
-            <Input onChange={handleInputChange} value={rawDiamondInput} />
+            <Input onChange={(e) => handleRawDiamondNameChanged(e.target.value)} value={rawDiamondName} />
           </Form.Item>
+          <Form.Item label="color" name="color" rules={[{ required: true, message: 'input your raw diamond color' }]}>
+            <Input onChange={(e) => handleRawDiamondColorChanged(e.target.value)} value={rawDiamondColor} />
+          </Form.Item>
+
         </Form>
       </Modal>
       <Table

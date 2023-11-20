@@ -6,9 +6,11 @@ import "./CompanyRegistry.sol";
 contract RawDiamondRegistry {
     struct RawDiamond {
         uint256 rawId;
-        address miningCompany;
-        address cuttingCompany;
-        // address gradingLab;
+        string rawDiamondName;
+        string rawDiamondColor;
+        string cuttingGrade;
+        CompanyRegistry.Company miningCompany;
+        CompanyRegistry.Company cuttingCompany;
     }
 
     mapping(uint256 => RawDiamond) public rawDiamondItems;
@@ -34,20 +36,25 @@ contract RawDiamondRegistry {
         return rawDiamondItems[rawId];
     }
 
-    function rawDiamondRegister() public onlyMiningCompany returns (uint256) {
+    function rawDiamondRegister(string calldata _rawDiamondName,string calldata _rawDiamondColor) public onlyMiningCompany returns (uint256) {
         RawDiamond memory newRawDiamond;
         newRawDiamond.rawId = rawDiamondCounts;
-        newRawDiamond.miningCompany = msg.sender;
+        newRawDiamond.rawDiamondName = _rawDiamondName;
+        newRawDiamond.rawDiamondColor = _rawDiamondColor;
+        CompanyRegistry.Company memory miningCompany = companyRegistry.getCompany(msg.sender);
+        newRawDiamond.miningCompany = miningCompany;
         uint256 rawId = rawDiamondCounts++;
         rawDiamondItems[rawId] = newRawDiamond;
         return rawId;
     }
 
     function rawDiamondCutting(
-        uint256 rawId
+        uint256 _rawId,string calldata  _cuttingGrade
     ) public onlyCuttingCompany returns (uint256) {
-        rawDiamondItems[rawId].cuttingCompany = msg.sender;
-        return rawId;
+        CompanyRegistry.Company memory cuttingCompany = companyRegistry.getCompany(msg.sender);
+        rawDiamondItems[_rawId].cuttingCompany = cuttingCompany;
+        rawDiamondItems[_rawId].cuttingGrade = _cuttingGrade;
+        return _rawId;
     }
 
     modifier onlyMiningCompany() {
