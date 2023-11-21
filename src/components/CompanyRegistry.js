@@ -167,10 +167,10 @@ const CompanyRegistry = () => {
         onOk={handleModalOk}
       >
         <Form form={form}>
-          <Form.Item label="companyName" name="companyName" rules={[{ required: true, message: 'input your company name' }]}>
+          <Form.Item label="Company Name" name="companyName" rules={[{ required: true, message: 'input your company name' }]}>
             <Input onChange={(e) => setCompanyName(e.target.value)} value={companyName} />
           </Form.Item>
-          <Form.Item label="companyType" name="companyType" rules={[{ required: true, message: 'select your company type' }]}>
+          <Form.Item label="Company Type" name="companyType" rules={[{ required: true, message: 'select your company type' }]}>
             <Select
               style={{ width: '100%', fontFamily: 'CustomFont, sans-serif' }}
               value={selectedCompanyType}

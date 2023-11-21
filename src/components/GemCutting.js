@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Table, Button, Modal, Input, Form, message } from 'antd';
+import { Table, Button, Modal, Input, Form, message,Select } from 'antd';
 import Web3 from 'web3';
 import RawDiamondRegistry from '../abis/RawDiamondRegistry.json'
 const GenCutting = () => {
@@ -73,7 +73,7 @@ const GenCutting = () => {
 
   const handleCuttingModalOk = () => {
     if (cuttingGrade !== null && choosedRawId!=null) {
-      setModalVisible(false);
+      setCuttingModalVisible(false);
       handleCutting(choosedRawId,cuttingGrade);
     }
   };
@@ -209,9 +209,17 @@ const GenCutting = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (_, record) => (
-        <Button onClick={() => handleCuttingClick(record)}>Cutting</Button>
-      ),
+      render: (_, record) => {
+        if (record.cuttingGrade !== undefined && record.cuttingGrade !== null && record.cuttingGrade !== '') {
+          return (
+            <Button disabled>Cutting</Button>
+          );
+        } else {
+          return (
+            <Button onClick={() => handleCuttingClick(record)}>Cutting</Button>
+          );
+        }
+      }
     },
   ];
 
@@ -234,8 +242,17 @@ const GenCutting = () => {
         onCancel={() => setCuttingModalVisible(false)}
         onOk={handleCuttingModalOk}>
         <Form>
-          <Form.Item label="cuttingGrade" name="cuttingGrade" rules={[{ required: true, message: 'input your raw diamond color' }]}>
-            <Input onChange={(e) => handleCuttingGradeChanged(e.target.value)} value={cuttingGrade} />
+          <Form.Item label="Cutting Grade" name="cuttingGrade" rules={[{ required: true, message: 'input your raw diamond color' }]}>
+            <Select
+              style={{ width: '100%', fontFamily: 'CustomFont, sans-serif' }}
+              value={cuttingGrade}
+              onChange={handleCuttingGradeChanged}>
+              <Select.Option value="Perfect Cut">Perfect Cut</Select.Option>
+              <Select.Option value="Very Good Cut">Very Good Cut</Select.Option>
+              <Select.Option value="Good Cut">Good Cut</Select.Option>
+              <Select.Option value="Fair Cut">Fair Cut</Select.Option>
+              <Select.Option value="Poor Cut">Poor Cut</Select.Option>
+            </Select>
           </Form.Item>
         </Form>
       </Modal>

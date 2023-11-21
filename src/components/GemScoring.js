@@ -1,12 +1,6 @@
-// import React from 'react';
 
-// const GemScoring = () => {
-//   return <div>原石打分的内容</div>;
-// };
-
-// export default GemScoring;
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Modal, Input, InputNumber, Form, message } from 'antd';
+import { Table, Button, Modal, Input, InputNumber, Form, message, Select } from 'antd';
 import Web3 from 'web3';
 import DiamondRegistry from '../abis/DiamondRegistry.json'
 const GemScoring = () => {
@@ -15,7 +9,12 @@ const GemScoring = () => {
   const [diamondInput, setDiamondInput] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [scoreInput, setScoreInput] = useState(null);
+  const [clarity, setClarity] = useState(null);
 
+
+  const handleClarityChanged = (value) => {
+    setClarity(value);
+  };
   const handleButtonClick = async () => {
     try {
       if (!contract) {
@@ -31,13 +30,13 @@ const GemScoring = () => {
   };
 
   const handleModalOk = () => {
-    if (diamondInput !== null && scoreInput !== null) {
+    if (diamondInput !== null && scoreInput !== null && clarity != null) {
       setModalVisible(false);
-      handleRegister(diamondInput, scoreInput);
+      handleRegister(diamondInput, scoreInput, clarity);
     }
   };
 
-  const handleRegister = async (diamondInput, scoreInput) => {
+  const handleRegister = async (diamondInput, scoreInput, clarity) => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
@@ -45,20 +44,19 @@ const GemScoring = () => {
       }
       console.log(diamondInput)
       console.log(scoreInput)
-  
+
       const parsedDiamondInput = parseInt(diamondInput, 10);
       const parsedScore = parseInt(scoreInput, 10);
-  
       if (isNaN(parsedDiamondInput) || isNaN(parsedScore)) {
         console.log(parsedDiamondInput)
         console.log(parsedScore)
         console.error('输入无效');
         return;
       }
-  
+
       const userAddress = window.ethereum.selectedAddress;
-      await contract.methods.diamondRegister(parsedDiamondInput, parsedScore).send({ from: userAddress });
-  
+      await contract.methods.diamondRegister(parsedDiamondInput, clarity, parsedScore).send({ from: userAddress });
+
       console.log('钻石注册成功');
       // 更新公司数据或执行其他操作
       const diamonds = await contract.methods.getAllDiamonds().call();
@@ -120,9 +118,24 @@ const GemScoring = () => {
       }
     },
     {
+      title: 'Raw Diamond Id',
+      dataIndex: 'rawDiamond',
+      key: 'rawDiamond',
+      render: (rawDiamond) => {
+        let typeLabel = rawDiamond.rawId.toString();
+        return <span key={rawDiamond}>{typeLabel}</span>;
+      }
+    },
+    {
       title: 'Grading Lab',
       dataIndex: 'gradingLab',
       key: 'gradingLab',
+      render: (gradingLab) => gradingLab.companyName,
+    },
+    {
+      title: 'Clarity',
+      dataIndex: 'clarity',
+      key: 'clarity'
     },
     {
       title: 'Grade',
@@ -133,6 +146,7 @@ const GemScoring = () => {
         return <span key={grade}>{typeLabel}</span>;
       }
     },
+
   ];
 
   return (
@@ -155,12 +169,28 @@ const GemScoring = () => {
         onOk={handleModalOk}
       >
         <Form>
-          <Form.Item label="RawId" name="rawId" rules={[{ required: true, message: 'input your raw dimond id' }]}>
-          <Input onChange={(e) => setDiamondInput(e.target.value)} value={diamondInput} />
+          <Form.Item label="RawId" name="rawId" rules={[{ required: true, message: 'input the raw dimond id' }]}>
+            <Input onChange={(e) => setDiamondInput(e.target.value)} value={diamondInput} />
           </Form.Item>
+
+          <Form.Item label="Clarity" name="clarity" rules={[{ required: true, message: 'input the clarity' }]}>
+            <Select
+              style={{ width: '100%', fontFamily: 'CustomFont, sans-serif' }}
+              value={clarity}
+              onChange={handleClarityChanged}>
+              <Select.Option value="Flawless">Flawless</Select.Option>
+              <Select.Option value="Internally Flawless">Internally Flawless</Select.Option>
+              <Select.Option value="Very Slightly Included">Very Slightly Included</Select.Option>
+              <Select.Option value="Slightly Included ">Slightly Included </Select.Option>
+              <Select.Option value="Included">Included</Select.Option>
+            </Select>
+          </Form.Item>
+
+
           <Form.Item label="Score" name="score" rules={[{ required: true, message: 'Input the diamond score' }]}>
             <InputNumber onChange={(value) => setScoreInput(value)} value={scoreInput} />
           </Form.Item>
+
         </Form>
       </Modal>
       <Table
