@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button, Form, Modal, Input, message, Select } from 'antd';
 import Web3 from 'web3';
 import JewelryShopABI from '../abis/JewelryShop.json'
-import { useLocation, useNavigate } from 'react-router-dom';
+
 const { Option } = Select;
 const MyJewelry = () => {
   const [jewelryData, setJewelryData] = useState(null);
@@ -10,10 +10,6 @@ const MyJewelry = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [transferAddress, setTransferAddress] = useState('');
   const [selectedJewelryId, setSelectedJewelryId] = useState('');
-
-  const [userAddress, setUserAddress] = useState('');
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const handleModalOk = () => {
     setModalVisible(false);
@@ -56,9 +52,7 @@ const MyJewelry = () => {
          deployedNetwork && deployedNetwork.address
        );
       const userAddress = accounts[0];
-      setUserAddress(userAddress);
       console.log('账户变化:', accounts)
-      navigate(location.pathname);
       const jewelries =  await contract.methods.getMyJewels().call({ from: userAddress });
       console.log(jewelries);
       setJewelryData(jewelries);
