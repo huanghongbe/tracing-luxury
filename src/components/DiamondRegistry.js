@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Button, Modal, Input, InputNumber, Form, message, Select } from 'antd';
 import Web3 from 'web3';
-import DiamondRegistry from '../abis/DiamondRegistry.json'
-const GemScoring = () => {
+import { animated } from 'react-spring';
+import '../global.css'
+import DiamondRegistryABI from '../abis/DiamondRegistry.json'
+const DiamondRegistry = () => {
   const [diamondData, setDiamondData] = useState([]);
   const [contract, setContract] = useState(null);
   const [diamondInput, setDiamondInput] = useState(null);
@@ -11,6 +13,19 @@ const GemScoring = () => {
   const [scoreInput, setScoreInput] = useState(null);
   const [clarity, setClarity] = useState(null);
 
+  //emoji
+  const [showEmoji, setShowEmoji] = useState(false);
+  const [emoji, setEmoji] = useState('💎');
+
+  const springProps = ({
+    to: { top: emoji ? '50px' : '-100px' },
+    from: { top: '-100px' },
+  });
+
+  const handleEmojiModalOk = () => {
+    setShowEmoji(false);
+  };
+  //
 
   const handleClarityChanged = (value) => {
     setClarity(value);
@@ -63,7 +78,9 @@ const GemScoring = () => {
       console.log('钻石数组:', diamonds);
       // 更新react组件状态
       setDiamondData(diamonds);
-      message.success('钻石注册成功');
+      // message.success('钻石注册成功');
+      //emojitrue
+      setShowEmoji(true);
     } catch (error) {
       console.error('注册失败:', error);
       message.error('钻石注册失败');
@@ -84,9 +101,9 @@ const GemScoring = () => {
 
           // 获取合约实例
           const networkId = await web3.eth.net.getId();
-          const deployedNetwork = DiamondRegistry.networks[networkId];
+          const deployedNetwork = DiamondRegistryABI.networks[networkId];
           const contract = new web3.eth.Contract(
-            DiamondRegistry.abi,
+            DiamondRegistryABI.abi,
             deployedNetwork && deployedNetwork.address
           );
 
@@ -150,8 +167,6 @@ const GemScoring = () => {
   ];
 
   return (
-
-
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <Button
@@ -161,12 +176,20 @@ const GemScoring = () => {
           register&grading
         </Button>
         <h1>Diamonds</h1>
+        {showEmoji && (
+      <animated.div className="emoji-icon" style={springProps}>
+      {emoji}
+    </animated.div>
+    )}
       </div>
       <Modal
         title="Diamond Register"
         open={modalVisible}
         onCancel={() => setModalVisible(false)}
-        onOk={handleModalOk}
+        // onOk={handleModalOk}
+        onOk={() => {
+          handleModalOk();
+          handleEmojiModalOk();}}
       >
         <Form>
           <Form.Item label="RawId" name="rawId" rules={[{ required: true, message: 'input the raw dimond id' }]}>
@@ -202,4 +225,4 @@ const GemScoring = () => {
   );
 };
 
-export default GemScoring;
+export default DiamondRegistry;

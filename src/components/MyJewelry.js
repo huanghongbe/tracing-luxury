@@ -57,7 +57,7 @@ const MyJewelry = () => {
         return;
       }
       const userAddress = window.ethereum.selectedAddress;
-      await contract.methods.transferJewelry(selectedJewelryId, transferAddress).send({ from: userAddress });
+      await contract.methods.transferTo(selectedJewelryId, transferAddress).send({ from: userAddress });
       console.log('转移成功');
       message.success('转移成功');
 
