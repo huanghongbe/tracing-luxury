@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Button, Select, Modal, Input, Form } from 'antd';
 import { animated } from 'react-spring';
-import Web3 from 'web3';
 import '../global.css'
+import Web3 from 'web3';
 import CompanyRegistryABI from '../abis/CompanyRegistry.json'
 const CompanyRegistry = () => {
   const [companyData, setCompanyData] = useState([]);
@@ -26,8 +26,6 @@ const CompanyRegistry = () => {
         console.error('合约实例不存在');
         return;
       }
-
-      // 添加以下代码
       setCompanyName(null);
       setSelectedCompanyType(null); // 重置选中的公司类型
       setModalVisible(true); // 打开下拉框弹窗
@@ -49,25 +47,18 @@ const CompanyRegistry = () => {
         console.error('合约实例不存在');
         return;
       }
-
       // 获取当前用户的账户地址
       const userAddress = window.ethereum.selectedAddress;
       // 调用合约的 companyRegister 函数
       await contract.methods.companyRegister(companyType, companyName).send({ from: userAddress });
-
       // 注册成功后的处理逻辑
       console.log('公司注册成功');
       setShowEmoji(true);
-
-      
-
       // 更新公司数据或执行其他操作
       const companies = await contract.methods.getAllCompanies().call();
       console.log('公司数组:', companies);
       //更新react组件状态
       setCompanyData(companies);
-      // window.location.reload();
-      // setShowEmoji(false);
     } catch (error) {
       console.error('注册失败:', error);
     }
@@ -94,7 +85,6 @@ const CompanyRegistry = () => {
           // 连接到以太坊网络
           const web3 = new Web3(window.ethereum);
           await window.ethereum.enable();
-
           // 获取合约实例
           const networkId = await web3.eth.net.getId();
           const deployedNetwork = CompanyRegistryABI.networks[networkId];
@@ -102,11 +92,9 @@ const CompanyRegistry = () => {
             CompanyRegistryABI.abi,
             deployedNetwork && deployedNetwork.address
           );
-
           // 调用合约函数获取公司数组
           const companies = await contract.methods.getAllCompanies().call();
           console.log('公司数组:', companies);
-
           // 更新React组件的状态
           setCompanyData(companies);
           setContract(contract);
@@ -162,8 +150,6 @@ const CompanyRegistry = () => {
   ];
 
   return (
-
-
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <Button
