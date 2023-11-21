@@ -66,6 +66,26 @@ contract JewelryShop {
         jewelryItems[jewelryId].owner = msg.sender;
     }
 
+    function getMyJewels() public view returns (Jewelry[] memory) {
+        uint256 count = 0;
+        for (uint256 i = 0; i < jewelryCounts; i++) {
+            if (jewelryItems[i].owner == msg.sender) {
+                count++;
+            }
+        }
+
+        Jewelry[] memory myJewels = new Jewelry[](count);
+        uint256 index = 0;
+        for (uint256 i = 0; i < jewelryCounts; i++) {
+            if (jewelryItems[i].owner == msg.sender) {
+                myJewels[index] = jewelryItems[i];
+                index++;
+            }
+        }
+
+        return myJewels;
+    }
+
     function jewelryVerify(
         uint256 jewelryId
     ) public view returns (Jewelry memory) {
