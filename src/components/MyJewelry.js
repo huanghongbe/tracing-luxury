@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button, Form, Modal, Input, message, Select } from 'antd';
 import Web3 from 'web3';
 import JewelryShopABI from '../abis/JewelryShop.json'
+import { useLocation, useNavigate } from 'react-router-dom';
 const { Option } = Select;
 const MyJewelry = () => {
   const [jewelryData, setJewelryData] = useState(null);
@@ -10,11 +11,13 @@ const MyJewelry = () => {
   const [transferAddress, setTransferAddress] = useState('');
   const [selectedJewelryId, setSelectedJewelryId] = useState('');
 
+  const [userAddress, setUserAddress] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleModalOk = () => {
     setModalVisible(false);
   };
-  
 
   const handleTransfer = async () => {
     setModalVisible(true);
@@ -40,11 +43,26 @@ const MyJewelry = () => {
 
   useEffect(() => {
     // 监听账户变化
-    const handleAccountsChanged = (accounts) => {
-      if (accounts.length > 0) {
-        // 账户发生变化，刷新页面重新获取数据
-        window.location.reload();
-      }
+    const handleAccountsChanged = async(accounts) => {
+       // 连接到以太坊网络
+       const web3 = new Web3(window.ethereum);
+       await window.ethereum.enable();
+
+       // 获取合约实例
+       const networkId = await web3.eth.net.getId();
+       const deployedNetwork = JewelryShopABI.networks[networkId];
+       const contract = new web3.eth.Contract(
+         JewelryShopABI.abi,
+         deployedNetwork && deployedNetwork.address
+       );
+      const userAddress = accounts[0];
+      setUserAddress(userAddress);
+      console.log('账户变化:', accounts)
+      navigate(location.pathname);
+      const jewelries =  await contract.methods.getMyJewels().call({ from: userAddress });
+      console.log(jewelries);
+      setJewelryData(jewelries);
+      console.log('刷新页面') // 刷新页面并保持在当前页面
     };
 
     // 添加账户变化事件监听器
