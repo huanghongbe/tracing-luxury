@@ -10746,12 +10746,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x70d488950cE4cdEAF75473ea5E47A393Ecf35eDD",
-      "transactionHash": "0x27174aa6c4c8ec5a60d75f881ab67ac68e2d172e1d6d4235d0533e7645a2f6b6"
+      "address": "0x5bEf2966Eff4e783eb3f221C5bc01E96105f38eC",
+      "transactionHash": "0xfedbb898045ee06dd167c57e6fbd9b53cf7989b78090e3bf98958366f6c1f4b3"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-11-21T07:57:44.045Z",
+  "updatedAt": "2023-11-21T10:37:36.958Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

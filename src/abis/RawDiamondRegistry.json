@@ -3958,7 +3958,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr",
+                      "name": "abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr",
                       "nodeType": "YulIdentifier",
                       "src": "6180:87:4"
                     },
@@ -3975,7 +3975,7 @@
                 }
               ]
             },
-            "name": "abi_encodeUpdatedPos_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr",
+            "name": "abi_encodeUpdatedPos_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -4140,7 +4140,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "array_length_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                      "name": "array_length_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                       "nodeType": "YulIdentifier",
                       "src": "6820:74:4"
                     },
@@ -4173,7 +4173,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack",
+                      "name": "array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "6917:100:4"
                     },
@@ -4268,7 +4268,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "array_dataslot_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                      "name": "array_dataslot_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                       "nodeType": "YulIdentifier",
                       "src": "7131:76:4"
                     },
@@ -4392,7 +4392,7 @@
                             }
                           ],
                           "functionName": {
-                            "name": "abi_encodeUpdatedPos_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr",
+                            "name": "abi_encodeUpdatedPos_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr",
                             "nodeType": "YulIdentifier",
                             "src": "7428:97:4"
                           },
@@ -4419,7 +4419,7 @@
                             }
                           ],
                           "functionName": {
-                            "name": "array_nextElement_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                            "name": "array_nextElement_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                             "nodeType": "YulIdentifier",
                             "src": "7569:79:4"
                           },
@@ -4593,7 +4593,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack",
+            "name": "abi_encode_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -7170,7 +7170,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr",
+            "name": "abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -8064,7 +8064,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr_fromStack",
+            "name": "abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -8437,7 +8437,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack",
+                      "name": "abi_encode_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "15800:147:4"
                     },
@@ -8454,7 +8454,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr__fromStack_reversed",
+            "name": "abi_encode_tuple_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -8889,7 +8889,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr_fromStack",
+                      "name": "abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "17087:97:4"
                     },
@@ -8906,7 +8906,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_struct$_RawDiamond_$630_memory_ptr__to_t_struct$_RawDiamond_$630_memory_ptr__fromStack_reversed",
+            "name": "abi_encode_tuple_t_struct$_RawDiamond_$692_memory_ptr__to_t_struct$_RawDiamond_$692_memory_ptr__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -9950,7 +9950,7 @@
                 }
               ]
             },
-            "name": "array_dataslot_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+            "name": "array_dataslot_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -10004,7 +10004,7 @@
                 }
               ]
             },
-            "name": "array_length_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+            "name": "array_length_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -10119,7 +10119,7 @@
                 }
               ]
             },
-            "name": "array_nextElement_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+            "name": "array_nextElement_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -10205,7 +10205,7 @@
                 }
               ]
             },
-            "name": "array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack",
+            "name": "array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -12890,7 +12890,7 @@
           }
         ]
       },
-      "contents": "{\n\n    function abi_decode_available_length_t_string_memory_ptr_fromMemory(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_memory_to_memory(src, dst, length)\n    }\n\n    function abi_decode_t_address_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function abi_decode_t_enum$_CompanyType_$6_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_enum$_CompanyType_$6(value)\n    }\n\n    // string\n    function abi_decode_t_string_calldata_ptr(offset, end) -> arrayPos, length {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        length := calldataload(offset)\n        if gt(length, 0xffffffffffffffff) { revert_error_15abf5612cd996bc235ba1e55a4a30ac60e6bb601ff7ba4ad3f179b6be8d0490() }\n        arrayPos := add(offset, 0x20)\n        if gt(add(arrayPos, mul(length, 0x01)), end) { revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() }\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr_fromMemory(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := mload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr_fromMemory(add(offset, 0x20), length, end)\n    }\n\n    // struct CompanyRegistry.Company\n    function abi_decode_t_struct$_Company_$16_memory_ptr_fromMemory(headStart, end) -> value {\n        if slt(sub(end, headStart), 0x80) { revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() }\n        value := allocate_memory(0x80)\n\n        {\n            // companyId\n\n            let offset := 0\n\n            mstore(add(value, 0x00), abi_decode_t_uint256_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // companyType\n\n            let offset := 32\n\n            mstore(add(value, 0x20), abi_decode_t_enum$_CompanyType_$6_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // addr\n\n            let offset := 64\n\n            mstore(add(value, 0x40), abi_decode_t_address_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // companyName\n\n            let offset := mload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert_error_5e8f644817bc4960744f35c15999b6eff64ae702f94b1c46297cfd4e1aec2421() }\n\n            mstore(add(value, 0x60), abi_decode_t_string_memory_ptr_fromMemory(add(headStart, offset), end))\n\n        }\n\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_enum$_CompanyType_$6_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_enum$_CompanyType_$6_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_string_calldata_ptrt_string_calldata_ptr(headStart, dataEnd) -> value0, value1, value2, value3 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := calldataload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value0, value1 := abi_decode_t_string_calldata_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value2, value3 := abi_decode_t_string_calldata_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_struct$_Company_$16_memory_ptr_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := mload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value0 := abi_decode_t_struct$_Company_$16_memory_ptr_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256t_string_calldata_ptr(headStart, dataEnd) -> value0, value1, value2 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1, value2 := abi_decode_t_string_calldata_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encodeUpdatedPos_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr(value0, pos) -> updatedPos {\n        updatedPos := abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr(value0, pos)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    // struct RawDiamondRegistry.RawDiamond[] -> struct RawDiamondRegistry.RawDiamond[]\n    function abi_encode_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack(pos, length)\n        let headStart := pos\n        let tail := add(pos, mul(length, 0x20))\n        let baseRef := array_dataslot_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, sub(tail, headStart))\n            let elementValue0 := mload(srcPtr)\n            tail := abi_encodeUpdatedPos_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr(elementValue0, tail)\n            srcPtr := array_nextElement_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr(srcPtr)\n            pos := add(pos, 0x20)\n        }\n        pos := tail\n        end := pos\n    }\n\n    function abi_encode_t_enum$_CompanyType_$6_to_t_uint8(value, pos) {\n        mstore(pos, convert_t_enum$_CompanyType_$6_to_t_uint8(value))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_stringliteral_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 24)\n        store_literal_in_memory_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_t_stringliteral_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 23)\n        store_literal_in_memory_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2(pos)\n        end := add(pos, 32)\n    }\n\n    // struct CompanyRegistry.Company -> struct CompanyRegistry.Company\n    function abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(value, pos)  -> end  {\n        let tail := add(pos, 0x80)\n\n        {\n            // companyId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // companyType\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_enum$_CompanyType_$6_to_t_uint8(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // addr\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // companyName\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    // struct CompanyRegistry.Company -> struct CompanyRegistry.Company\n    function abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0x80)\n\n        {\n            // companyId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // companyType\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_enum$_CompanyType_$6_to_t_uint8(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // addr\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // companyName\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    // struct RawDiamondRegistry.RawDiamond -> struct RawDiamondRegistry.RawDiamond\n    function abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr(value, pos)  -> end  {\n        let tail := add(pos, 0xc0)\n\n        {\n            // rawId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // rawDiamondName\n\n            let memberValue0 := mload(add(value, 0x20))\n\n            mstore(add(pos, 0x20), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // rawDiamondColor\n\n            let memberValue0 := mload(add(value, 0x40))\n\n            mstore(add(pos, 0x40), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingGrade\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // miningCompany\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingCompany\n\n            let memberValue0 := mload(add(value, 0xa0))\n\n            mstore(add(pos, 0xa0), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    // struct RawDiamondRegistry.RawDiamond -> struct RawDiamondRegistry.RawDiamond\n    function abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0xc0)\n\n        {\n            // rawId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // rawDiamondName\n\n            let memberValue0 := mload(add(value, 0x20))\n\n            mstore(add(pos, 0x20), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // rawDiamondColor\n\n            let memberValue0 := mload(add(value, 0x40))\n\n            mstore(add(pos, 0x40), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingGrade\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // miningCompany\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingCompany\n\n            let memberValue0 := mload(add(value, 0xa0))\n\n            mstore(add(pos, 0xa0), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_struct$_RawDiamond_$630_memory_ptr__to_t_struct$_RawDiamond_$630_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_struct$_RawDiamond_$630_memory_ptr_to_t_struct$_RawDiamond_$630_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_struct$_Company_$16_memory_ptr_t_struct$_Company_$16_memory_ptr__to_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_struct$_Company_$16_memory_ptr_t_struct$_Company_$16_memory_ptr__fromStack_reversed(headStart , value5, value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 192)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value1,  tail)\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n        mstore(add(headStart, 96), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value3,  tail)\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr_fromStack(value4,  tail)\n\n        mstore(add(headStart, 160), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr_fromStack(value5,  tail)\n\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_dataslot_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_length_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_nextElement_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_enum$_CompanyType_$6(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_CompanyType_$6(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function convert_t_enum$_CompanyType_$6_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_CompanyType_$6(value)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function increment_t_uint256(value) -> ret {\n        value := cleanup_t_uint256(value)\n        if eq(value, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x32() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function revert_error_15abf5612cd996bc235ba1e55a4a30ac60e6bb601ff7ba4ad3f179b6be8d0490() {\n        revert(0, 0)\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() {\n        revert(0, 0)\n    }\n\n    function revert_error_5e8f644817bc4960744f35c15999b6eff64ae702f94b1c46297cfd4e1aec2421() {\n        revert(0, 0)\n    }\n\n    function revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function store_literal_in_memory_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7(memPtr) {\n\n        mstore(add(memPtr, 0), \"You are not the Cutters!\")\n\n    }\n\n    function store_literal_in_memory_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2(memPtr) {\n\n        mstore(add(memPtr, 0), \"You are not the miners!\")\n\n    }\n\n    function validator_assert_t_enum$_CompanyType_$6(value) {\n        if iszero(lt(value, 4)) { panic_error_0x21() }\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_enum$_CompanyType_$6(value) {\n        if iszero(lt(value, 4)) { revert(0, 0) }\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "contents": "{\n\n    function abi_decode_available_length_t_string_memory_ptr_fromMemory(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_string_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() }\n        copy_memory_to_memory(src, dst, length)\n    }\n\n    function abi_decode_t_address_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function abi_decode_t_enum$_CompanyType_$6_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_enum$_CompanyType_$6(value)\n    }\n\n    // string\n    function abi_decode_t_string_calldata_ptr(offset, end) -> arrayPos, length {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        length := calldataload(offset)\n        if gt(length, 0xffffffffffffffff) { revert_error_15abf5612cd996bc235ba1e55a4a30ac60e6bb601ff7ba4ad3f179b6be8d0490() }\n        arrayPos := add(offset, 0x20)\n        if gt(add(arrayPos, mul(length, 0x01)), end) { revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() }\n    }\n\n    // string\n    function abi_decode_t_string_memory_ptr_fromMemory(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }\n        let length := mload(offset)\n        array := abi_decode_available_length_t_string_memory_ptr_fromMemory(add(offset, 0x20), length, end)\n    }\n\n    // struct CompanyRegistry.Company\n    function abi_decode_t_struct$_Company_$16_memory_ptr_fromMemory(headStart, end) -> value {\n        if slt(sub(end, headStart), 0x80) { revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() }\n        value := allocate_memory(0x80)\n\n        {\n            // companyId\n\n            let offset := 0\n\n            mstore(add(value, 0x00), abi_decode_t_uint256_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // companyType\n\n            let offset := 32\n\n            mstore(add(value, 0x20), abi_decode_t_enum$_CompanyType_$6_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // addr\n\n            let offset := 64\n\n            mstore(add(value, 0x40), abi_decode_t_address_fromMemory(add(headStart, offset), end))\n\n        }\n\n        {\n            // companyName\n\n            let offset := mload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert_error_5e8f644817bc4960744f35c15999b6eff64ae702f94b1c46297cfd4e1aec2421() }\n\n            mstore(add(value, 0x60), abi_decode_t_string_memory_ptr_fromMemory(add(headStart, offset), end))\n\n        }\n\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_t_uint256_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_enum$_CompanyType_$6_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_enum$_CompanyType_$6_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_string_calldata_ptrt_string_calldata_ptr(headStart, dataEnd) -> value0, value1, value2, value3 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := calldataload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value0, value1 := abi_decode_t_string_calldata_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value2, value3 := abi_decode_t_string_calldata_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_struct$_Company_$16_memory_ptr_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := mload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value0 := abi_decode_t_struct$_Company_$16_memory_ptr_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256t_string_calldata_ptr(headStart, dataEnd) -> value0, value1, value2 {\n        if slt(sub(dataEnd, headStart), 64) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() }\n\n            value1, value2 := abi_decode_t_string_calldata_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encodeUpdatedPos_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr(value0, pos) -> updatedPos {\n        updatedPos := abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr(value0, pos)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    // struct RawDiamondRegistry.RawDiamond[] -> struct RawDiamondRegistry.RawDiamond[]\n    function abi_encode_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack(pos, length)\n        let headStart := pos\n        let tail := add(pos, mul(length, 0x20))\n        let baseRef := array_dataslot_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, sub(tail, headStart))\n            let elementValue0 := mload(srcPtr)\n            tail := abi_encodeUpdatedPos_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr(elementValue0, tail)\n            srcPtr := array_nextElement_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr(srcPtr)\n            pos := add(pos, 0x20)\n        }\n        pos := tail\n        end := pos\n    }\n\n    function abi_encode_t_enum$_CompanyType_$6_to_t_uint8(value, pos) {\n        mstore(pos, convert_t_enum$_CompanyType_$6_to_t_uint8(value))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_stringliteral_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 24)\n        store_literal_in_memory_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_t_stringliteral_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 23)\n        store_literal_in_memory_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2(pos)\n        end := add(pos, 32)\n    }\n\n    // struct CompanyRegistry.Company -> struct CompanyRegistry.Company\n    function abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(value, pos)  -> end  {\n        let tail := add(pos, 0x80)\n\n        {\n            // companyId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // companyType\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_enum$_CompanyType_$6_to_t_uint8(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // addr\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // companyName\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    // struct CompanyRegistry.Company -> struct CompanyRegistry.Company\n    function abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0x80)\n\n        {\n            // companyId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // companyType\n\n            let memberValue0 := mload(add(value, 0x20))\n            abi_encode_t_enum$_CompanyType_$6_to_t_uint8(memberValue0, add(pos, 0x20))\n        }\n\n        {\n            // addr\n\n            let memberValue0 := mload(add(value, 0x40))\n            abi_encode_t_address_to_t_address(memberValue0, add(pos, 0x40))\n        }\n\n        {\n            // companyName\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    // struct RawDiamondRegistry.RawDiamond -> struct RawDiamondRegistry.RawDiamond\n    function abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr(value, pos)  -> end  {\n        let tail := add(pos, 0xc0)\n\n        {\n            // rawId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // rawDiamondName\n\n            let memberValue0 := mload(add(value, 0x20))\n\n            mstore(add(pos, 0x20), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // rawDiamondColor\n\n            let memberValue0 := mload(add(value, 0x40))\n\n            mstore(add(pos, 0x40), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingGrade\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // miningCompany\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingCompany\n\n            let memberValue0 := mload(add(value, 0xa0))\n\n            mstore(add(pos, 0xa0), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    // struct RawDiamondRegistry.RawDiamond -> struct RawDiamondRegistry.RawDiamond\n    function abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr_fromStack(value, pos)  -> end  {\n        let tail := add(pos, 0xc0)\n\n        {\n            // rawId\n\n            let memberValue0 := mload(add(value, 0x00))\n            abi_encode_t_uint256_to_t_uint256(memberValue0, add(pos, 0x00))\n        }\n\n        {\n            // rawDiamondName\n\n            let memberValue0 := mload(add(value, 0x20))\n\n            mstore(add(pos, 0x20), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // rawDiamondColor\n\n            let memberValue0 := mload(add(value, 0x40))\n\n            mstore(add(pos, 0x40), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingGrade\n\n            let memberValue0 := mload(add(value, 0x60))\n\n            mstore(add(pos, 0x60), sub(tail, pos))\n            tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // miningCompany\n\n            let memberValue0 := mload(add(value, 0x80))\n\n            mstore(add(pos, 0x80), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        {\n            // cuttingCompany\n\n            let memberValue0 := mload(add(value, 0xa0))\n\n            mstore(add(pos, 0xa0), sub(tail, pos))\n            tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr(memberValue0, tail)\n\n        }\n\n        end := tail\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_to_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_struct$_RawDiamond_$692_memory_ptr__to_t_struct$_RawDiamond_$692_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_struct$_RawDiamond_$692_memory_ptr_to_t_struct$_RawDiamond_$692_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_struct$_Company_$16_memory_ptr_t_struct$_Company_$16_memory_ptr__to_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_struct$_Company_$16_memory_ptr_t_struct$_Company_$16_memory_ptr__fromStack_reversed(headStart , value5, value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 192)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value1,  tail)\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value2,  tail)\n\n        mstore(add(headStart, 96), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value3,  tail)\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr_fromStack(value4,  tail)\n\n        mstore(add(headStart, 160), sub(tail, headStart))\n        tail := abi_encode_t_struct$_Company_$16_memory_ptr_to_t_struct$_Company_$16_memory_ptr_fromStack(value5,  tail)\n\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function array_allocation_size_t_string_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_dataslot_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_length_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_nextElement_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_enum$_CompanyType_$6(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_CompanyType_$6(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function convert_t_enum$_CompanyType_$6_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_CompanyType_$6(value)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function increment_t_uint256(value) -> ret {\n        value := cleanup_t_uint256(value)\n        if eq(value, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x32() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function revert_error_15abf5612cd996bc235ba1e55a4a30ac60e6bb601ff7ba4ad3f179b6be8d0490() {\n        revert(0, 0)\n    }\n\n    function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {\n        revert(0, 0)\n    }\n\n    function revert_error_3538a459e4a0eb828f1aed5ebe5dc96fe59620a31d9b33e41259bb820cae769f() {\n        revert(0, 0)\n    }\n\n    function revert_error_5e8f644817bc4960744f35c15999b6eff64ae702f94b1c46297cfd4e1aec2421() {\n        revert(0, 0)\n    }\n\n    function revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() {\n        revert(0, 0)\n    }\n\n    function revert_error_987264b3b1d58a9c7f8255e93e81c77d86d6299019c33110a076957a3e06e2ae() {\n        revert(0, 0)\n    }\n\n    function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {\n        revert(0, 0)\n    }\n\n    function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {\n        revert(0, 0)\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function store_literal_in_memory_20aee6d56367f3e108113d69aff894ef077d62f75f5936d5e1ef2e21a84127a7(memPtr) {\n\n        mstore(add(memPtr, 0), \"You are not the Cutters!\")\n\n    }\n\n    function store_literal_in_memory_cd53a91157c0984685b7ac80ff3cbd6a48009f08427b3426a93db22da51e6fd2(memPtr) {\n\n        mstore(add(memPtr, 0), \"You are not the miners!\")\n\n    }\n\n    function validator_assert_t_enum$_CompanyType_$6(value) {\n        if iszero(lt(value, 4)) { panic_error_0x21() }\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_enum$_CompanyType_$6(value) {\n        if iszero(lt(value, 4)) { revert(0, 0) }\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
       "id": 4,
       "language": "Yul",
       "name": "#utility.yul"
@@ -12907,15 +12907,15 @@
         254
       ],
       "RawDiamondRegistry": [
-        845
+        907
       ]
     },
-    "id": 846,
+    "id": 908,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 614,
+        "id": 676,
         "literals": [
           "solidity",
           "^",
@@ -12928,10 +12928,10 @@
       {
         "absolutePath": "project:/src/contracts/CompanyRegistry.sol",
         "file": "./CompanyRegistry.sol",
-        "id": 615,
+        "id": 677,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 846,
+        "scope": 908,
         "sourceUnit": 255,
         "src": "57:31:3",
         "symbolAliases": [],
@@ -12943,9 +12943,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 845,
+        "id": 907,
         "linearizedBaseContracts": [
-          845
+          907
         ],
         "name": "RawDiamondRegistry",
         "nameLocation": "99:18:3",
@@ -12953,16 +12953,16 @@
         "nodes": [
           {
             "canonicalName": "RawDiamondRegistry.RawDiamond",
-            "id": 630,
+            "id": 692,
             "members": [
               {
                 "constant": false,
-                "id": 617,
+                "id": 679,
                 "mutability": "mutable",
                 "name": "rawId",
                 "nameLocation": "160:5:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 630,
+                "scope": 692,
                 "src": "152:13:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -12971,7 +12971,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 616,
+                  "id": 678,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "152:7:3",
@@ -12984,12 +12984,12 @@
               },
               {
                 "constant": false,
-                "id": 619,
+                "id": 681,
                 "mutability": "mutable",
                 "name": "rawDiamondName",
                 "nameLocation": "182:14:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 630,
+                "scope": 692,
                 "src": "175:21:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -12998,7 +12998,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 618,
+                  "id": 680,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "175:6:3",
@@ -13011,12 +13011,12 @@
               },
               {
                 "constant": false,
-                "id": 621,
+                "id": 683,
                 "mutability": "mutable",
                 "name": "rawDiamondColor",
                 "nameLocation": "213:15:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 630,
+                "scope": 692,
                 "src": "206:22:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -13025,7 +13025,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 620,
+                  "id": 682,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "206:6:3",
@@ -13038,12 +13038,12 @@
               },
               {
                 "constant": false,
-                "id": 623,
+                "id": 685,
                 "mutability": "mutable",
                 "name": "cuttingGrade",
                 "nameLocation": "245:12:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 630,
+                "scope": 692,
                 "src": "238:19:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -13052,7 +13052,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 622,
+                  "id": 684,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "238:6:3",
@@ -13065,12 +13065,12 @@
               },
               {
                 "constant": false,
-                "id": 626,
+                "id": 688,
                 "mutability": "mutable",
                 "name": "miningCompany",
                 "nameLocation": "291:13:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 630,
+                "scope": 692,
                 "src": "267:37:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -13079,10 +13079,10 @@
                   "typeString": "struct CompanyRegistry.Company"
                 },
                 "typeName": {
-                  "id": 625,
+                  "id": 687,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 624,
+                    "id": 686,
                     "name": "CompanyRegistry.Company",
                     "nodeType": "IdentifierPath",
                     "referencedDeclaration": 16,
@@ -13099,12 +13099,12 @@
               },
               {
                 "constant": false,
-                "id": 629,
+                "id": 691,
                 "mutability": "mutable",
                 "name": "cuttingCompany",
                 "nameLocation": "338:14:3",
                 "nodeType": "VariableDeclaration",
-                "scope": 630,
+                "scope": 692,
                 "src": "314:38:3",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -13113,10 +13113,10 @@
                   "typeString": "struct CompanyRegistry.Company"
                 },
                 "typeName": {
-                  "id": 628,
+                  "id": 690,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 627,
+                    "id": 689,
                     "name": "CompanyRegistry.Company",
                     "nodeType": "IdentifierPath",
                     "referencedDeclaration": 16,
@@ -13135,30 +13135,30 @@
             "name": "RawDiamond",
             "nameLocation": "131:10:3",
             "nodeType": "StructDefinition",
-            "scope": 845,
+            "scope": 907,
             "src": "124:235:3",
             "visibility": "public"
           },
           {
             "constant": false,
             "functionSelector": "20c9e11b",
-            "id": 635,
+            "id": 697,
             "mutability": "mutable",
             "name": "rawDiamondItems",
             "nameLocation": "403:15:3",
             "nodeType": "VariableDeclaration",
-            "scope": 845,
+            "scope": 907,
             "src": "365:53:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$630_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$692_storage_$",
               "typeString": "mapping(uint256 => struct RawDiamondRegistry.RawDiamond)"
             },
             "typeName": {
-              "id": 634,
+              "id": 696,
               "keyType": {
-                "id": 631,
+                "id": 693,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "373:7:3",
@@ -13170,23 +13170,23 @@
               "nodeType": "Mapping",
               "src": "365:30:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$630_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$692_storage_$",
                 "typeString": "mapping(uint256 => struct RawDiamondRegistry.RawDiamond)"
               },
               "valueType": {
-                "id": 633,
+                "id": 695,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 632,
+                  "id": 694,
                   "name": "RawDiamond",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 630,
+                  "referencedDeclaration": 692,
                   "src": "384:10:3"
                 },
-                "referencedDeclaration": 630,
+                "referencedDeclaration": 692,
                 "src": "384:10:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_RawDiamond_$630_storage_ptr",
+                  "typeIdentifier": "t_struct$_RawDiamond_$692_storage_ptr",
                   "typeString": "struct RawDiamondRegistry.RawDiamond"
                 }
               }
@@ -13196,12 +13196,12 @@
           {
             "constant": false,
             "functionSelector": "8d281fd2",
-            "id": 637,
+            "id": 699,
             "mutability": "mutable",
             "name": "rawDiamondCounts",
             "nameLocation": "439:16:3",
             "nodeType": "VariableDeclaration",
-            "scope": 845,
+            "scope": 907,
             "src": "424:31:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -13210,7 +13210,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 636,
+              "id": 698,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "424:7:3",
@@ -13223,12 +13223,12 @@
           },
           {
             "constant": false,
-            "id": 640,
+            "id": 702,
             "mutability": "mutable",
             "name": "companyRegistry",
             "nameLocation": "486:15:3",
             "nodeType": "VariableDeclaration",
-            "scope": 845,
+            "scope": 907,
             "src": "462:39:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -13237,10 +13237,10 @@
               "typeString": "contract CompanyRegistry"
             },
             "typeName": {
-              "id": 639,
+              "id": 701,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 638,
+                "id": 700,
                 "name": "CompanyRegistry",
                 "nodeType": "IdentifierPath",
                 "referencedDeclaration": 254,
@@ -13257,23 +13257,23 @@
           },
           {
             "body": {
-              "id": 651,
+              "id": 713,
               "nodeType": "Block",
               "src": "546:68:3",
               "statements": [
                 {
                   "expression": {
-                    "id": 649,
+                    "id": 711,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 645,
+                      "id": 707,
                       "name": "companyRegistry",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 640,
+                      "referencedDeclaration": 702,
                       "src": "556:15:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_CompanyRegistry_$254",
@@ -13285,11 +13285,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 647,
+                          "id": 709,
                           "name": "_companyRegistry",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 642,
+                          "referencedDeclaration": 704,
                           "src": "590:16:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -13304,7 +13304,7 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 646,
+                        "id": 708,
                         "name": "CompanyRegistry",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -13315,7 +13315,7 @@
                           "typeString": "type(contract CompanyRegistry)"
                         }
                       },
-                      "id": 648,
+                      "id": 710,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -13336,13 +13336,13 @@
                       "typeString": "contract CompanyRegistry"
                     }
                   },
-                  "id": 650,
+                  "id": 712,
                   "nodeType": "ExpressionStatement",
                   "src": "556:51:3"
                 }
               ]
             },
-            "id": 652,
+            "id": 714,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -13350,17 +13350,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 643,
+              "id": 705,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 642,
+                  "id": 704,
                   "mutability": "mutable",
                   "name": "_companyRegistry",
                   "nameLocation": "528:16:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 652,
+                  "scope": 714,
                   "src": "520:24:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -13369,7 +13369,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 641,
+                    "id": 703,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "520:7:3",
@@ -13385,12 +13385,12 @@
               "src": "519:26:3"
             },
             "returnParameters": {
-              "id": 644,
+              "id": 706,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "546:0:3"
             },
-            "scope": 845,
+            "scope": 907,
             "src": "508:106:3",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -13398,68 +13398,68 @@
           },
           {
             "body": {
-              "id": 693,
+              "id": 755,
               "nodeType": "Block",
               "src": "691:235:3",
               "statements": [
                 {
                   "assignments": [
-                    663
+                    725
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 663,
+                      "id": 725,
                       "mutability": "mutable",
                       "name": "allRawDiamonds",
                       "nameLocation": "721:14:3",
                       "nodeType": "VariableDeclaration",
-                      "scope": 693,
+                      "scope": 755,
                       "src": "701:34:3",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                         "typeString": "struct RawDiamondRegistry.RawDiamond[]"
                       },
                       "typeName": {
                         "baseType": {
-                          "id": 661,
+                          "id": 723,
                           "nodeType": "UserDefinedTypeName",
                           "pathNode": {
-                            "id": 660,
+                            "id": 722,
                             "name": "RawDiamond",
                             "nodeType": "IdentifierPath",
-                            "referencedDeclaration": 630,
+                            "referencedDeclaration": 692,
                             "src": "701:10:3"
                           },
-                          "referencedDeclaration": 630,
+                          "referencedDeclaration": 692,
                           "src": "701:10:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_RawDiamond_$630_storage_ptr",
+                            "typeIdentifier": "t_struct$_RawDiamond_$692_storage_ptr",
                             "typeString": "struct RawDiamondRegistry.RawDiamond"
                           }
                         },
-                        "id": 662,
+                        "id": 724,
                         "nodeType": "ArrayTypeName",
                         "src": "701:12:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_storage_$dyn_storage_ptr",
                           "typeString": "struct RawDiamondRegistry.RawDiamond[]"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 670,
+                  "id": 732,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 668,
+                        "id": 730,
                         "name": "rawDiamondCounts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 637,
+                        "referencedDeclaration": 699,
                         "src": "755:16:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -13474,7 +13474,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 667,
+                      "id": 729,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -13482,37 +13482,37 @@
                       "nodeType": "NewExpression",
                       "src": "738:16:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr_$",
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr_$",
                         "typeString": "function (uint256) pure returns (struct RawDiamondRegistry.RawDiamond memory[] memory)"
                       },
                       "typeName": {
                         "baseType": {
-                          "id": 665,
+                          "id": 727,
                           "nodeType": "UserDefinedTypeName",
                           "pathNode": {
-                            "id": 664,
+                            "id": 726,
                             "name": "RawDiamond",
                             "nodeType": "IdentifierPath",
-                            "referencedDeclaration": 630,
+                            "referencedDeclaration": 692,
                             "src": "742:10:3"
                           },
-                          "referencedDeclaration": 630,
+                          "referencedDeclaration": 692,
                           "src": "742:10:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_RawDiamond_$630_storage_ptr",
+                            "typeIdentifier": "t_struct$_RawDiamond_$692_storage_ptr",
                             "typeString": "struct RawDiamondRegistry.RawDiamond"
                           }
                         },
-                        "id": 666,
+                        "id": 728,
                         "nodeType": "ArrayTypeName",
                         "src": "742:12:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_storage_$dyn_storage_ptr",
                           "typeString": "struct RawDiamondRegistry.RawDiamond[]"
                         }
                       }
                     },
-                    "id": 669,
+                    "id": 731,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -13523,7 +13523,7 @@
                     "src": "738:34:3",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                       "typeString": "struct RawDiamondRegistry.RawDiamond memory[] memory"
                     }
                   },
@@ -13532,37 +13532,37 @@
                 },
                 {
                   "body": {
-                    "id": 689,
+                    "id": 751,
                     "nodeType": "Block",
                     "src": "826:63:3",
                     "statements": [
                       {
                         "expression": {
-                          "id": 687,
+                          "id": 749,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "baseExpression": {
-                              "id": 681,
+                              "id": 743,
                               "name": "allRawDiamonds",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 663,
+                              "referencedDeclaration": 725,
                               "src": "840:14:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                                "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                                 "typeString": "struct RawDiamondRegistry.RawDiamond memory[] memory"
                               }
                             },
-                            "id": 683,
+                            "id": 745,
                             "indexExpression": {
-                              "id": 682,
+                              "id": 744,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 672,
+                              "referencedDeclaration": 734,
                               "src": "855:1:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -13576,7 +13576,7 @@
                             "nodeType": "IndexAccess",
                             "src": "840:17:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                              "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                               "typeString": "struct RawDiamondRegistry.RawDiamond memory"
                             }
                           },
@@ -13584,24 +13584,24 @@
                           "operator": "=",
                           "rightHandSide": {
                             "baseExpression": {
-                              "id": 684,
+                              "id": 746,
                               "name": "rawDiamondItems",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 635,
+                              "referencedDeclaration": 697,
                               "src": "860:15:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$630_storage_$",
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$692_storage_$",
                                 "typeString": "mapping(uint256 => struct RawDiamondRegistry.RawDiamond storage ref)"
                               }
                             },
-                            "id": 686,
+                            "id": 748,
                             "indexExpression": {
-                              "id": 685,
+                              "id": 747,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 672,
+                              "referencedDeclaration": 734,
                               "src": "876:1:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -13615,17 +13615,17 @@
                             "nodeType": "IndexAccess",
                             "src": "860:18:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_RawDiamond_$630_storage",
+                              "typeIdentifier": "t_struct$_RawDiamond_$692_storage",
                               "typeString": "struct RawDiamondRegistry.RawDiamond storage ref"
                             }
                           },
                           "src": "840:38:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                            "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                             "typeString": "struct RawDiamondRegistry.RawDiamond memory"
                           }
                         },
-                        "id": 688,
+                        "id": 750,
                         "nodeType": "ExpressionStatement",
                         "src": "840:38:3"
                       }
@@ -13636,17 +13636,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 677,
+                    "id": 739,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 675,
+                      "id": 737,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 672,
+                      "referencedDeclaration": 734,
                       "src": "799:1:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -13656,11 +13656,11 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<",
                     "rightExpression": {
-                      "id": 676,
+                      "id": 738,
                       "name": "rawDiamondCounts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 637,
+                      "referencedDeclaration": 699,
                       "src": "803:16:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -13673,20 +13673,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 690,
+                  "id": 752,
                   "initializationExpression": {
                     "assignments": [
-                      672
+                      734
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 672,
+                        "id": 734,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "792:1:3",
                         "nodeType": "VariableDeclaration",
-                        "scope": 690,
+                        "scope": 752,
                         "src": "787:6:3",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -13695,7 +13695,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 671,
+                          "id": 733,
                           "name": "uint",
                           "nodeType": "ElementaryTypeName",
                           "src": "787:4:3",
@@ -13707,10 +13707,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 674,
+                    "id": 736,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 673,
+                      "id": 735,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -13729,7 +13729,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 679,
+                      "id": 741,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -13739,11 +13739,11 @@
                       "prefix": false,
                       "src": "821:3:3",
                       "subExpression": {
-                        "id": 678,
+                        "id": 740,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 672,
+                        "referencedDeclaration": 734,
                         "src": "821:1:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -13755,7 +13755,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 680,
+                    "id": 742,
                     "nodeType": "ExpressionStatement",
                     "src": "821:3:3"
                   },
@@ -13764,26 +13764,26 @@
                 },
                 {
                   "expression": {
-                    "id": 691,
+                    "id": 753,
                     "name": "allRawDiamonds",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 663,
+                    "referencedDeclaration": 725,
                     "src": "905:14:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                       "typeString": "struct RawDiamondRegistry.RawDiamond memory[] memory"
                     }
                   },
-                  "functionReturnParameters": 658,
-                  "id": 692,
+                  "functionReturnParameters": 720,
+                  "id": 754,
                   "nodeType": "Return",
                   "src": "898:21:3"
                 }
               ]
             },
             "functionSelector": "e669ab2d",
-            "id": 694,
+            "id": 756,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -13791,53 +13791,53 @@
             "nameLocation": "629:17:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 653,
+              "id": 715,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "646:2:3"
             },
             "returnParameters": {
-              "id": 658,
+              "id": 720,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 657,
+                  "id": 719,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 694,
+                  "scope": 756,
                   "src": "670:19:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct RawDiamondRegistry.RawDiamond[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 655,
+                      "id": 717,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 654,
+                        "id": 716,
                         "name": "RawDiamond",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 630,
+                        "referencedDeclaration": 692,
                         "src": "670:10:3"
                       },
-                      "referencedDeclaration": 630,
+                      "referencedDeclaration": 692,
                       "src": "670:10:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RawDiamond_$630_storage_ptr",
+                        "typeIdentifier": "t_struct$_RawDiamond_$692_storage_ptr",
                         "typeString": "struct RawDiamondRegistry.RawDiamond"
                       }
                     },
-                    "id": 656,
+                    "id": 718,
                     "nodeType": "ArrayTypeName",
                     "src": "670:12:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RawDiamond_$630_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RawDiamond_$692_storage_$dyn_storage_ptr",
                       "typeString": "struct RawDiamondRegistry.RawDiamond[]"
                     }
                   },
@@ -13846,7 +13846,7 @@
               ],
               "src": "669:21:3"
             },
-            "scope": 845,
+            "scope": 907,
             "src": "620:306:3",
             "stateMutability": "view",
             "virtual": false,
@@ -13854,31 +13854,31 @@
           },
           {
             "body": {
-              "id": 706,
+              "id": 768,
               "nodeType": "Block",
               "src": "1024:46:3",
               "statements": [
                 {
                   "expression": {
                     "baseExpression": {
-                      "id": 702,
+                      "id": 764,
                       "name": "rawDiamondItems",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 635,
+                      "referencedDeclaration": 697,
                       "src": "1041:15:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$630_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$692_storage_$",
                         "typeString": "mapping(uint256 => struct RawDiamondRegistry.RawDiamond storage ref)"
                       }
                     },
-                    "id": 704,
+                    "id": 766,
                     "indexExpression": {
-                      "id": 703,
+                      "id": 765,
                       "name": "rawId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 696,
+                      "referencedDeclaration": 758,
                       "src": "1057:5:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -13892,19 +13892,19 @@
                     "nodeType": "IndexAccess",
                     "src": "1041:22:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RawDiamond_$630_storage",
+                      "typeIdentifier": "t_struct$_RawDiamond_$692_storage",
                       "typeString": "struct RawDiamondRegistry.RawDiamond storage ref"
                     }
                   },
-                  "functionReturnParameters": 701,
-                  "id": 705,
+                  "functionReturnParameters": 763,
+                  "id": 767,
                   "nodeType": "Return",
                   "src": "1034:29:3"
                 }
               ]
             },
             "functionSelector": "2e78c4fb",
-            "id": 707,
+            "id": 769,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -13912,17 +13912,17 @@
             "nameLocation": "941:13:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 697,
+              "id": 759,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 696,
+                  "id": 758,
                   "mutability": "mutable",
                   "name": "rawId",
                   "nameLocation": "972:5:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 707,
+                  "scope": 769,
                   "src": "964:13:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -13931,7 +13931,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 695,
+                    "id": 757,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "964:7:3",
@@ -13946,38 +13946,38 @@
               "src": "954:29:3"
             },
             "returnParameters": {
-              "id": 701,
+              "id": 763,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 700,
+                  "id": 762,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 707,
+                  "scope": 769,
                   "src": "1005:17:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                    "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                     "typeString": "struct RawDiamondRegistry.RawDiamond"
                   },
                   "typeName": {
-                    "id": 699,
+                    "id": 761,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 698,
+                      "id": 760,
                       "name": "RawDiamond",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 630,
+                      "referencedDeclaration": 692,
                       "src": "1005:10:3"
                     },
-                    "referencedDeclaration": 630,
+                    "referencedDeclaration": 692,
                     "src": "1005:10:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RawDiamond_$630_storage_ptr",
+                      "typeIdentifier": "t_struct$_RawDiamond_$692_storage_ptr",
                       "typeString": "struct RawDiamondRegistry.RawDiamond"
                     }
                   },
@@ -13986,7 +13986,7 @@
               ],
               "src": "1004:19:3"
             },
-            "scope": 845,
+            "scope": 907,
             "src": "932:138:3",
             "stateMutability": "view",
             "virtual": false,
@@ -13994,82 +13994,82 @@
           },
           {
             "body": {
-              "id": 770,
+              "id": 832,
               "nodeType": "Block",
               "src": "1213:472:3",
               "statements": [
                 {
                   "assignments": [
-                    720
+                    782
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 720,
+                      "id": 782,
                       "mutability": "mutable",
                       "name": "newRawDiamond",
                       "nameLocation": "1241:13:3",
                       "nodeType": "VariableDeclaration",
-                      "scope": 770,
+                      "scope": 832,
                       "src": "1223:31:3",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                        "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                         "typeString": "struct RawDiamondRegistry.RawDiamond"
                       },
                       "typeName": {
-                        "id": 719,
+                        "id": 781,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 718,
+                          "id": 780,
                           "name": "RawDiamond",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 630,
+                          "referencedDeclaration": 692,
                           "src": "1223:10:3"
                         },
-                        "referencedDeclaration": 630,
+                        "referencedDeclaration": 692,
                         "src": "1223:10:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RawDiamond_$630_storage_ptr",
+                          "typeIdentifier": "t_struct$_RawDiamond_$692_storage_ptr",
                           "typeString": "struct RawDiamondRegistry.RawDiamond"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 721,
+                  "id": 783,
                   "nodeType": "VariableDeclarationStatement",
                   "src": "1223:31:3"
                 },
                 {
                   "expression": {
-                    "id": 726,
+                    "id": 788,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 722,
+                        "id": 784,
                         "name": "newRawDiamond",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 720,
+                        "referencedDeclaration": 782,
                         "src": "1264:13:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                          "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                           "typeString": "struct RawDiamondRegistry.RawDiamond memory"
                         }
                       },
-                      "id": 724,
+                      "id": 786,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "rawId",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 617,
+                      "referencedDeclaration": 679,
                       "src": "1264:19:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -14079,11 +14079,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 725,
+                      "id": 787,
                       "name": "rawDiamondCounts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 637,
+                      "referencedDeclaration": 699,
                       "src": "1286:16:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -14096,38 +14096,38 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 727,
+                  "id": 789,
                   "nodeType": "ExpressionStatement",
                   "src": "1264:38:3"
                 },
                 {
                   "expression": {
-                    "id": 732,
+                    "id": 794,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 728,
+                        "id": 790,
                         "name": "newRawDiamond",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 720,
+                        "referencedDeclaration": 782,
                         "src": "1312:13:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                          "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                           "typeString": "struct RawDiamondRegistry.RawDiamond memory"
                         }
                       },
-                      "id": 730,
+                      "id": 792,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "rawDiamondName",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 619,
+                      "referencedDeclaration": 681,
                       "src": "1312:28:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -14137,11 +14137,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 731,
+                      "id": 793,
                       "name": "_rawDiamondName",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 709,
+                      "referencedDeclaration": 771,
                       "src": "1343:15:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -14154,38 +14154,38 @@
                       "typeString": "string memory"
                     }
                   },
-                  "id": 733,
+                  "id": 795,
                   "nodeType": "ExpressionStatement",
                   "src": "1312:46:3"
                 },
                 {
                   "expression": {
-                    "id": 738,
+                    "id": 800,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 734,
+                        "id": 796,
                         "name": "newRawDiamond",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 720,
+                        "referencedDeclaration": 782,
                         "src": "1368:13:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                          "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                           "typeString": "struct RawDiamondRegistry.RawDiamond memory"
                         }
                       },
-                      "id": 736,
+                      "id": 798,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "rawDiamondColor",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 621,
+                      "referencedDeclaration": 683,
                       "src": "1368:29:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -14195,11 +14195,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 737,
+                      "id": 799,
                       "name": "_rawDiamondColor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 711,
+                      "referencedDeclaration": 773,
                       "src": "1400:16:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -14212,23 +14212,23 @@
                       "typeString": "string memory"
                     }
                   },
-                  "id": 739,
+                  "id": 801,
                   "nodeType": "ExpressionStatement",
                   "src": "1368:48:3"
                 },
                 {
                   "assignments": [
-                    744
+                    806
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 744,
+                      "id": 806,
                       "mutability": "mutable",
                       "name": "miningCompany",
                       "nameLocation": "1457:13:3",
                       "nodeType": "VariableDeclaration",
-                      "scope": 770,
+                      "scope": 832,
                       "src": "1426:44:3",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -14237,10 +14237,10 @@
                         "typeString": "struct CompanyRegistry.Company"
                       },
                       "typeName": {
-                        "id": 743,
+                        "id": 805,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 742,
+                          "id": 804,
                           "name": "CompanyRegistry.Company",
                           "nodeType": "IdentifierPath",
                           "referencedDeclaration": 16,
@@ -14256,12 +14256,12 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 750,
+                  "id": 812,
                   "initialValue": {
                     "arguments": [
                       {
                         "expression": {
-                          "id": 747,
+                          "id": 809,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -14272,7 +14272,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 748,
+                        "id": 810,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -14294,18 +14294,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 745,
+                        "id": 807,
                         "name": "companyRegistry",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 640,
+                        "referencedDeclaration": 702,
                         "src": "1473:15:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_CompanyRegistry_$254",
                           "typeString": "contract CompanyRegistry"
                         }
                       },
-                      "id": 746,
+                      "id": 808,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -14319,7 +14319,7 @@
                         "typeString": "function (address) view external returns (struct CompanyRegistry.Company memory)"
                       }
                     },
-                    "id": 749,
+                    "id": 811,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14339,32 +14339,32 @@
                 },
                 {
                   "expression": {
-                    "id": 755,
+                    "id": 817,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 751,
+                        "id": 813,
                         "name": "newRawDiamond",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 720,
+                        "referencedDeclaration": 782,
                         "src": "1521:13:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                          "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                           "typeString": "struct RawDiamondRegistry.RawDiamond memory"
                         }
                       },
-                      "id": 753,
+                      "id": 815,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "miningCompany",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 626,
+                      "referencedDeclaration": 688,
                       "src": "1521:27:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Company_$16_memory_ptr",
@@ -14374,11 +14374,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 754,
+                      "id": 816,
                       "name": "miningCompany",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 744,
+                      "referencedDeclaration": 806,
                       "src": "1551:13:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Company_$16_memory_ptr",
@@ -14391,23 +14391,23 @@
                       "typeString": "struct CompanyRegistry.Company memory"
                     }
                   },
-                  "id": 756,
+                  "id": 818,
                   "nodeType": "ExpressionStatement",
                   "src": "1521:43:3"
                 },
                 {
                   "assignments": [
-                    758
+                    820
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 758,
+                      "id": 820,
                       "mutability": "mutable",
                       "name": "rawId",
                       "nameLocation": "1582:5:3",
                       "nodeType": "VariableDeclaration",
-                      "scope": 770,
+                      "scope": 832,
                       "src": "1574:13:3",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -14416,7 +14416,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 757,
+                        "id": 819,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "1574:7:3",
@@ -14428,9 +14428,9 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 761,
+                  "id": 823,
                   "initialValue": {
-                    "id": 760,
+                    "id": 822,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14440,11 +14440,11 @@
                     "prefix": false,
                     "src": "1590:18:3",
                     "subExpression": {
-                      "id": 759,
+                      "id": 821,
                       "name": "rawDiamondCounts",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 637,
+                      "referencedDeclaration": 699,
                       "src": "1590:16:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -14461,31 +14461,31 @@
                 },
                 {
                   "expression": {
-                    "id": 766,
+                    "id": 828,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "baseExpression": {
-                        "id": 762,
+                        "id": 824,
                         "name": "rawDiamondItems",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 635,
+                        "referencedDeclaration": 697,
                         "src": "1618:15:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$630_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$692_storage_$",
                           "typeString": "mapping(uint256 => struct RawDiamondRegistry.RawDiamond storage ref)"
                         }
                       },
-                      "id": 764,
+                      "id": 826,
                       "indexExpression": {
-                        "id": 763,
+                        "id": 825,
                         "name": "rawId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 758,
+                        "referencedDeclaration": 820,
                         "src": "1634:5:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -14499,67 +14499,67 @@
                       "nodeType": "IndexAccess",
                       "src": "1618:22:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RawDiamond_$630_storage",
+                        "typeIdentifier": "t_struct$_RawDiamond_$692_storage",
                         "typeString": "struct RawDiamondRegistry.RawDiamond storage ref"
                       }
                     },
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 765,
+                      "id": 827,
                       "name": "newRawDiamond",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 720,
+                      "referencedDeclaration": 782,
                       "src": "1643:13:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RawDiamond_$630_memory_ptr",
+                        "typeIdentifier": "t_struct$_RawDiamond_$692_memory_ptr",
                         "typeString": "struct RawDiamondRegistry.RawDiamond memory"
                       }
                     },
                     "src": "1618:38:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RawDiamond_$630_storage",
+                      "typeIdentifier": "t_struct$_RawDiamond_$692_storage",
                       "typeString": "struct RawDiamondRegistry.RawDiamond storage ref"
                     }
                   },
-                  "id": 767,
+                  "id": 829,
                   "nodeType": "ExpressionStatement",
                   "src": "1618:38:3"
                 },
                 {
                   "expression": {
-                    "id": 768,
+                    "id": 830,
                     "name": "rawId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 758,
+                    "referencedDeclaration": 820,
                     "src": "1673:5:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 717,
-                  "id": 769,
+                  "functionReturnParameters": 779,
+                  "id": 831,
                   "nodeType": "Return",
                   "src": "1666:12:3"
                 }
               ]
             },
             "functionSelector": "ef1b21c7",
-            "id": 771,
+            "id": 833,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 714,
+                "id": 776,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 713,
+                  "id": 775,
                   "name": "onlyMiningCompany",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 827,
+                  "referencedDeclaration": 889,
                   "src": "1177:17:3"
                 },
                 "nodeType": "ModifierInvocation",
@@ -14570,17 +14570,17 @@
             "nameLocation": "1085:18:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 712,
+              "id": 774,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 709,
+                  "id": 771,
                   "mutability": "mutable",
                   "name": "_rawDiamondName",
                   "nameLocation": "1120:15:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 771,
+                  "scope": 833,
                   "src": "1104:31:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -14589,7 +14589,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 708,
+                    "id": 770,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1104:6:3",
@@ -14602,12 +14602,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 711,
+                  "id": 773,
                   "mutability": "mutable",
                   "name": "_rawDiamondColor",
                   "nameLocation": "1152:16:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 771,
+                  "scope": 833,
                   "src": "1136:32:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -14616,7 +14616,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 710,
+                    "id": 772,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1136:6:3",
@@ -14631,17 +14631,17 @@
               "src": "1103:66:3"
             },
             "returnParameters": {
-              "id": 717,
+              "id": 779,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 716,
+                  "id": 778,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 771,
+                  "scope": 833,
                   "src": "1204:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -14650,7 +14650,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 715,
+                    "id": 777,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1204:7:3",
@@ -14664,7 +14664,7 @@
               ],
               "src": "1203:9:3"
             },
-            "scope": 845,
+            "scope": 907,
             "src": "1076:609:3",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -14672,23 +14672,23 @@
           },
           {
             "body": {
-              "id": 809,
+              "id": 871,
               "nodeType": "Block",
               "src": "1823:253:3",
               "statements": [
                 {
                   "assignments": [
-                    786
+                    848
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 786,
+                      "id": 848,
                       "mutability": "mutable",
                       "name": "cuttingCompany",
                       "nameLocation": "1864:14:3",
                       "nodeType": "VariableDeclaration",
-                      "scope": 809,
+                      "scope": 871,
                       "src": "1833:45:3",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -14697,10 +14697,10 @@
                         "typeString": "struct CompanyRegistry.Company"
                       },
                       "typeName": {
-                        "id": 785,
+                        "id": 847,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 784,
+                          "id": 846,
                           "name": "CompanyRegistry.Company",
                           "nodeType": "IdentifierPath",
                           "referencedDeclaration": 16,
@@ -14716,12 +14716,12 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 792,
+                  "id": 854,
                   "initialValue": {
                     "arguments": [
                       {
                         "expression": {
-                          "id": 789,
+                          "id": 851,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -14732,7 +14732,7 @@
                             "typeString": "msg"
                           }
                         },
-                        "id": 790,
+                        "id": 852,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -14754,18 +14754,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 787,
+                        "id": 849,
                         "name": "companyRegistry",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 640,
+                        "referencedDeclaration": 702,
                         "src": "1881:15:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_CompanyRegistry_$254",
                           "typeString": "contract CompanyRegistry"
                         }
                       },
-                      "id": 788,
+                      "id": 850,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -14779,7 +14779,7 @@
                         "typeString": "function (address) view external returns (struct CompanyRegistry.Company memory)"
                       }
                     },
-                    "id": 791,
+                    "id": 853,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14799,7 +14799,7 @@
                 },
                 {
                   "expression": {
-                    "id": 798,
+                    "id": 860,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14807,24 +14807,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 793,
+                          "id": 855,
                           "name": "rawDiamondItems",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 635,
+                          "referencedDeclaration": 697,
                           "src": "1929:15:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$630_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$692_storage_$",
                             "typeString": "mapping(uint256 => struct RawDiamondRegistry.RawDiamond storage ref)"
                           }
                         },
-                        "id": 795,
+                        "id": 857,
                         "indexExpression": {
-                          "id": 794,
+                          "id": 856,
                           "name": "_rawId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 773,
+                          "referencedDeclaration": 835,
                           "src": "1945:6:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -14838,18 +14838,18 @@
                         "nodeType": "IndexAccess",
                         "src": "1929:23:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RawDiamond_$630_storage",
+                          "typeIdentifier": "t_struct$_RawDiamond_$692_storage",
                           "typeString": "struct RawDiamondRegistry.RawDiamond storage ref"
                         }
                       },
-                      "id": 796,
+                      "id": 858,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "cuttingCompany",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 629,
+                      "referencedDeclaration": 691,
                       "src": "1929:38:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Company_$16_storage",
@@ -14859,11 +14859,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 797,
+                      "id": 859,
                       "name": "cuttingCompany",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 786,
+                      "referencedDeclaration": 848,
                       "src": "1970:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Company_$16_memory_ptr",
@@ -14876,13 +14876,13 @@
                       "typeString": "struct CompanyRegistry.Company storage ref"
                     }
                   },
-                  "id": 799,
+                  "id": 861,
                   "nodeType": "ExpressionStatement",
                   "src": "1929:55:3"
                 },
                 {
                   "expression": {
-                    "id": 805,
+                    "id": 867,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14890,24 +14890,24 @@
                     "leftHandSide": {
                       "expression": {
                         "baseExpression": {
-                          "id": 800,
+                          "id": 862,
                           "name": "rawDiamondItems",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 635,
+                          "referencedDeclaration": 697,
                           "src": "1994:15:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$630_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RawDiamond_$692_storage_$",
                             "typeString": "mapping(uint256 => struct RawDiamondRegistry.RawDiamond storage ref)"
                           }
                         },
-                        "id": 802,
+                        "id": 864,
                         "indexExpression": {
-                          "id": 801,
+                          "id": 863,
                           "name": "_rawId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 773,
+                          "referencedDeclaration": 835,
                           "src": "2010:6:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -14921,18 +14921,18 @@
                         "nodeType": "IndexAccess",
                         "src": "1994:23:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RawDiamond_$630_storage",
+                          "typeIdentifier": "t_struct$_RawDiamond_$692_storage",
                           "typeString": "struct RawDiamondRegistry.RawDiamond storage ref"
                         }
                       },
-                      "id": 803,
+                      "id": 865,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "cuttingGrade",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 623,
+                      "referencedDeclaration": 685,
                       "src": "1994:36:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -14942,11 +14942,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 804,
+                      "id": 866,
                       "name": "_cuttingGrade",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 775,
+                      "referencedDeclaration": 837,
                       "src": "2033:13:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_calldata_ptr",
@@ -14959,43 +14959,43 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 806,
+                  "id": 868,
                   "nodeType": "ExpressionStatement",
                   "src": "1994:52:3"
                 },
                 {
                   "expression": {
-                    "id": 807,
+                    "id": 869,
                     "name": "_rawId",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 773,
+                    "referencedDeclaration": 835,
                     "src": "2063:6:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 781,
-                  "id": 808,
+                  "functionReturnParameters": 843,
+                  "id": 870,
                   "nodeType": "Return",
                   "src": "2056:13:3"
                 }
               ]
             },
             "functionSelector": "6c1256f6",
-            "id": 810,
+            "id": 872,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 778,
+                "id": 840,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 777,
+                  "id": 839,
                   "name": "onlyCuttingCompany",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 844,
+                  "referencedDeclaration": 906,
                   "src": "1786:18:3"
                 },
                 "nodeType": "ModifierInvocation",
@@ -15006,17 +15006,17 @@
             "nameLocation": "1700:17:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 776,
+              "id": 838,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 773,
+                  "id": 835,
                   "mutability": "mutable",
                   "name": "_rawId",
                   "nameLocation": "1735:6:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 810,
+                  "scope": 872,
                   "src": "1727:14:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -15025,7 +15025,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 772,
+                    "id": 834,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1727:7:3",
@@ -15038,12 +15038,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 775,
+                  "id": 837,
                   "mutability": "mutable",
                   "name": "_cuttingGrade",
                   "nameLocation": "1759:13:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 810,
+                  "scope": 872,
                   "src": "1742:30:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -15052,7 +15052,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 774,
+                    "id": 836,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1742:6:3",
@@ -15067,17 +15067,17 @@
               "src": "1717:61:3"
             },
             "returnParameters": {
-              "id": 781,
+              "id": 843,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 780,
+                  "id": 842,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 810,
+                  "scope": 872,
                   "src": "1814:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -15086,7 +15086,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 779,
+                    "id": 841,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1814:7:3",
@@ -15100,7 +15100,7 @@
               ],
               "src": "1813:9:3"
             },
-            "scope": 845,
+            "scope": 907,
             "src": "1691:385:3",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -15108,7 +15108,7 @@
           },
           {
             "body": {
-              "id": 826,
+              "id": 888,
               "nodeType": "Block",
               "src": "2111:194:3",
               "statements": [
@@ -15120,7 +15120,7 @@
                           "typeIdentifier": "t_enum$_CompanyType_$6",
                           "typeString": "enum CompanyRegistry.CompanyType"
                         },
-                        "id": 821,
+                        "id": 883,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -15129,7 +15129,7 @@
                           "arguments": [
                             {
                               "expression": {
-                                "id": 815,
+                                "id": 877,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -15140,7 +15140,7 @@
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 816,
+                              "id": 878,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -15162,18 +15162,18 @@
                               }
                             ],
                             "expression": {
-                              "id": 813,
+                              "id": 875,
                               "name": "companyRegistry",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 640,
+                              "referencedDeclaration": 702,
                               "src": "2142:15:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_CompanyRegistry_$254",
                                 "typeString": "contract CompanyRegistry"
                               }
                             },
-                            "id": 814,
+                            "id": 876,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -15187,7 +15187,7 @@
                               "typeString": "function (address) view external returns (enum CompanyRegistry.CompanyType)"
                             }
                           },
-                          "id": 817,
+                          "id": 879,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -15207,7 +15207,7 @@
                         "rightExpression": {
                           "expression": {
                             "expression": {
-                              "id": 818,
+                              "id": 880,
                               "name": "CompanyRegistry",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -15218,7 +15218,7 @@
                                 "typeString": "type(contract CompanyRegistry)"
                               }
                             },
-                            "id": 819,
+                            "id": 881,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -15232,7 +15232,7 @@
                               "typeString": "type(enum CompanyRegistry.CompanyType)"
                             }
                           },
-                          "id": 820,
+                          "id": 882,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -15254,7 +15254,7 @@
                       },
                       {
                         "hexValue": "596f7520617265206e6f7420746865206d696e65727321",
-                        "id": 822,
+                        "id": 884,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -15280,7 +15280,7 @@
                           "typeString": "literal_string \"You are not the miners!\""
                         }
                       ],
-                      "id": 812,
+                      "id": 874,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -15294,7 +15294,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 823,
+                    "id": 885,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -15309,23 +15309,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 824,
+                  "id": 886,
                   "nodeType": "ExpressionStatement",
                   "src": "2121:166:3"
                 },
                 {
-                  "id": 825,
+                  "id": 887,
                   "nodeType": "PlaceholderStatement",
                   "src": "2297:1:3"
                 }
               ]
             },
-            "id": 827,
+            "id": 889,
             "name": "onlyMiningCompany",
             "nameLocation": "2091:17:3",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 811,
+              "id": 873,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2108:2:3"
@@ -15336,7 +15336,7 @@
           },
           {
             "body": {
-              "id": 843,
+              "id": 905,
               "nodeType": "Block",
               "src": "2341:196:3",
               "statements": [
@@ -15348,7 +15348,7 @@
                           "typeIdentifier": "t_enum$_CompanyType_$6",
                           "typeString": "enum CompanyRegistry.CompanyType"
                         },
-                        "id": 838,
+                        "id": 900,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -15357,7 +15357,7 @@
                           "arguments": [
                             {
                               "expression": {
-                                "id": 832,
+                                "id": 894,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -15368,7 +15368,7 @@
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 833,
+                              "id": 895,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -15390,18 +15390,18 @@
                               }
                             ],
                             "expression": {
-                              "id": 830,
+                              "id": 892,
                               "name": "companyRegistry",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 640,
+                              "referencedDeclaration": 702,
                               "src": "2372:15:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_CompanyRegistry_$254",
                                 "typeString": "contract CompanyRegistry"
                               }
                             },
-                            "id": 831,
+                            "id": 893,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -15415,7 +15415,7 @@
                               "typeString": "function (address) view external returns (enum CompanyRegistry.CompanyType)"
                             }
                           },
-                          "id": 834,
+                          "id": 896,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -15435,7 +15435,7 @@
                         "rightExpression": {
                           "expression": {
                             "expression": {
-                              "id": 835,
+                              "id": 897,
                               "name": "CompanyRegistry",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -15446,7 +15446,7 @@
                                 "typeString": "type(contract CompanyRegistry)"
                               }
                             },
-                            "id": 836,
+                            "id": 898,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -15460,7 +15460,7 @@
                               "typeString": "type(enum CompanyRegistry.CompanyType)"
                             }
                           },
-                          "id": 837,
+                          "id": 899,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -15482,7 +15482,7 @@
                       },
                       {
                         "hexValue": "596f7520617265206e6f7420746865204375747465727321",
-                        "id": 839,
+                        "id": 901,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -15508,7 +15508,7 @@
                           "typeString": "literal_string \"You are not the Cutters!\""
                         }
                       ],
-                      "id": 829,
+                      "id": 891,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -15522,7 +15522,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 840,
+                    "id": 902,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -15537,23 +15537,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 841,
+                  "id": 903,
                   "nodeType": "ExpressionStatement",
                   "src": "2351:168:3"
                 },
                 {
-                  "id": 842,
+                  "id": 904,
                   "nodeType": "PlaceholderStatement",
                   "src": "2529:1:3"
                 }
               ]
             },
-            "id": 844,
+            "id": 906,
             "name": "onlyCuttingCompany",
             "nameLocation": "2320:18:3",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 828,
+              "id": 890,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2338:2:3"
@@ -15563,7 +15563,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 846,
+        "scope": 908,
         "src": "90:2449:3",
         "usedErrors": []
       }
@@ -15578,12 +15578,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x062E2FecEE101c2077296fC4805Ed4003D282B9D",
-      "transactionHash": "0x69aee588461803f10d4917d72f66b6a36544ca6e7b3ac2ffb0a9902952003e54"
+      "address": "0xb709d11f22BF6566b3cFB8eD6123B73bd61594b9",
+      "transactionHash": "0x2250954c4cb14fbd524dc5fbedeaea1ec54de1a313c9aca95c354bea57df65e0"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-11-21T07:57:44.052Z",
+  "updatedAt": "2023-11-21T10:37:36.965Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

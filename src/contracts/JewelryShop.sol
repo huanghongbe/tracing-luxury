@@ -33,6 +33,11 @@ contract JewelryShop {
         _;
     }
 
+    function transferTo(uint256 _jewelryId, address _to) public {
+        require(jewelryItems[_jewelryId].owner == msg.sender);
+        jewelryItems[_jewelryId].owner = _to;
+    }
+
     function getAllJewels() public view returns (Jewelry[] memory) {
         Jewelry[] memory allJewels = new Jewelry[](jewelryCounts);
         for (uint i = 0; i < jewelryCounts; i++) {
