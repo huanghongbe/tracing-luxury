@@ -143,6 +143,7 @@ const JewelryShop = () => {
       title: 'Manufacturer',
       dataIndex: 'manufacturer',
       key: 'manufacturer',
+      render: (manufacturer) => manufacturer.companyName,
     },
     {
       title: 'Owner',

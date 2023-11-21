@@ -7,7 +7,7 @@ import "./DiamondRegistry.sol";
 contract JewelryShop {
     struct Jewelry {
         uint256 jewelryId;
-        address manufacturer;
+        CompanyRegistry.Company manufacturer;
         address owner;
         DiamondRegistry.Diamond diamond;
         uint256 price;
@@ -53,7 +53,8 @@ contract JewelryShop {
         // todo ：珠宝注册
         Jewelry memory newJewelry;
         newJewelry.diamond = diamondRegistry.getDiamond(uniqueId);
-        newJewelry.manufacturer = msg.sender;
+        CompanyRegistry.Company memory manufacturer = companyRegistry.getCompany(msg.sender);
+        newJewelry.manufacturer = manufacturer;
         newJewelry.owner = msg.sender;
         newJewelry.price = price;
         newJewelry.jewelryId = jewelryCounts;

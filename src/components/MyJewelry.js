@@ -10,45 +10,12 @@ const MyJewelry = () => {
   const [transferAddress, setTransferAddress] = useState('');
   const [selectedJewelryId, setSelectedJewelryId] = useState('');
 
-  const handleButtonClick = async () => {
-    try {
-      if (!contract) {
-        console.error('合约实例不存在');
-        return;
-      }
-      handleLogin();
-    } catch (error) {
-      console.error('获取失败:', error);
-    }
-  };
+
   const handleModalOk = () => {
     setModalVisible(false);
   };
-  const handleLogin = async () => {
-    try {
-      // 确保合约实例存在
-      if (!contract) {
-        console.error('合约实例不存在');
-        return;
-      }
-      // 获取当前用户的账户地址
-      const userAddress = window.ethereum.selectedAddress;
-      await contract.methods.getAllJewels().send({ from: userAddress });
-      console.log('获取成功');
-      message.success('登录成功');
-
-      const jewelries = await contract.methods.getAllJewels().call();
-      console.log('珠宝数组:', jewelries);
-      //更新react组件状态
-      setJewelryData(jewelries);
-      // window.location.reload();
-
-    } catch (error) {
-      console.error('获取失败:', error);
-      message.error('获取失败');
-    }
-  };
   
+
   const handleTransfer = async () => {
     setModalVisible(true);
     try {
@@ -63,7 +30,7 @@ const MyJewelry = () => {
 
       const jewelries = await contract.methods.getAllJewels().call();
       console.log('珠宝数组:', jewelries);
-      
+
       setJewelryData(jewelries);
     } catch (error) {
       console.error('转移失败:', error);
@@ -72,6 +39,16 @@ const MyJewelry = () => {
   };
 
   useEffect(() => {
+    // 监听账户变化
+    const handleAccountsChanged = (accounts) => {
+      if (accounts.length > 0) {
+        // 账户发生变化，刷新页面重新获取数据
+        window.location.reload();
+      }
+    };
+
+    // 添加账户变化事件监听器
+    window.ethereum.on('accountsChanged', handleAccountsChanged);
     const connectToWeb3 = async () => {
       // 检查Web3对象是否已经存在
       if (window.ethereum) {
@@ -88,11 +65,13 @@ const MyJewelry = () => {
             deployedNetwork && deployedNetwork.address
           );
 
+          const addresses = await web3.eth.getAccounts();
+          const userAddress = addresses[0];
           // 调用合约函数获取公司数组
-          const jewelries = await contract.methods.getAllJewels().call();
+          const jewelries = await contract.methods.getMyJewels().call({ from: userAddress });
           console.log('珠宝数组:', jewelries);
 
-      
+
           // 更新React组件的状态
           setJewelryData(jewelries);
           setContract(contract);
@@ -104,6 +83,10 @@ const MyJewelry = () => {
       }
     };
     connectToWeb3();
+    // 清除事件监听器
+    return () => {
+      window.ethereum.removeListener('accountsChanged', handleAccountsChanged);
+    };
   }, []);
 
   const columns = [
@@ -120,6 +103,7 @@ const MyJewelry = () => {
       title: 'Manufacturer',
       dataIndex: 'manufacturer',
       key: 'manufacturer',
+      render: (manufacturer) => manufacturer.companyName,
     },
     {
       title: 'Transfer',
@@ -134,12 +118,6 @@ const MyJewelry = () => {
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
-        <Button
-          style={{ position: 'absolute', top: '5px', right: '150px',fontFamily: 'CustomFont, sans-serif' }}
-          onClick={handleButtonClick}
-        >
-          login
-        </Button>
         <h1>MyJewelries</h1>
       </div>
       <Modal
