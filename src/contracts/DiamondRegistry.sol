@@ -7,7 +7,8 @@ import "./CompanyRegistry.sol";
 contract DiamondRegistry {
     struct Diamond {
         uint256 uniqueId;
-        address gradingLab;
+        CompanyRegistry.Company gradingLab;
+        string clarity;
         uint256 grade;
         RawDiamondRegistry.RawDiamond rawDiamond;
     }
@@ -36,12 +37,28 @@ contract DiamondRegistry {
     }
 
     function diamondRegister(
-        uint256 rawId,uint256 grade
+        uint256 rawId,
+        string calldata clarity,
+        uint256 grade
     ) public onlyGradingCompany returns (uint256) {
         RawDiamondRegistry.RawDiamond memory rawDiamond = rawDiamondRegistry
             .getRawDiamond(rawId);
+        require(
+            rawDiamond.cuttingCompany.addr != address(0) &&
+                rawDiamond.miningCompany.addr != address(0),
+            "this raw diamond haven't been shaped"
+        );
         uint256 uniqueId = diamondCounts++;
-        Diamond memory newDiamond = Diamond(uniqueId, msg.sender, grade, rawDiamond);
+        CompanyRegistry.Company memory gradingLab = companyRegistry.getCompany(
+            msg.sender
+        );
+        Diamond memory newDiamond = Diamond(
+            uniqueId,
+            gradingLab,
+            clarity,
+            grade,
+            rawDiamond
+        );
         diamondItems[uniqueId] = newDiamond;
         return uniqueId;
     }
