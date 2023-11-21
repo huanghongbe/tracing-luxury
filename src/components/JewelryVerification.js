@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Input, Button, message } from 'antd';
 import Web3 from 'web3';
 import JewelryShopABI from '../abis/JewelryShop.json';
+import '../global.css'
 
 const JewelryVerification = () => {
   const [jewelryId, setJewelryId] = useState('');
   const [jewelryInfo, setJewelryInfo] = useState(null);
   const [contract, setContract] = useState(null);
-
+  
+  //firework
+  const [showFireworks, setShowFireworks] = useState(false);
+  
   useEffect(() => {
     initializeContract();
   }, []);
@@ -47,10 +51,19 @@ const JewelryVerification = () => {
 
       const result = await contract.methods.jewelryVerify(jewelryId).call();
       setJewelryInfo(result);
+      launchFireworks();
     } catch (error) {
       console.error('Verification failed', error);
       message.error('Verification failed. Please try again.');
     }
+  };
+
+  //firework
+  const launchFireworks = () => {
+    setShowFireworks(true);
+    setTimeout(() => {
+      setShowFireworks(false);
+    }, 3000); // 礼花动画持续时间，单位为毫秒
   };
 
   return (
@@ -67,16 +80,19 @@ const JewelryVerification = () => {
           Verify
         </Button>
       </div>
-      {jewelryInfo && (
-        <div style={{ marginTop: '16px' }}>
-          <h3>Jewelry Information:</h3>
-          <p>Jewelry ID: {jewelryId}</p>
-          <p>Manufacturer: {jewelryInfo.manufacturer}</p>
-          <p>Owner: {jewelryInfo.owner}</p>
-        </div>
+      {jewelryInfo && showFireworks && (
+  <div style={{ marginTop: '16px', position: 'relative' }}>
+    <h3>Jewelry Information:</h3>
+    <p>Jewelry ID: {jewelryId}</p>
+    <p>Manufacturer: {jewelryInfo.manufacturer}</p>
+    <p>Owner: {jewelryInfo.owner}</p>
+    {[...Array(10)].map((_, index) => (
+      <div key={index} className="firework" style={{ left: `${Math.random() * 100}%` }}></div>
+    ))}
+  </div>
       )}
-    </div>
-  );
+      </div>
+);
 };
 
 export default JewelryVerification;

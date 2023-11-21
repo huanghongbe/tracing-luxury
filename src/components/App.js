@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
+import { animated } from 'react-spring';
 import {
   // createFromIconfontCN,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  StrikethroughOutlined,
-  HeatMapOutlined,
-  SketchOutlined,
-  UsergroupAddOutlined,
 } from '@ant-design/icons';
-import { ConfigProvider, Layout, Menu, Button, theme } from 'antd';
+import { ConfigProvider, Layout, Menu, Button, theme, Popover } from 'antd';
 import '../global.css'
 import JewelryVerification from './JewelryVerification';
 import GemRegistration from './GemRegistration';
@@ -27,13 +21,18 @@ const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [selectedKey, setSelectedKey] = useState('1');
   // const colorBgContainer = 'linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)';
+  //emoji
+  const [emoji, setEmoji] = useState('');
   const {
     token: { colorBgContainer },
   } = theme.useToken();
   
   const handleMenuClick = (key) => {
     setSelectedKey(key);
-  };
+    setEmoji(getRandomEmoji());
+  }
+
+
   // const CustomIcon = createFromIconfontCN({
   //   scriptUrl: '//at.icons8.com/{https://img.icons8.com/plasticine/100/stone-adze.png}.js',
   // })
@@ -56,6 +55,18 @@ const App = () => {
     }
   };
 
+  const springProps = ({
+    to: { top: emoji ? '50px' : '-100px' },
+    from: { top: '-100px' },
+  });
+
+  //emoji click
+  const getRandomEmoji = () => {
+    const emojis = ['😀', '😎', '🤩', '😊', '🥳'];
+    const randomIndex = Math.floor(Math.random() * emojis.length);
+    return emojis[randomIndex];
+  };
+
   return (
     <Layout style={{ background: 'transparent'}} >
       <div>
@@ -66,7 +77,6 @@ const App = () => {
           className="custom-menu"
           // theme="light"
           mode="inline"
-          // defaultSelectedKeys={['1']}
           selectedKeys={[selectedKey]}
           onClick={({ key }) => handleMenuClick(key)}
           items={[
@@ -140,6 +150,11 @@ const App = () => {
           {renderContentComponent()}
         </Content>
       </Layout>
+      {emoji && (
+        <animated.div className="emoji-icon" style={springProps}>
+          {emoji}
+        </animated.div>
+      )}
     </Layout>
   );
 };

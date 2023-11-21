@@ -42,3 +42,54 @@
   .ant-layout-sider {
     background: linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   }
+
+  /* emoji */
+  .emoji-icon {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    animation-name: emojiAnimation;
+    animation-duration: 1s;
+  }
+  
+  @keyframes emojiAnimation {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    20% {
+      top: 50px;
+      opacity: 1;
+    }
+    80% {
+      top: 50px;
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  /* fireworks */
+  @keyframes fireworks {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+  }
+  
+  .firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    animation: fireworks 2s linear infinite;
+  }

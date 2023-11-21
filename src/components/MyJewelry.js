@@ -16,14 +16,13 @@ const MyJewelry = () => {
         console.error('合约实例不存在');
         return;
       }
-      setModalVisible(true);
+      handleLogin();
     } catch (error) {
       console.error('获取失败:', error);
     }
   };
   const handleModalOk = () => {
     setModalVisible(false);
-    handleLogin();
   };
   const handleLogin = async () => {
     try {
@@ -46,11 +45,12 @@ const MyJewelry = () => {
 
     } catch (error) {
       console.error('获取失败:', error);
-      message.errot('获取失败');
+      message.error('获取失败');
     }
   };
   
   const handleTransfer = async () => {
+    setModalVisible(true);
     try {
       if (!contract) {
         console.error('合约实例不存在');

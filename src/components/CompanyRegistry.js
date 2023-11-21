@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Button, Select, Modal, Input, Form } from 'antd';
+import { animated } from 'react-spring';
 import Web3 from 'web3';
 import '../global.css'
 import CompanyRegistryABI from '../abis/CompanyRegistry.json'
@@ -14,7 +15,11 @@ const CompanyRegistry = () => {
     pageSize: 10, // 每页显示10条数据
   });
 
+  //emoji
+  const [showEmoji, setShowEmoji] = useState(false);
+  const [emoji, setEmoji] = useState('😎');
 
+  
   const handleButtonClick = async () => {
     try {
       if (!contract) {
@@ -52,6 +57,9 @@ const CompanyRegistry = () => {
 
       // 注册成功后的处理逻辑
       console.log('公司注册成功');
+      setShowEmoji(true);
+
+      
 
       // 更新公司数据或执行其他操作
       const companies = await contract.methods.getAllCompanies().call();
@@ -59,13 +67,22 @@ const CompanyRegistry = () => {
       //更新react组件状态
       setCompanyData(companies);
       // window.location.reload();
-
+      // setShowEmoji(false);
     } catch (error) {
       console.error('注册失败:', error);
     }
   };
   const handleCompanyTypeChange = (value) => {
     setSelectedCompanyType(value);
+  };
+
+  const springProps = ({
+    to: { top: emoji ? '50px' : '-100px' },
+    from: { top: '-100px' },
+  });
+
+  const handleEmojiModalOk = () => {
+    setShowEmoji(false);
   };
 
 
@@ -156,6 +173,11 @@ const CompanyRegistry = () => {
           register
         </Button>
         <h1>Companies</h1>
+        {showEmoji && (
+      <animated.div className="emoji-icon" style={springProps}>
+      {emoji}
+    </animated.div>
+    )}
       </div>
       <Modal
         title="enter your company information"
@@ -164,7 +186,10 @@ const CompanyRegistry = () => {
           form.resetFields();
           setModalVisible(false);
         }}
-        onOk={handleModalOk}
+        // onOk={handleModalOk}
+        onOk={() => {
+          handleModalOk();
+          handleEmojiModalOk();}}
       >
         <Form form={form}>
           <Form.Item label="companyName" name="companyName" rules={[{ required: true, message: 'input your company name' }]}>
