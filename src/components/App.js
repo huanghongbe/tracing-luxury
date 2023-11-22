@@ -35,10 +35,10 @@ const App = () => {
     <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
     <Router>
       <div>
-      <div style={{ position: 'relative' }}>
+      {/* <div style={{ position: 'relative' }}>
       <Background />
-      </div>
-      <Layout style={{ positon:'relative', zIndex: 1, background: 'transparent'}} >
+      </div> */}
+      <Layout style={{ positon:'relative', width:'100vw',height: '100vh', zIndex: 1, background: 'transparent'}} >
         <Sider  style={{ background: 'transparent'}} trigger={null} collapsible collapsed={collapsed}>
           <div className="demo-logo-vertical" />
           <Menu
