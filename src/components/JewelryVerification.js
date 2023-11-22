@@ -67,8 +67,12 @@ const JewelryVerification = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', fontFamily: 'CustomFont, sans-serif' }}>
-      <h1>Verify</h1>
+    <div style={{ fontFamily: 'CustomFont, sans-serif' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <h1 style={{ textAlign: 'center'}}>
+        Verify
+        </h1>
+      </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Input
           style={{ width: '300px', marginRight: '16px' }}

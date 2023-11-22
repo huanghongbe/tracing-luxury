@@ -148,17 +148,33 @@ const CompanyRegistry = () => {
       },
     },
   ];
-
+  // position: 'relative', top: '5px', right: '150px',
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
+        {/* <h1>Companies
         <Button
-          style={{ position: 'absolute', top: '5px', right: '150px', fontFamily: 'CustomFont, sans-serif' }}
+          style={{ marginLeft:'600px', fontFamily: 'CustomFont, sans-serif' }}
           onClick={handleButtonClick}
         >
           register
         </Button>
-        <h1>Companies</h1>
+        </h1> */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h1 style={{ marginBottom: '20px' }}>
+    Companies
+  </h1>
+  <Button
+    style={{
+      marginBottom: '2px',
+      fontFamily: 'CustomFont, sans-serif',
+    }}
+    onClick={handleButtonClick}
+  >
+    Register
+  </Button>
+</div>
+        
         {showEmoji && (
       <animated.div className="emoji-icon" style={springProps}>
       {emoji}
