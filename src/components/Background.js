@@ -20,7 +20,7 @@ function Background() {
   )
 }
 
-function Diamonds({ count = 40 }) {
+const Diamonds = ({ count = 40 }) => {
   const { viewport, clock } = useThree()
   const model = useRef()
   const { nodes } = useGLTF(diamondUrl)

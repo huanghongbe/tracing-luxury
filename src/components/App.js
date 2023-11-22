@@ -29,15 +29,13 @@ const App = () => {
   }
 
   return (
-    
+
+    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+    <Background />
+    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
     <Router>
       <div>
       <div style={{ position: 'relative' }}>
-      {/* <div className="canvas-container">
-        <Canvas dpr={[1, 1.5]} camera={{ fov: 50, position: [0, 0, 25], near: 1, far: 100 }}>
-          <Background />
-        </Canvas>
-      </div> */}
       <Background />
       </div>
       <Layout style={{ positon:'relative', zIndex: 1, background: 'transparent'}} >
@@ -96,6 +94,10 @@ const App = () => {
       </div>
       
     </Router>
+    </div>
+  </div>
+    
+   
     
   );
 }
