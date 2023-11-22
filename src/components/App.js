@@ -11,7 +11,13 @@ import DiamondRegistry from './DiamondRegistry';
 import MyJewelry from './MyJewelry';
 import CompanyRegistry from './CompanyRegistry'
 import JewelryShop from './JewelryShop';
+import Background from './Background';
+// import { extend } from '@react-three/fiber';
+// import { Canvas } from "@react-three/fiber";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+
+// extend({ Canvas });
 
 const { Header, Sider, Content } = Layout;
 
@@ -23,10 +29,18 @@ const App = () => {
   }
 
   return (
+    
     <Router>
-      <Layout style={{ background: 'transparent'}} >
-        <div>
-        </div>
+      <div>
+      <div style={{ position: 'relative' }}>
+      {/* <div className="canvas-container">
+        <Canvas dpr={[1, 1.5]} camera={{ fov: 50, position: [0, 0, 25], near: 1, far: 100 }}>
+          <Background />
+        </Canvas>
+      </div> */}
+      <Background />
+      </div>
+      <Layout style={{ positon:'relative', zIndex: 1, background: 'transparent'}} >
         <Sider  style={{ background: 'transparent'}} trigger={null} collapsible collapsed={collapsed}>
           <div className="demo-logo-vertical" />
           <Menu
@@ -73,10 +87,16 @@ const App = () => {
               <Route path="/my-jewelry" element={<MyJewelry />} />
               <Route path="/jewelry-verification" element={<JewelryVerification />} />
             </Routes>
+            
+           
           </Content>
         </Layout>
       </Layout>
+      {/* <Background style={{ zIndex: -1, top: 0, left: 0, width:"100%", height:"100%" }} /> */}
+      </div>
+      
     </Router>
+    
   );
 }
 
