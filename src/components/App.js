@@ -32,7 +32,7 @@ const App = () => {
           <Menu
             className="custom-menu"
             mode="inline"
-            onClick={handleMenuClick}
+            // onClick={handleMenuClick}
             selectedKeys={[]}
           >
             <Menu.Item key="1" icon={<img className="custom-icon" src="https://img.icons8.com/external-filled-outline-geotatah/64/external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah.png" alt="external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah" />}>
