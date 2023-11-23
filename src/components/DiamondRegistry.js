@@ -176,11 +176,12 @@ const DiamondRegistry = () => {
         </Button>
         <h1>Diamonds</h1> */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-  <h1 style={{ marginBottom: '20px' }}>
+  <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
     Diamonds
   </h1>
   <Button
     style={{
+      color:'#3894DB',
       marginBottom: '2px',
       fontFamily: 'CustomFont, sans-serif',
     }}

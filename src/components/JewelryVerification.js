@@ -146,7 +146,7 @@ const JewelryVerification = () => {
   return (
     <div style={{ fontFamily: 'CustomFont, sans-serif' }}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <h1 style={{ textAlign: 'center' }}>
+        <h1 style={{ textAlign: 'center', color:'#3894DB' }}>
           Verify
         </h1>
       </div>
@@ -157,7 +157,9 @@ const JewelryVerification = () => {
           value={jewelryId}
           onChange={(e) => setJewelryId(e.target.value)}
         />
-        <Button onClick={handleVerify}>
+        <Button 
+        style={{color:'#3894DB'}}
+        onClick={handleVerify}>
           Verify
         </Button>
       </div>

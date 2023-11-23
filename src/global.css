@@ -35,15 +35,23 @@
   /* .custom-menu {
     background: linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   } */
+  
+
 
   .custom-menu {
     background: transparent;
   }
 
+  .custom-menu .ant-menu-item:hover .custom-icon {
+    filter: brightness(100%);
+  }
+
   .custom-menu .ant-menu-item {
     font-family: 'CustomFont', sans-serif;
     font-size: 15px;
-    color: pink;
+    /* color: pink; */
+    /* color: #8571F4; */
+    color: #3894DB;
   }
   
   .gradient-background {

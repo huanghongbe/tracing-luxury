@@ -13,6 +13,8 @@ import CompanyRegistry from './CompanyRegistry'
 import JewelryShop from './JewelryShop';
 import Background from './Background';
 import { BrowserRouter as Router, Routes, Route ,Link} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBuildings } from '@fortawesome/free-solid-svg-icons';
 
 const { Header, Sider, Content } = Layout;
 
@@ -25,28 +27,34 @@ const App = () => {
   }
 
   const iconUrlMap = {
-    company: 'https://img.icons8.com/external-filled-outline-geotatah/64/external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah.png',
-    gemMine: 'https://img.icons8.com/plasticine/100/stone-adze.png',
-    gemScore: 'https://img.icons8.com/plasticine/100/rock.png',
-    jewelryShop: 'https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/external-diamond-essentials-icongeek26-linear-colour-icongeek26.png',
-    myJewelry: 'https://img.icons8.com/matisse/100/jewelry.png',
-    jewelryVerification: 'https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-diamond-award-and-success-wanicon-lineal-color-wanicon.png',
+    // company: 'https://img.icons8.com/external-filled-outline-geotatah/64/external-company-corporate-social-responsibility-filled-outline-filled-outline-geotatah.png',
+    // gemMine: 'https://img.icons8.com/plasticine/100/stone-adze.png',
+    company: 'https://img.icons8.com/arcade/64/skyscrapers.png' ,
+    // gemMine: 'https://img.icons8.com/plasticine/100/rock.png',
+    gemMine :'https://img.icons8.com/arcade/64/coal.png' ,
+    gemScore: 'https://img.icons8.com/arcade/64/diamond.png' ,
+    // jewelryShop: 'https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/external-diamond-essentials-icongeek26-linear-colour-icongeek26.png',
+    jewelryShop: 'https://img.icons8.com/arcade/64/bracelet.png' ,
+    // myJewelry: 'https://img.icons8.com/matisse/100/jewelry.png',
+    myJewelry: 'https://img.icons8.com/arcade/64/jewelry.png',
+    // jewelryVerification: 'https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/external-diamond-award-and-success-wanicon-lineal-color-wanicon.png',
+    jewelryVerification: 'https://img.icons8.com/arcade/64/monocle.png',
   };
 
   const menuItems = [
     {
       key: '1',
-      label: <Link to="/company-registry">Company</Link>,
+      label: <Link to="/company-registry">CompanyR</Link>,
       icon: <img className="custom-icon" src={iconUrlMap.company} alt="Company" />,
     },
     {
       key: '2',
-      label: <Link to="/raw-diamond-registry">GemMine</Link>,
+      label: <Link to="/raw-diamond-registry">RawgemR</Link>,
       icon: <img className="custom-icon" src={iconUrlMap.gemMine} alt="GemMine" />,
     },
     {
       key: '3',
-      label: <Link to="/diamond-registry">GemScore</Link>,
+      label: <Link to="/diamond-registry">DiamondR</Link>,
       icon: <img className="custom-icon" src={iconUrlMap.gemScore} alt="GemScore" />,
     },
     {
@@ -56,7 +64,7 @@ const App = () => {
     },
     {
       key: '5',
-      label: <Link to="/my-jewelry">Myjew</Link>,
+      label: <Link to="/my-jewelry">Myjewels</Link>,
       icon: <img className="custom-icon" src={iconUrlMap.myJewelry} alt="Myjew" />,
     },
     {
@@ -88,7 +96,7 @@ const App = () => {
                     type="text"
                     icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
                    onClick={handleMenuClick}
-                    style={{ fontSize: '16px', width: 64, height: 64 }}
+                    style={{ fontSize: '16px', width: 64, height: 64, color:'white'}}
                   />
                 </Header>
                 <Content style={{ margin: '24px 16px', padding: 24, minHeight: 280, background: 'transparent' }}>

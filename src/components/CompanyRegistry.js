@@ -148,6 +148,12 @@ const CompanyRegistry = () => {
       },
     },
   ];
+
+  const darkTableStyle = {
+    backgroundColor: '#222',
+    color: '#fff',
+  };
+  
   // position: 'relative', top: '5px', right: '150px',
   return (
     <div>
@@ -161,11 +167,12 @@ const CompanyRegistry = () => {
         </Button>
         </h1> */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-  <h1 style={{ marginBottom: '20px' }}>
+  <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
     Companies
   </h1>
   <Button
     style={{
+      color:'#3894DB',
       marginBottom: '2px',
       fontFamily: 'CustomFont, sans-serif',
     }}

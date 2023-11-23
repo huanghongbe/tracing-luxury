@@ -149,7 +149,7 @@ const MyJewelry = () => {
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
-        <h1>MyJewelries</h1>
+        <h1 style={{color:'#3894DB'}}>MyJewelries</h1>
       </div>
       <Modal
         title="MyJewelry"
