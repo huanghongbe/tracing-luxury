@@ -82,7 +82,7 @@ const App = () => {
           <div>
             <Layout style={{ position: 'relative', width: '100vw', height: '100vh', zIndex: 1, background: 'transparent' }}>
               <Sider style={{ background: 'transparent' }} trigger={null} collapsible collapsed={collapsed}>
-                <div className="demo-logo-vertical" />
+                <div className="demo-logo-vertical" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
                 <Menu
                   className="custom-menu"
                   mode="inline"
