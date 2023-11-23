@@ -165,8 +165,8 @@ const JewelryVerification = () => {
       <Modal
         title="Jewelry Information"
         open={isModalVisible}
-        onCancel={() => setIsModalVisible(false)}
         onOk={() => setIsModalVisible(false)}
+        closable={false}
         okText="Close"
         width={600}
         style={{ height: 600, overflow: 'auto' }} 
