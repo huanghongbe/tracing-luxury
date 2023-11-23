@@ -113,11 +113,11 @@ const JewelryVerification = () => {
       }
 
       let rawDiamond = {
-          rawId,
-          rawDiamondColor,
-          cuttingGrade,
-          miningCompany,
-          cuttingCompany
+        rawId,
+        rawDiamondColor,
+        cuttingGrade,
+        miningCompany,
+        cuttingCompany
       }
       let diamond = {
         uniqueId,
@@ -126,9 +126,9 @@ const JewelryVerification = () => {
         gradingLab,
         rawDiamond
       }
-      
+
       let jewelry = {
-        jewelryId : jewelryIdResult,
+        jewelryId: jewelryIdResult,
         manufacturer,
         diamond,
         owner,
@@ -168,6 +168,9 @@ const JewelryVerification = () => {
         onCancel={() => setIsModalVisible(false)}
         onOk={() => setIsModalVisible(false)}
         okText="Close"
+        width={600}
+        style={{ height: 600, overflow: 'auto' }} 
+        cancelButtonProps={{ style: { display: 'none' } }}
       >
         <JsonToTable json={jewelryInfo} />
       </Modal>
