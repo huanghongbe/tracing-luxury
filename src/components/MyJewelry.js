@@ -11,49 +11,64 @@ const MyJewelry = () => {
   const [transferAddress, setTransferAddress] = useState('');
   const [selectedJewelryId, setSelectedJewelryId] = useState('');
 
-  const handleModalOk = () => {
-    setModalVisible(false);
-  };
-
-  const handleTransfer = async () => {
-    setModalVisible(true);
+  const handleModalOk = async () => {
     try {
       if (!contract) {
         console.error('合约实例不存在');
         return;
       }
       const userAddress = window.ethereum.selectedAddress;
+      console.log("id :", selectedJewelryId);
+      console.log("transferAddress :", transferAddress);
       await contract.methods.transferTo(selectedJewelryId, transferAddress).send({ from: userAddress });
-      console.log('转移成功');
+
       message.success('转移成功');
-
-      const jewelries = await contract.methods.getAllJewels().call();
-      console.log('珠宝数组:', jewelries);
-
+      const jewelries = await contract.methods.getMyJewels().call({ from: userAddress });
       setJewelryData(jewelries);
+      setModalVisible(false);
     } catch (error) {
       console.error('转移失败:', error);
       message.error('转移失败');
     }
+
   };
+
+  const handleTransfer = async (record) => {
+    setModalVisible(true);
+    setSelectedJewelryId(record.jewelryId);
+  };
+
+  const handleSale = async (record) => {
+    try {
+      if (!contract) {
+        console.error('合约实例不存在');
+        return;
+      }
+      const userAddress = window.ethereum.selectedAddress;
+      await contract.methods.sell(record.jewelryId).send({ from: userAddress });
+      window.location.reload();
+    } catch (error) {
+      message.error("出售失败", error);
+    }
+  }
 
   useEffect(() => {
     // 监听账户变化
-    const handleAccountsChanged = async(accounts) => {
-       // 连接到以太坊网络
-       const web3 = new Web3(window.ethereum);
-       await window.ethereum.enable();
+    const handleAccountsChanged = async (accounts) => {
+      // 连接到以太坊网络
+      const web3 = new Web3(window.ethereum);
+      await window.ethereum.enable();
 
-       // 获取合约实例
-       const networkId = await web3.eth.net.getId();
-       const deployedNetwork = JewelryShopABI.networks[networkId];
-       const contract = new web3.eth.Contract(
-         JewelryShopABI.abi,
-         deployedNetwork && deployedNetwork.address
-       );
+      // 获取合约实例
+      const networkId = await web3.eth.net.getId();
+      const deployedNetwork = JewelryShopABI.networks[networkId];
+      const contract = new web3.eth.Contract(
+        JewelryShopABI.abi,
+        deployedNetwork && deployedNetwork.address
+      );
       const userAddress = accounts[0];
       console.log('账户变化:', accounts)
-      const jewelries =  await contract.methods.getMyJewels().call({ from: userAddress });
+      const jewelries = await contract.methods.getMyJewels().call({ from: userAddress });
       console.log(jewelries);
       setJewelryData(jewelries);
       console.log('刷新页面') // 刷新页面并保持在当前页面
@@ -118,10 +133,14 @@ const MyJewelry = () => {
       render: (manufacturer) => manufacturer.companyName,
     },
     {
-      title: 'Transfer',
+      title: 'Action',
       key: 'transfer',
       render: (_, record) => (
-        <Button onClick={() => handleTransfer(record)}>Transfer</Button>
+        <div>
+          <Button type="primary">Transfer</Button>
+          <span style={{ margin: '0 10px' }}></span>
+          <Button type="primary">Sell</Button>
+        </div>
       ),
     },
 
@@ -142,7 +161,7 @@ const MyJewelry = () => {
           <Form.Item label="Transfer Address" name="transferaddress" rules={[{ required: true, message: 'input your target address' }]}>
             <Input onChange={(e) => setTransferAddress(e.target.value)} value={transferAddress} />
           </Form.Item>
-          <Form.Item label="Select Jewelry" name="selectedJewelryId">
+          {/* <Form.Item label="Select Jewelry" name="selectedJewelryId">
             <Select
               value={selectedJewelryId}
               onChange={(value) => setSelectedJewelryId(value)}
@@ -154,7 +173,7 @@ const MyJewelry = () => {
                   </Option>
                 ))}
             </Select>
-          </Form.Item>
+          </Form.Item> */}
         </Form>
       </Modal>
       <Table

@@ -286,7 +286,7 @@ const RawDiamondRegistry = () => {
       <Table
         columns={columns}
         dataSource={rawDiamondData}
-        // rowKey={(record) => record.rawId}
+        rowKey={(record) => record.rawId}
       />
     </div>
   );

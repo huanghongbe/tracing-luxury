@@ -20,7 +20,7 @@ function Background() {
   )
 }
 
-const Diamonds = ({ count = 40 }) => {
+const Diamonds = ({ count = 20 }) => {
   const { viewport, clock } = useThree()
   const model = useRef()
   const { nodes } = useGLTF(diamondUrl)
@@ -53,7 +53,7 @@ const Diamonds = ({ count = 40 }) => {
       model.current.setMatrixAt(i, dummy.matrix)
     })
     model.current.instanceMatrix.needsUpdate = true
-  })
+  },1 )
 
   return (
     <CubeCamera>

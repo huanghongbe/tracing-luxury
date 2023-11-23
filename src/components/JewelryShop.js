@@ -4,13 +4,14 @@ import Web3 from 'web3';
 import { animated } from 'react-spring';
 import '../global.css'
 import JewelryShopABI from '../abis/JewelryShop.json'
+
 const JewelryShop = () => {
   const [jewelryData, setJewelryData] = useState(null);
   const [contract, setContract] = useState(null);
   const [jewelryInput, setJewelryInput] = useState('');
   const [priceInput, setPriceInput] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
- 
+  const [userAddress, setUserAddress ] = useState(null);
   //emoji
   const [showEmoji, setShowEmoji] = useState(false);
   const [emoji, setEmoji] = useState('🤩');
@@ -99,6 +100,20 @@ const JewelryShop = () => {
   };
 
   useEffect(() => {
+
+    // 监听账户变化
+    const handleAccountsChanged = async (accounts) => {
+      
+      const userAddress = accounts[0];
+      console.log('账户变化:', accounts)
+      setUserAddress(userAddress)
+      console.log('刷新页面') // 刷新页面并保持在当前页面
+      window.location.reload();
+    };
+
+    // 添加账户变化事件监听器
+    window.ethereum.on('accountsChanged', handleAccountsChanged);
+    
     const connectToWeb3 = async () => {
       // 检查Web3对象是否已经存在
       if (window.ethereum) {
@@ -115,10 +130,13 @@ const JewelryShop = () => {
           );
           // 调用合约函数获取公司数组
           const jewelries = await contract.methods.getAllJewels().call();
-          console.log('珠宝数组:', jewelries);  
+          console.log('珠宝数组:', jewelries);
+          const accounts = await web3.eth.getAccounts();
+          setUserAddress(accounts[0]);
           // 更新React组件的状态
           setJewelryData(jewelries);
           setContract(contract);
+          
         } catch (error) {
           console.error('连接到以太坊网络时出错:', error);
         }
@@ -160,11 +178,16 @@ const JewelryShop = () => {
       }
     },
     {
-      title: 'Purchase',
+      title: 'Action',
       key: 'purchase',
-      render: (_, record) => (
-        <Button onClick={() => handlePurchase(record)}>Purchase</Button>
-      ),
+      render: (_, record) => {
+        if (record.isSold || record.owner === userAddress) {
+          return <Button disabled>Purchase</Button>;
+        } else {
+          return <Button onClick={() => handlePurchase(record)}>Purchase</Button>;
+        }
+      }
+
     },
 
   ];
@@ -180,24 +203,24 @@ const JewelryShop = () => {
         </Button>
         <h1>Jewelries</h1> */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-  <h1 style={{ marginBottom: '20px' }}>
-    Jewelries
-  </h1>
-  <Button
-    style={{
-      marginBottom: '2px',
-      fontFamily: 'CustomFont, sans-serif',
-    }}
-    onClick={handleButtonClick}
-  >
-    Register
-  </Button>
-</div>
+          <h1 style={{ marginBottom: '20px' }}>
+            Jewelries
+          </h1>
+          <Button
+            style={{
+              marginBottom: '2px',
+              fontFamily: 'CustomFont, sans-serif',
+            }}
+            onClick={handleButtonClick}
+          >
+            Register
+          </Button>
+        </div>
         {showEmoji && (
-      <animated.div className="emoji-icon" style={springProps}>
-      {emoji}
-    </animated.div>
-    )}
+          <animated.div className="emoji-icon" style={springProps}>
+            {emoji}
+          </animated.div>
+        )}
       </div>
       <Modal
         title="Jewelry Designer"
@@ -206,7 +229,8 @@ const JewelryShop = () => {
         // onOk={handleModalOk}
         onOk={() => {
           handleModalOk();
-          handleEmojiModalOk();}}
+          handleEmojiModalOk();
+        }}
       >
         <Form>
           <Form.Item label="Diamond Id" name="diamondId" rules={[{ required: true, message: 'input your jewelry id' }]}>
