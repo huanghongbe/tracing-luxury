@@ -134,12 +134,12 @@ const MyJewelry = () => {
     },
     {
       title: 'Action',
-      key: 'transfer',
+      key: 'action',
       render: (_, record) => (
         <div>
-          <Button type="primary">Transfer</Button>
+          <Button type="primary" onClick={() => handleTransfer(record)}>Transfer</Button>
           <span style={{ margin: '0 10px' }}></span>
-          <Button type="primary">Sell</Button>
+          <Button type="primary" onClick={() => handleSale(record)}>Sell</Button>
         </div>
       ),
     },

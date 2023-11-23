@@ -181,7 +181,7 @@ const JewelryShop = () => {
       title: 'Action',
       key: 'purchase',
       render: (_, record) => {
-        if (record.isSold || record.owner === userAddress) {
+        if (!record.beingSold || record.owner === userAddress) {
           return <Button disabled>Purchase</Button>;
         } else {
           return <Button onClick={() => handlePurchase(record)}>Purchase</Button>;
