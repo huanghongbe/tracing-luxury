@@ -82,6 +82,7 @@ const App = () => {
           <div>
             <Layout style={{ position: 'relative', width: '100vw', height: '100vh', zIndex: 1, background: 'transparent' }}>
               <Sider style={{ background: 'transparent' }} trigger={null} collapsible collapsed={collapsed}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop:'10px' }}>
                 <div className="demo-logo-vertical" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
                 <Menu
                   className="custom-menu"
@@ -89,6 +90,7 @@ const App = () => {
                   items = {menuItems}
                 >
                 </Menu>
+                </div>
               </Sider>
               <Layout style={{ background: 'transparent' }}>
                 <Header style={{ padding: 0, background: 'transparent' }}>
