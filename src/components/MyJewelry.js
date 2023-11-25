@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Form, Modal, Input, message, Select } from 'antd';
+import { Table, Button, Form, Modal, Input, message, Select, Pagination, Card } from 'antd';
 import Web3 from 'web3';
 import JewelryShopABI from '../abis/JewelryShop.json'
 
@@ -10,6 +10,9 @@ const MyJewelry = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [transferAddress, setTransferAddress] = useState('');
   const [selectedJewelryId, setSelectedJewelryId] = useState('');
+   //page
+   const [currentPage, setCurrentPage] = useState(1);
+   const [pageSize, setPageSize] = useState(6);
 
   const handleModalOk = async () => {
     try {
@@ -146,6 +149,33 @@ const MyJewelry = () => {
 
   ];
 
+  //page
+  const handlePageChange = (page, pageSize) => {
+    setCurrentPage(page);
+  };
+
+  const renderJewelryData = () => {
+    if (!jewelryData) {
+      return null;
+    }
+
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const currentJewelryData = jewelryData.slice(startIndex, endIndex);
+
+    return currentJewelryData.map((record) => (
+      <Card className="jewelry-card" key={record.jewelryId} >
+        <p>{`Jewelry ID: ${record.jewelryId}`}</p>
+        <p>{`Manufacturer: ${record.manufacturer.companyName}`}</p>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Button className="card-button" onClick={() => handleTransfer(record)}>Transfer</Button>
+        <span style={{ margin: '0 10px' }}></span>
+        <Button className="card-button" onClick={() => handleSale(record)}>Sell</Button>
+        </div>
+       </Card>
+    ));
+  };
+
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
@@ -176,11 +206,20 @@ const MyJewelry = () => {
           </Form.Item> */}
         </Form>
       </Modal>
-      <Table
+      <div className="card-container">{renderJewelryData()}</div>
+      <div className="pagination-container">
+      <Pagination
+        current={currentPage}
+        pageSize={pageSize}
+        total={jewelryData ? jewelryData.length : 0}
+        onChange={handlePageChange}
+      />
+      </div>
+      {/* <Table
         columns={columns}
         dataSource={jewelryData}
         rowKey={(record) => record.jewelryId}
-      />
+      /> */}
     </div>
   );
 };

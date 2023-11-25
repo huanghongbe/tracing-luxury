@@ -179,14 +179,7 @@ const DiamondRegistry = () => {
   <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
     Diamonds
   </h1>
-  <Button
-    style={{
-      color:'#3894DB',
-      marginBottom: '2px',
-      fontFamily: 'CustomFont, sans-serif',
-    }}
-    onClick={handleButtonClick}
-  >
+  <Button className="register-button" onClick={handleButtonClick}>
     Register&Grading
   </Button>
 </div>
@@ -234,6 +227,7 @@ const DiamondRegistry = () => {
         columns={columns}
         dataSource={diamondData}
         rowKey={(record) => record.rawId}
+        className="custom-table"
       />
     </div>
   );

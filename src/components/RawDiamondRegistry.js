@@ -228,14 +228,7 @@ const RawDiamondRegistry = () => {
   <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
     Raw Diamonds
   </h1>
-  <Button
-    style={{
-      color:'#3894DB',
-      marginBottom: '2px',
-      fontFamily: 'CustomFont, sans-serif',
-    }}
-    onClick={handleButtonClick}
-  >
+  <Button className="register-button" onClick={handleButtonClick}>
     Register
   </Button>
 </div>
@@ -288,6 +281,7 @@ const RawDiamondRegistry = () => {
         columns={columns}
         dataSource={rawDiamondData}
         rowKey={(record) => record.rawId}
+        className="custom-table"
       />
     </div>
   );

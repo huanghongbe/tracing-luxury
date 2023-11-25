@@ -5,7 +5,12 @@
     overflow: hidden;
     /* background: linear-gradient(to top, #eeb5d7, #e5b8e1, #dbbcea, #cfc1f0, #c3c5f5, #b8ccfb, #acd2fe, #a2d8ff, #98e1ff, #93e9ff, #93f1fa, #9af8f2); */
 }
-
+.register-button{
+  color:#3894DB;
+  margin-bottom: 2px;
+  font-family: 'CustomFont';
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
+}
 .canvas-container {
   position: fixed;
   top: 0;
@@ -14,6 +19,42 @@
   height: 100%;
   z-index: -1;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.jewelry-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'CustomFont';
+  background-color: #aecef7; /* Light blue color */
+  /* box-shadow: 0 2px 4px rgba(49, 161, 247, 0.969); */
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7); /* 明亮的白光阴影 */
+}
+
+.card-button{
+  font-family: 'CustomFont';
+  background-color: #326fbf;
+}
+
+.verify-input{
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
+  width: 300px; 
+  margin-right: 16px;
+}
+
+
+.pagination-container {
+  position: fixed;
+  margin-top: 10px;
+  /* bottom: 60px;  */
+  right: 30px;
+}
+
 
 @font-face {
   font-family: 'CustomFont';
@@ -24,8 +65,10 @@
     width: 100%;
     min-height: 100%;
   }
-  .custom-table {
-    background: transparent ! important;
+  .custom-table .ant-table {
+    /* background: transparent ! important; */
+    font-family: 'CustomFont' !important;
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
   }
   .custom-icon{
     width: 36px;
@@ -36,10 +79,13 @@
     background: linear-gradient(to right top, #c89cb3, #c59cbd, #be9dc7, #b39fd2, #a3a2dc, #94ace8, #80b5f2, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   } */
   
-
+  .custom-avatar{
+    top:10px;
+  }
 
   .custom-menu {
     background: transparent;
+    margin-top: 20px;
   }
 
   .custom-menu .ant-menu-item:hover .custom-icon {
@@ -47,7 +93,7 @@
   }
 
   .custom-menu .ant-menu-item {
-    font-family: 'CustomFont', sans-serif;
+    font-family: 'CustomFont';
     font-size: 15px;
     /* color: pink; */
     /* color: #8571F4; */
@@ -92,23 +138,4 @@
     }
   }
 
-  /* fireworks */
-  @keyframes fireworks {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-1000px);
-      opacity: 0;
-    }
-  }
   
-  .firework {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ffeb3b;
-    border-radius: 50%;
-    animation: fireworks 2s linear infinite;
-  }

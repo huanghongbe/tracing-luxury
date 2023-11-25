@@ -152,26 +152,25 @@ const JewelryVerification = () => {
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Input
-          style={{ width: '300px', marginRight: '16px' }}
+          className="verify-input"
           placeholder="Enter Jewelry ID"
           value={jewelryId}
           onChange={(e) => setJewelryId(e.target.value)}
         />
-        <Button 
-        style={{color:'#3894DB'}}
-        onClick={handleVerify}>
+        <Button className="register-button" onClick={handleVerify}>
           Verify
         </Button>
       </div>
 
       <Modal
+
         title="Jewelry Information"
         open={isModalVisible}
         onOk={() => setIsModalVisible(false)}
         closable={false}
         okText="Close"
         width={600}
-        style={{ height: 600, overflow: 'auto' }} 
+        style={{ height: 600, overflow: 'auto', fontFamily: 'CustomFont' }} 
         cancelButtonProps={{ style: { display: 'none' } }}
       >
         <JsonToTable json={jewelryInfo} />

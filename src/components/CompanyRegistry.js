@@ -149,10 +149,10 @@ const CompanyRegistry = () => {
     },
   ];
 
-  const darkTableStyle = {
-    backgroundColor: '#222',
-    color: '#fff',
-  };
+  // const darkTableStyle = {
+  //   backgroundColor: '#222',
+  //   color: '#fff',
+  // };
   
   // position: 'relative', top: '5px', right: '150px',
   return (
@@ -170,14 +170,7 @@ const CompanyRegistry = () => {
   <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
     Companies
   </h1>
-  <Button
-    style={{
-      color:'#3894DB',
-      marginBottom: '2px',
-      fontFamily: 'CustomFont, sans-serif',
-    }}
-    onClick={handleButtonClick}
-  >
+  <Button className="register-button" onClick={handleButtonClick}>
     Register
   </Button>
 </div>

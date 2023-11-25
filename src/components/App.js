@@ -3,7 +3,7 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Button } from 'antd';
+import { Layout, Menu, Button, Avatar } from 'antd';
 import '../global.css'
 import JewelryVerification from './JewelryVerification';
 import RawDiamondRegistry from './RawDiamondRegistry';
@@ -13,13 +13,12 @@ import CompanyRegistry from './CompanyRegistry'
 import JewelryShop from './JewelryShop';
 import Background from './Background';
 import { BrowserRouter as Router, Routes, Route ,Link} from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuildings } from '@fortawesome/free-solid-svg-icons';
 
 const { Header, Sider, Content } = Layout;
 
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
+  // const [users, setUsers] = useState([]);
 
  
   const handleMenuClick = () => {
@@ -84,6 +83,9 @@ const App = () => {
               <Sider style={{ background: 'transparent' }} trigger={null} collapsible collapsed={collapsed}>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop:'10px' }}>
                 <div className="demo-logo-vertical" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}/>
+                {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '10px'}}>
+                <Avatar size={45} src={avatarUrl} />
+                </div> */}
                 <Menu
                   className="custom-menu"
                   mode="inline"
