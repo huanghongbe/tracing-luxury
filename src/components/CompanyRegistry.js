@@ -87,7 +87,9 @@ const CompanyRegistry = () => {
           await window.ethereum.enable();
           // 获取合约实例
           const networkId = await web3.eth.net.getId();
+          console.log(networkId);
           const deployedNetwork = CompanyRegistryABI.networks[networkId];
+          console.log(deployedNetwork);
           const contract = new web3.eth.Contract(
             CompanyRegistryABI.abi,
             deployedNetwork && deployedNetwork.address

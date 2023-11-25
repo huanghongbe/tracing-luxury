@@ -1,15 +1,14 @@
+const CompanyRegistry = artifacts.require("CompanyRegistry");
+const RawDiamondRegistry = artifacts.require("RawDiamondRegistry");
+const DiamondRegistry = artifacts.require("DiamondRegistry");
 const JewelryShop = artifacts.require("JewelryShop");
-const CompanyRegistry = artifacts.require("CompanyRegistry")
-const DiamondRegistry = artifacts.require("DiamondRegistry")
-const RawDiamondRegistry = artifacts.require("RawDiamondRegistry")
 
-module.exports = function (deployer) {
-    deployer.deploy(CompanyRegistry)
-        .then(() => CompanyRegistry.deployed())
-        .then(() => deployer.deploy(RawDiamondRegistry, CompanyRegistry.address))
-        .then(() => RawDiamondRegistry.deployed())
-        .then(() => deployer.deploy(DiamondRegistry, RawDiamondRegistry.address, CompanyRegistry.address))
-        .then(() => DiamondRegistry.deployed())
-        .then(() => deployer.deploy(JewelryShop, CompanyRegistry.address, DiamondRegistry.address))
-
+module.exports = async function (deployer, network, accounts) {
+  await deployer.deploy(CompanyRegistry);
+  // 等待第一个合约部署完成后再继续
+  await deployer.deploy(RawDiamondRegistry, CompanyRegistry.address);
+  // 等待第二个合约部署完成后再继续
+  await deployer.deploy(DiamondRegistry, RawDiamondRegistry.address, CompanyRegistry.address);
+  // 等待第三个合约部署完成后再继续
+  await deployer.deploy(JewelryShop, CompanyRegistry.address, DiamondRegistry.address);
 };
