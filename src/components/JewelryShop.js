@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Form, Modal, Input, message } from 'antd';
+import { Table, Button, Form, Modal, Input, message, Card, Pagination } from 'antd';
 import Web3 from 'web3';
 import { animated } from 'react-spring';
 import '../global.css'
@@ -15,11 +15,15 @@ const JewelryShop = () => {
   //emoji
   const [showEmoji, setShowEmoji] = useState(false);
   const [emoji, setEmoji] = useState('🤩');
+  //page
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(6);
 
   const springProps = ({
     to: { top: emoji ? '50px' : '-100px' },
     from: { top: '-100px' },
   });
+
 
   const handleEmojiModalOk = () => {
     setShowEmoji(false);
@@ -192,16 +196,38 @@ const JewelryShop = () => {
 
   ];
 
+  //page
+  const handlePageChange = (page, pageSize) => {
+    setCurrentPage(page);
+  };
+
+  const renderJewelryData = () => {
+    if (!jewelryData) {
+      return null;
+    }
+
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    const currentJewelryData = jewelryData.slice(startIndex, endIndex);
+
+    return currentJewelryData.map((record) => (
+      <Card className="jewelry-card" key={record.jewelryId} >
+        <p>{`Jewelry ID: ${record.jewelryId}`}</p>
+        <p>{`Manufacturer: ${record.manufacturer.companyName}`}</p>
+        <p>{`Owner: ${record.owner}`}</p>
+        <p>{`Price: ${record.price}`}</p>
+        {(!record.beingSold || record.owner === userAddress) ? (
+                    <Button className="card-button" disabled>Purchase</Button>
+                     ) : (
+                    <Button className="card-button" onClick={() => handlePurchase(record)}>Purchase</Button>
+                     )}
+       </Card>
+    ));
+  };
+
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
-        {/* <Button
-          style={{ position: 'absolute', top: '5px', right: '150px',fontFamily: 'CustomFont, sans-serif' }}
-          onClick={handleButtonClick}
-        >
-          register
-        </Button>
-        <h1>Jewelries</h1> */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
             Jewelries
@@ -211,6 +237,7 @@ const JewelryShop = () => {
               color:'#3894DB',
               marginBottom: '2px',
               fontFamily: 'CustomFont, sans-serif',
+              boxShadow: '0 0 10px 3px rgba(255, 255, 255, 0.7)',
             }}
             onClick={handleButtonClick}
           >
@@ -242,11 +269,35 @@ const JewelryShop = () => {
           </Form.Item>
         </Form>
       </Modal>
-      <Table
+      <div className="card-container">{renderJewelryData()}</div>
+      <div className="pagination-container">
+      <Pagination
+        current={currentPage}
+        pageSize={pageSize}
+        total={jewelryData ? jewelryData.length : 0}
+        onChange={handlePageChange}
+      />
+      </div>
+      {/* <div className="card-container">
+             {jewelryData && jewelryData.map((record) => (
+              <Card key={record.jewelryId} title={record.jewelryName} className="jewelry-card">
+                <p>JewelryId: {record.jewelryId.toString()}</p>
+                <p>Manufacturer: {record.manufacturer.companyName}</p>
+                <p>Owner: {record.owner}</p>
+                <p>Price: {record.price.toString()} ETH</p>
+                {(!record.beingSold || record.owner === userAddress) ? (
+                    <Button className="card-button" disabled>Purchase</Button>
+                     ) : (
+                    <Button className="card-button" onClick={() => handlePurchase(record)}>Purchase</Button>
+                     )}
+              </Card>
+            ))}
+                     </div> */}           
+      {/* <Table
         columns={columns}
         dataSource={jewelryData}
         rowKey={(record) => record.jewelryId}
-      />
+      /> */}
     </div>
   );
 };
