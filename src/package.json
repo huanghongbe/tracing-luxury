@@ -20,7 +20,7 @@
     "three": "0.153.0"
   },
   "devDependencies": {
-    "typescript": "3.3.3"
+    "typescript": "5.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -16,12 +16,11 @@ const JewelryVerification = () => {
 
   const initializeContract = async () => {
     try {
-      // Check if Web3 provider is available
+
       if (window.ethereum) {
         const web3 = new Web3(window.ethereum);
         await window.ethereum.enable();
 
-        // Get the deployed contract address from the ABI
         const networkId = await web3.eth.net.getId();
         const deployedNetwork = JewelryShopABI.networks[networkId];
         if (!deployedNetwork) {
@@ -29,7 +28,6 @@ const JewelryVerification = () => {
         }
         const contractAddress = deployedNetwork.address;
 
-        // Create contract instance
         const contract = new web3.eth.Contract(JewelryShopABI.abi, contractAddress);
         setContract(contract);
       } else {
@@ -146,8 +144,8 @@ const JewelryVerification = () => {
   return (
     <div style={{ fontFamily: 'CustomFont, sans-serif' }}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <h1 style={{ textAlign: 'center', color:'#3894DB' }}>
-          Verify
+        <h1 style={{ textAlign: 'center', color: '#EAEE4A'}}>
+          Verification
         </h1>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -161,16 +159,14 @@ const JewelryVerification = () => {
           Verify
         </Button>
       </div>
-
       <Modal
-
         title="Jewelry Information"
         open={isModalVisible}
         onOk={() => setIsModalVisible(false)}
         closable={false}
         okText="Close"
         width={600}
-        style={{ height: 600, overflow: 'auto', fontFamily: 'CustomFont' }} 
+        style={{ height: 600, overflow: 'auto', fontFamily: 'CustomFont' }}
         cancelButtonProps={{ style: { display: 'none' } }}
       >
         <JsonToTable json={jewelryInfo} />

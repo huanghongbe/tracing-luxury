@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Form, Modal, Input, message, Card, Pagination } from 'antd';
+import { Image, Button, Form, Modal, Input, message, Card, Pagination } from 'antd';
 import Web3 from 'web3';
 import { animated } from 'react-spring';
 import '../global.css'
 import JewelryShopABI from '../abis/JewelryShop.json'
+
 
 const JewelryShop = () => {
   const [jewelryData, setJewelryData] = useState(null);
@@ -11,13 +12,13 @@ const JewelryShop = () => {
   const [jewelryInput, setJewelryInput] = useState('');
   const [priceInput, setPriceInput] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
-  const [userAddress, setUserAddress ] = useState(null);
+  const [userAddress, setUserAddress] = useState(null);
   //emoji
   const [showEmoji, setShowEmoji] = useState(false);
   const [emoji, setEmoji] = useState('🤩');
   //page
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(6);
+  const [pageSize, setPageSize] = useState(3);
 
   const springProps = ({
     to: { top: emoji ? '50px' : '-100px' },
@@ -56,16 +57,11 @@ const JewelryShop = () => {
       }
       console.log(jewelryInput)
       console.log(priceInput)
-      // 获取当前用户的账户地址
       const userAddress = window.ethereum.selectedAddress;
-      // 调用合约的 companyRegister 函数
       await contract.methods.diamondDesigning(jewelryInput, priceInput).send({ from: userAddress });
-      // 注册成功后的处理逻辑
       console.log('钻石设计成功');
-      // 更新公司数据或执行其他操作
       const jewelries = await contract.methods.getAllJewels().call();
       console.log('珠宝数组:', jewelries);
-      //更新react组件状态
       setJewelryData(jewelries);
       //emojitrue
       setShowEmoji(true);
@@ -107,7 +103,7 @@ const JewelryShop = () => {
 
     // 监听账户变化
     const handleAccountsChanged = async (accounts) => {
-      
+
       const userAddress = accounts[0];
       console.log('账户变化:', accounts)
       setUserAddress(userAddress)
@@ -117,7 +113,7 @@ const JewelryShop = () => {
 
     // 添加账户变化事件监听器
     window.ethereum.on('accountsChanged', handleAccountsChanged);
-    
+
     const connectToWeb3 = async () => {
       // 检查Web3对象是否已经存在
       if (window.ethereum) {
@@ -140,7 +136,7 @@ const JewelryShop = () => {
           // 更新React组件的状态
           setJewelryData(jewelries);
           setContract(contract);
-          
+
         } catch (error) {
           console.error('连接到以太坊网络时出错:', error);
         }
@@ -210,18 +206,32 @@ const JewelryShop = () => {
     const endIndex = startIndex + pageSize;
     const currentJewelryData = jewelryData.slice(startIndex, endIndex);
 
+
     return currentJewelryData.map((record) => (
       <Card className="jewelry-card" key={record.jewelryId} >
-        <p>{`Jewelry ID: ${record.jewelryId}`}</p>
-        <p>{`Manufacturer: ${record.manufacturer.companyName}`}</p>
-        <p>{`Owner: ${record.owner}`}</p>
-        <p>{`Price: ${record.price}`}</p>
-        {(!record.beingSold || record.owner === userAddress) ? (
-                    <Button className="card-button" disabled>Purchase</Button>
-                     ) : (
-                    <Button className="card-button" onClick={() => handlePurchase(record)}>Purchase</Button>
-                     )}
-       </Card>
+        <div style={{ textAlign: 'center' }}>
+          <Image
+            src={require('../assets/0000000.jpg')}
+            alt="Diamond"
+            style={{ height: '100' }}
+          />
+        </div>
+        <p>Details</p>
+        <div style={{ border: '1px dashed #000', padding: '10px' }}>
+          <p>{`Jewelry ID: ${record.jewelryId}`}</p>
+          <p>{`Manufacturer: ${record.manufacturer.companyName}`}</p>
+          <p title={record.owner}>{`Owner: ${record.owner.slice(0, 16)}...`}</p>
+          <p>{`Price: ${record.price}`}</p>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            {(!record.beingSold || record.owner === userAddress) ? (
+              <Button className="card-button" disabled>Purchase</Button>
+            ) : (
+              <Button className="card-button" onClick={() => handlePurchase(record)}>Purchase</Button>
+            )}
+          </div>
+        </div>
+
+      </Card>
     ));
   };
 
@@ -229,15 +239,14 @@ const JewelryShop = () => {
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
+          <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>
             Jewelries
           </h1>
           <Button
+            className="register-button"
             style={{
-              color:'#3894DB',
               marginBottom: '2px',
               fontFamily: 'CustomFont, sans-serif',
-              boxShadow: '0 0 10px 3px rgba(255, 255, 255, 0.7)',
             }}
             onClick={handleButtonClick}
           >
@@ -271,33 +280,13 @@ const JewelryShop = () => {
       </Modal>
       <div className="card-container">{renderJewelryData()}</div>
       <div className="pagination-container">
-      <Pagination
-        current={currentPage}
-        pageSize={pageSize}
-        total={jewelryData ? jewelryData.length : 0}
-        onChange={handlePageChange}
-      />
+        <Pagination
+          current={currentPage}
+          pageSize={pageSize}
+          total={jewelryData ? jewelryData.length : 0}
+          onChange={handlePageChange}
+        />
       </div>
-      {/* <div className="card-container">
-             {jewelryData && jewelryData.map((record) => (
-              <Card key={record.jewelryId} title={record.jewelryName} className="jewelry-card">
-                <p>JewelryId: {record.jewelryId.toString()}</p>
-                <p>Manufacturer: {record.manufacturer.companyName}</p>
-                <p>Owner: {record.owner}</p>
-                <p>Price: {record.price.toString()} ETH</p>
-                {(!record.beingSold || record.owner === userAddress) ? (
-                    <Button className="card-button" disabled>Purchase</Button>
-                     ) : (
-                    <Button className="card-button" onClick={() => handlePurchase(record)}>Purchase</Button>
-                     )}
-              </Card>
-            ))}
-                     </div> */}           
-      {/* <Table
-        columns={columns}
-        dataSource={jewelryData}
-        rowKey={(record) => record.jewelryId}
-      /> */}
     </div>
   );
 };

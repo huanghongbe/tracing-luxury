@@ -35,9 +35,9 @@ const DiamondRegistry = () => {
         console.error('合约实例不存在');
         return;
       }
-      setDiamondInput(null); // 重置选中的公司类型
+      setDiamondInput(null);
       setScoreInput(null);
-      setModalVisible(true); // 打开下拉框弹窗
+      setModalVisible(true);
     } catch (error) {
       console.error('DiamondRegister 函数调用失败:', error);
     }
@@ -72,7 +72,6 @@ const DiamondRegistry = () => {
       await contract.methods.diamondRegister(parsedDiamondInput, clarity, parsedScore).send({ from: userAddress });
 
       console.log('钻石注册成功');
-      // 更新公司数据或执行其他操作
       const diamonds = await contract.methods.getAllDiamonds().call();
       console.log('钻石数组:', diamonds);
       // 更新react组件状态
@@ -168,26 +167,19 @@ const DiamondRegistry = () => {
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
-        {/* <Button
-          style={{ position: 'absolute', top: '5px', right: '150px', fontFamily: 'CustomFont, sans-serif' }}
-          onClick={handleButtonClick}
-        >
-          register&grading
-        </Button>
-        <h1>Diamonds</h1> */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-  <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
-    Diamonds
-  </h1>
-  <Button className="register-button" onClick={handleButtonClick}>
-    Register&Grading
-  </Button>
-</div>
+          <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>
+            Diamonds
+          </h1>
+          <Button className="register-button" onClick={handleButtonClick}>
+            Register&Grading
+          </Button>
+        </div>
         {showEmoji && (
-      <animated.div className="emoji-icon" style={springProps}>
-      {emoji}
-    </animated.div>
-    )}
+          <animated.div className="emoji-icon" style={springProps}>
+            {emoji}
+          </animated.div>
+        )}
       </div>
       <Modal
         title="Diamond Register"
@@ -196,7 +188,8 @@ const DiamondRegistry = () => {
         // onOk={handleModalOk}
         onOk={() => {
           handleModalOk();
-          handleEmojiModalOk();}}
+          handleEmojiModalOk();
+        }}
       >
         <Form>
           <Form.Item label="RawId" name="rawId" rules={[{ required: true, message: 'input the raw dimond id' }]}>
@@ -223,12 +216,13 @@ const DiamondRegistry = () => {
 
         </Form>
       </Modal>
-      <Table
+      {diamondData.length > 0 && (<Table
         columns={columns}
         dataSource={diamondData}
         rowKey={(record) => record.rawId}
         className="custom-table"
       />
+      )}
     </div>
   );
 };

@@ -53,7 +53,7 @@ const Diamonds = ({ count = 20 }) => {
       model.current.setMatrixAt(i, dummy.matrix)
     })
     model.current.instanceMatrix.needsUpdate = true
-  },1 )
+  }, 1)
 
   return (
     <CubeCamera>

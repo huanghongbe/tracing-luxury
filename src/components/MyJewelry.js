@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Form, Modal, Input, message, Select, Pagination, Card } from 'antd';
+import { Image, Button, Form, Modal, Input, message, Pagination, Card } from 'antd';
 import Web3 from 'web3';
 import JewelryShopABI from '../abis/JewelryShop.json'
 
-const { Option } = Select;
 const MyJewelry = () => {
   const [jewelryData, setJewelryData] = useState(null);
   const [contract, setContract] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [transferAddress, setTransferAddress] = useState('');
   const [selectedJewelryId, setSelectedJewelryId] = useState('');
-   //page
-   const [currentPage, setCurrentPage] = useState(1);
-   const [pageSize, setPageSize] = useState(6);
+  //page
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(6);
 
   const handleModalOk = async () => {
     try {
@@ -97,10 +96,8 @@ const MyJewelry = () => {
 
           const addresses = await web3.eth.getAccounts();
           const userAddress = addresses[0];
-          // 调用合约函数获取公司数组
           const jewelries = await contract.methods.getMyJewels().call({ from: userAddress });
           console.log('珠宝数组:', jewelries);
-
 
           // 更新React组件的状态
           setJewelryData(jewelries);
@@ -158,28 +155,38 @@ const MyJewelry = () => {
     if (!jewelryData) {
       return null;
     }
-
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = startIndex + pageSize;
     const currentJewelryData = jewelryData.slice(startIndex, endIndex);
 
     return currentJewelryData.map((record) => (
       <Card className="jewelry-card" key={record.jewelryId} >
-        <p>{`Jewelry ID: ${record.jewelryId}`}</p>
-        <p>{`Manufacturer: ${record.manufacturer.companyName}`}</p>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button className="card-button" onClick={() => handleTransfer(record)}>Transfer</Button>
-        <span style={{ margin: '0 10px' }}></span>
-        <Button className="card-button" onClick={() => handleSale(record)}>Sell</Button>
+        <div style={{ textAlign: 'center' }}>
+          <Image
+            src={require('../assets/0000000.jpg')}
+            alt="Diamond"
+            style={{ height: '100' }}
+          />
         </div>
-       </Card>
+        <p>Details</p>
+        <div style={{ border: '1px dashed #000', padding: '10px' }}>
+          <p>{`Jewelry ID: ${record.jewelryId}`}</p>
+          <p>{`Manufacturer: ${record.manufacturer.companyName}`}</p>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Button className="card-button" onClick={() => handleTransfer(record)}>Transfer</Button>
+            <span style={{ margin: '0 10px' }}></span>
+            <Button className="card-button" onClick={() => handleSale(record)}>Sell</Button>
+          </div>
+        </div>
+      </Card>
+
     ));
   };
 
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
-        <h1 style={{color:'#3894DB'}}>MyJewelries</h1>
+        <h1 style={{ color: '#EAEE4A' }}>MyJewelries</h1>
       </div>
       <Modal
         title="MyJewelry"
@@ -191,29 +198,16 @@ const MyJewelry = () => {
           <Form.Item label="Transfer Address" name="transferaddress" rules={[{ required: true, message: 'input your target address' }]}>
             <Input onChange={(e) => setTransferAddress(e.target.value)} value={transferAddress} />
           </Form.Item>
-          {/* <Form.Item label="Select Jewelry" name="selectedJewelryId">
-            <Select
-              value={selectedJewelryId}
-              onChange={(value) => setSelectedJewelryId(value)}
-            >
-              {jewelryData &&
-                jewelryData.map((jewelry) => (
-                  <Option key={jewelry.jewelryId} value={jewelry.jewelryId}>
-                    {jewelry.jewelryId}
-                  </Option>
-                ))}
-            </Select>
-          </Form.Item> */}
         </Form>
       </Modal>
       <div className="card-container">{renderJewelryData()}</div>
       <div className="pagination-container">
-      <Pagination
-        current={currentPage}
-        pageSize={pageSize}
-        total={jewelryData ? jewelryData.length : 0}
-        onChange={handlePageChange}
-      />
+        <Pagination
+          current={currentPage}
+          pageSize={pageSize}
+          total={jewelryData ? jewelryData.length : 0}
+          onChange={handlePageChange}
+        />
       </div>
       {/* <Table
         columns={columns}

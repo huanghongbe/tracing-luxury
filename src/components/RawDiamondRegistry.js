@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Modal, Input, Form, message,Select } from 'antd';
+import { Table, Button, Modal, Input, Form, message, Select } from 'antd';
 import Web3 from 'web3';
 import { animated } from 'react-spring';
 import '../global.css'
@@ -26,7 +26,6 @@ const RawDiamondRegistry = () => {
   const handleEmojiModalOk = () => {
     setShowEmoji(false);
   };
-  //
 
   const handleButtonClick = async () => {
     try {
@@ -41,7 +40,6 @@ const RawDiamondRegistry = () => {
       console.error('rawDiamondRegister 函数调用失败:', error);
     }
   };
-
 
   const handleCuttingClick = async (record) => {
     try {
@@ -65,9 +63,9 @@ const RawDiamondRegistry = () => {
   };
 
   const handleCuttingModalOk = () => {
-    if (cuttingGrade !== null && choosedRawId!=null) {
+    if (cuttingGrade !== null && choosedRawId != null) {
       setCuttingModalVisible(false);
-      handleCutting(choosedRawId,cuttingGrade);
+      handleCutting(choosedRawId, cuttingGrade);
     }
   };
 
@@ -105,7 +103,6 @@ const RawDiamondRegistry = () => {
       const userAddress = window.ethereum.selectedAddress;
       await contract.methods.rawDiamondRegister(rawDiamondName, rawDiamondColor).send({ from: userAddress });
       console.log('原石注册成功');
-      // 更新公司数据或执行其他操作
       const rawDiamonds = await contract.methods.getAllRawDiamonds().call();
       console.log('原石数组:', rawDiamonds);
       //更新react组件状态
@@ -144,7 +141,6 @@ const RawDiamondRegistry = () => {
             RawDiamondRegistryABI.abi,
             deployedNetwork && deployedNetwork.address
           );
-          // 调用合约函数获取公司数组
           const rawDiamonds = await contract.methods.getAllRawDiamonds().call();
           console.log('原石数组:', rawDiamonds);
           // 更新React组件的状态
@@ -217,26 +213,19 @@ const RawDiamondRegistry = () => {
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
-        {/* <Button
-          style={{ position: 'absolute', top: '5px', right: '150px', fontFamily: 'CustomFont, sans-serif' }}
-          onClick={handleButtonClick}
-        >
-          register
-        </Button>
-        <h1>Raw Diamonds</h1> */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-  <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
-    Raw Diamonds
-  </h1>
-  <Button className="register-button" onClick={handleButtonClick}>
-    Register
-  </Button>
-</div>
+          <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>
+            Raw Diamonds
+          </h1>
+          <Button className="register-button" onClick={handleButtonClick}>
+            Register
+          </Button>
+        </div>
         {showEmoji && (
-      <animated.div className="emoji-icon" style={springProps}>
-      {emoji}
-    </animated.div>
-    )}
+          <animated.div className="emoji-icon" style={springProps}>
+            {emoji}
+          </animated.div>
+        )}
       </div>
       <Modal
         title="Raw Diamond Cutting"
@@ -265,7 +254,8 @@ const RawDiamondRegistry = () => {
         // onOk={handleModalOk}
         onOk={() => {
           handleModalOk();
-          handleEmojiModalOk();}}
+          handleEmojiModalOk();
+        }}
       >
         <Form>
           <Form.Item label="name" name="name" rules={[{ required: true, message: 'input your raw diamond name' }]}>
@@ -277,12 +267,13 @@ const RawDiamondRegistry = () => {
 
         </Form>
       </Modal>
-      <Table
+      {rawDiamondData.length > 0 && (<Table
         columns={columns}
         dataSource={rawDiamondData}
         rowKey={(record) => record.rawId}
         className="custom-table"
       />
+      )}
     </div>
   );
 };

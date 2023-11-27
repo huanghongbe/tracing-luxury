@@ -19,7 +19,7 @@ const CompanyRegistry = () => {
   const [showEmoji, setShowEmoji] = useState(false);
   const [emoji, setEmoji] = useState('😎');
 
-  
+
   const handleButtonClick = async () => {
     try {
       if (!contract) {
@@ -151,37 +151,24 @@ const CompanyRegistry = () => {
     },
   ];
 
-  // const darkTableStyle = {
-  //   backgroundColor: '#222',
-  //   color: '#fff',
-  // };
-  
-  // position: 'relative', top: '5px', right: '150px',
+
   return (
     <div>
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
-        {/* <h1>Companies
-        <Button
-          style={{ marginLeft:'600px', fontFamily: 'CustomFont, sans-serif' }}
-          onClick={handleButtonClick}
-        >
-          register
-        </Button>
-        </h1> */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-  <h1 style={{ marginBottom: '20px', color:'#3894DB' }}>
-    Companies
-  </h1>
-  <Button className="register-button" onClick={handleButtonClick}>
-    Register
-  </Button>
-</div>
-        
+          <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>
+            Companies
+          </h1>
+          <Button className="register-button" onClick={handleButtonClick}>
+            Register
+          </Button>
+        </div>
+
         {showEmoji && (
-      <animated.div className="emoji-icon" style={springProps}>
-      {emoji}
-    </animated.div>
-    )}
+          <animated.div className="emoji-icon" style={springProps}>
+            {emoji}
+          </animated.div>
+        )}
       </div>
       <Modal
         title="enter your company information"
@@ -193,7 +180,8 @@ const CompanyRegistry = () => {
         // onOk={handleModalOk}
         onOk={() => {
           handleModalOk();
-          handleEmojiModalOk();}}
+          handleEmojiModalOk();
+        }}
       >
         <Form form={form}>
           <Form.Item label="Company Name" name="companyName" rules={[{ required: true, message: 'input your company name' }]}>
@@ -214,7 +202,7 @@ const CompanyRegistry = () => {
 
       </Modal>
 
-      <Table
+      {companyData.length > 0 && (<Table
         columns={columns}
         dataSource={companyData}
         rowKey={(record) => record.companyId}
@@ -225,6 +213,7 @@ const CompanyRegistry = () => {
         className="custom-table"
       >
       </Table>
+      )}
     </div>
   );
 };
