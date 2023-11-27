@@ -10,7 +10,7 @@ import MyJewelry from './MyJewelry';
 import CompanyRegistry from './CompanyRegistry'
 import JewelryShop from './JewelryShop';
 import Background from './Background';
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Web3 from 'web3';
 // import ChainSwitcher from './ChainSwitcher';
 
@@ -32,6 +32,20 @@ const App = () => {
     if (window.ethereum) {
       const web3Instance = new Web3(window.ethereum);
       setWeb3(web3Instance);
+
+      // 监听MetaMask账户变化事件
+      window.ethereum.on('accountsChanged', (accounts) => {
+        if (accounts.length > 0) {
+          setUserAddress(accounts[0]);
+          setIsConnected(true);
+        } else {
+          // 用户断开连接时的处理
+          setIsConnected(false);
+          setUserAddress(null);
+          message.info('BYEBYE~');
+        }
+      });
+
       fetchUserAddress(web3Instance);
     } else {
       message.error('Please install MetaMask!');

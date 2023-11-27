@@ -11,6 +11,9 @@ contract RawDiamondRegistry {
         string cuttingGrade;
         CompanyRegistry.Company miningCompany;
         CompanyRegistry.Company cuttingCompany;
+        //time
+        uint256 minedTime;
+        uint256 cuttingTime; 
     }
 
     mapping(uint256 => RawDiamond) public rawDiamondItems;
@@ -44,6 +47,7 @@ contract RawDiamondRegistry {
         CompanyRegistry.Company memory miningCompany = companyRegistry.getCompany(msg.sender);
         newRawDiamond.miningCompany = miningCompany;
         uint256 rawId = rawDiamondCounts++;
+        newRawDiamond.minedTime = block.timestamp;
         rawDiamondItems[rawId] = newRawDiamond;
         return rawId;
     }
@@ -54,6 +58,7 @@ contract RawDiamondRegistry {
         CompanyRegistry.Company memory cuttingCompany = companyRegistry.getCompany(msg.sender);
         rawDiamondItems[_rawId].cuttingCompany = cuttingCompany;
         rawDiamondItems[_rawId].cuttingGrade = _cuttingGrade;
+        rawDiamondItems[_rawId].cuttingTime = block.timestamp;
         return _rawId;
     }
 

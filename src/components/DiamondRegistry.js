@@ -121,7 +121,7 @@ const DiamondRegistry = () => {
     };
     connectToWeb3();
   }, []);
-
+  
   const columns = [
     {
       title: 'Diamond Id',
@@ -161,6 +161,27 @@ const DiamondRegistry = () => {
         return <span key={grade}>{typeLabel}</span>;
       }
     },
+    {
+      title: 'Grading Time',
+      dataIndex: 'registerTime',
+      key: 'registerTime',
+      render: (registerTime) => {
+        if (registerTime) {
+          const registerTimeNumber = Number(registerTime); // 显式将 minedTime 转换为 Number 类型
+          const dateTime = new Date(registerTimeNumber * 1000); // 将时间戳转换为 JavaScript 的 Date 对象
+          const year = dateTime.getFullYear(); // 获取年份
+          const month = (dateTime.getMonth() + 1).toString().padStart(2, '0'); // 获取月份（加1，因为月份从0开始，然后使用padStart补零）
+          const day = dateTime.getDate().toString().padStart(2, '0'); // 获取日期
+          const hours = dateTime.getHours().toString().padStart(2, '0'); // 获取小时
+          const minutes = dateTime.getMinutes().toString().padStart(2, '0'); // 获取分钟
+          const seconds = dateTime.getSeconds().toString().padStart(2, '0'); // 获取秒钟
+          const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+          return <span>{formattedDateTime}</span>;
+        } else {
+          return <span>N/A</span>;
+        }
+      },
+    }
 
   ];
 

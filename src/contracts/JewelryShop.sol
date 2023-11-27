@@ -12,6 +12,7 @@ contract JewelryShop {
     DiamondRegistry.Diamond diamond;
     uint256 price;
     bool beingSold;
+    uint256 designTime;
   }
 
   mapping(uint256 => Jewelry) public jewelryItems;
@@ -55,7 +56,9 @@ contract JewelryShop {
     newJewelry.price = price;
     newJewelry.jewelryId = jewelryCounts;
     newJewelry.beingSold = true;
+    newJewelry.designTime = block.timestamp;
     jewelryItems[jewelryCounts++] = newJewelry;
+    
   }
 
   function jewelryPurchase(uint256 jewelryId) public payable {

@@ -11,6 +11,8 @@ contract DiamondRegistry {
         string clarity;
         uint256 grade;
         RawDiamondRegistry.RawDiamond rawDiamond;
+        //time
+        uint256 registerTime;
     }
 
     mapping(uint256 => Diamond) public diamondItems;
@@ -52,12 +54,14 @@ contract DiamondRegistry {
         CompanyRegistry.Company memory gradingLab = companyRegistry.getCompany(
             msg.sender
         );
+        uint256 registerTime = block.timestamp;
         Diamond memory newDiamond = Diamond(
             uniqueId,
             gradingLab,
             clarity,
             grade,
-            rawDiamond
+            rawDiamond,
+            registerTime
         );
         diamondItems[uniqueId] = newDiamond;
         return uniqueId;

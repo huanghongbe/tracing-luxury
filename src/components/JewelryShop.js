@@ -205,7 +205,7 @@ const JewelryShop = () => {
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = startIndex + pageSize;
     const currentJewelryData = jewelryData.slice(startIndex, endIndex);
-
+    console.log(jewelryData.designTime);
 
     return currentJewelryData.map((record) => (
       <Card className="jewelry-card" key={record.jewelryId} >
@@ -220,6 +220,11 @@ const JewelryShop = () => {
         <div style={{ border: '1px dashed #000', padding: '10px' }}>
           <p>{`Jewelry ID: ${record.jewelryId}`}</p>
           <p>{`Manufacturer: ${record.manufacturer.companyName}`}</p>
+          <p>{`Design Time: ${
+      record.designTime
+        ? new Date(Number(record.designTime) * 1000).toLocaleString()
+        : 'N/A'
+    }`}</p>
           <p title={record.owner}>{`Owner: ${record.owner.slice(0, 16)}...`}</p>
           <p>{`Price: ${record.price}`}</p>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
