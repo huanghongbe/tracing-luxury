@@ -14,7 +14,7 @@ module.exports = {
       gas: 5500000,
       gasPrice: 20000000000,
       timeoutBlocks: 200,
-      provider: () => new HDWalletProvider(mnemonic, 'https://sepolia.infura.io/v3/929b7f8f44b5430f8e0c610a6f1048e3', 0),
+      provider: () => new HDWalletProvider(mnemonic, 'https://sepolia.infura.io/v3/<---your dapp key--->', 0),
       network_id: "11155111",
     },
   },
