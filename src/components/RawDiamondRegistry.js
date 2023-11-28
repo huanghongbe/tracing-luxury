@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Modal, Input, Form, message, Select } from 'antd';
+import { Spin, Table, Button, Modal, Input, Form, message, Select } from 'antd';
 import Web3 from 'web3';
 import { animated } from 'react-spring';
 import '../global.css'
@@ -17,6 +17,7 @@ const RawDiamondRegistry = () => {
   //emoji
   const [showEmoji, setShowEmoji] = useState(false);
   const [emoji, setEmoji] = useState('🪨');
+  const [isLoading, setIsLoading] = useState(false);
 
   const springProps = ({
     to: { top: emoji ? '50px' : '-100px' },
@@ -76,6 +77,7 @@ const RawDiamondRegistry = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
 
       const userAddress = window.ethereum.selectedAddress;
       await contract.methods.rawDiamondCutting(choosedRawId, cuttingGrade).send({ from: userAddress });
@@ -86,10 +88,12 @@ const RawDiamondRegistry = () => {
       setRawDiamondData(rawDiamonds);
 
 
-      message.success('原石切割成功');
+      message.success('Cutting successfully!🎉');
     } catch (error) {
       console.error('切割失败:', error);
       message.error('切割失败');
+    } finally{
+      setIsLoading(false);
     }
   };
 
@@ -99,6 +103,7 @@ const RawDiamondRegistry = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
       //todo rawdiamond加名字参数
       const userAddress = window.ethereum.selectedAddress;
       await contract.methods.rawDiamondRegister(rawDiamondName, rawDiamondColor).send({ from: userAddress });
@@ -113,6 +118,8 @@ const RawDiamondRegistry = () => {
     } catch (error) {
       console.error('注册失败:', error);
       message.error('原石注册失败');
+    } finally{
+      setIsLoading(false);
     }
   };
   const handleRawDiamondNameChanged = (value) => {
@@ -254,6 +261,11 @@ const RawDiamondRegistry = () => {
 
   return (
     <div>
+       {isLoading && (
+        <div className="loading-container">
+          <Spin size="large" tip="Loading..."/>
+          </div>
+      )}
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>

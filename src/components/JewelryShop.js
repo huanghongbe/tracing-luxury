@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Image, Button, Form, Modal, Input, message, Card, Pagination } from 'antd';
+import { Spin, Image, Button, Form, Modal, Input, message, Card, Pagination } from 'antd';
 import Web3 from 'web3';
 import { animated } from 'react-spring';
 import '../global.css'
@@ -19,6 +19,7 @@ const JewelryShop = () => {
   //page
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(3);
+  const [isLoading, setIsLoading] = useState(false);
 
   const springProps = ({
     to: { top: emoji ? '50px' : '-100px' },
@@ -55,6 +56,7 @@ const JewelryShop = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
       console.log(jewelryInput)
       console.log(priceInput)
       const userAddress = window.ethereum.selectedAddress;
@@ -67,6 +69,8 @@ const JewelryShop = () => {
       setShowEmoji(true);
     } catch (error) {
       console.error('注册失败:', error);
+    } finally{
+      setIsLoading(false);
     }
   };
   const handlePurchase = async (record) => {
@@ -76,6 +80,7 @@ const JewelryShop = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
       const web3 = new Web3(window.ethereum);
       // 获取当前用户的账户地址
       const userAddress = window.ethereum.selectedAddress;
@@ -96,6 +101,8 @@ const JewelryShop = () => {
     } catch (error) {
       console.error('购买失败:', error);
       message.error('购买失败');
+    } finally{
+      setIsLoading(false);
     }
   };
 
@@ -146,6 +153,21 @@ const JewelryShop = () => {
     };
     connectToWeb3();
   }, []);
+
+  const renderPagination = () => {
+    if (!jewelryData || jewelryData.length === 0) {
+      return null; // 当没有数据时不渲染分页组件
+    }
+  
+    return (
+      <Pagination
+        current={currentPage}
+        pageSize={pageSize}
+        total={jewelryData.length}
+        onChange={handlePageChange}
+      />
+    );
+  };
 
   const columns = [
     {
@@ -242,6 +264,11 @@ const JewelryShop = () => {
 
   return (
     <div>
+      {isLoading && (
+        <div className="loading-container">
+          <Spin size="large" tip="Loading..."/>
+          </div>
+      )}
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>
@@ -285,12 +312,13 @@ const JewelryShop = () => {
       </Modal>
       <div className="card-container">{renderJewelryData()}</div>
       <div className="pagination-container">
-        <Pagination
+        {/* <Pagination
           current={currentPage}
           pageSize={pageSize}
           total={jewelryData ? jewelryData.length : 0}
           onChange={handlePageChange}
-        />
+        /> */}
+         {renderPagination()}
       </div>
     </div>
   );

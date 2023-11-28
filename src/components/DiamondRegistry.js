@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Modal, Input, InputNumber, Form, message, Select } from 'antd';
+import { Spin, Table, Button, Modal, Input, InputNumber, Form, message, Select } from 'antd';
 import Web3 from 'web3';
 import { animated } from 'react-spring';
 import '../global.css'
@@ -15,6 +15,7 @@ const DiamondRegistry = () => {
   //emoji
   const [showEmoji, setShowEmoji] = useState(false);
   const [emoji, setEmoji] = useState('💎');
+  const [isLoading, setIsLoading] = useState(false);
 
   const springProps = ({
     to: { top: emoji ? '50px' : '-100px' },
@@ -56,6 +57,7 @@ const DiamondRegistry = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
       console.log(diamondInput)
       console.log(scoreInput)
 
@@ -84,6 +86,8 @@ const DiamondRegistry = () => {
       message.error('钻石注册失败');
       setDiamondInput(null);
       setScoreInput(null);
+    } finally{
+      setIsLoading(false);
     }
   };
 
@@ -187,6 +191,11 @@ const DiamondRegistry = () => {
 
   return (
     <div>
+      {isLoading && (
+        <div className="loading-container">
+          <Spin size="large" tip="Loading..."/>
+          </div>
+      )}
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>

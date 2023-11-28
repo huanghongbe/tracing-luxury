@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Image, Button, Form, Modal, Input, message, Pagination, Card } from 'antd';
+import { Spin, Image, Button, Form, Modal, Input, message, Pagination, Card } from 'antd';
 import Web3 from 'web3';
 import JewelryShopABI from '../abis/JewelryShop.json'
 
@@ -12,6 +12,7 @@ const MyJewelry = () => {
   //page
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(6);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleModalOk = async () => {
     try {
@@ -19,6 +20,7 @@ const MyJewelry = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
       const userAddress = window.ethereum.selectedAddress;
       console.log("id :", selectedJewelryId);
       console.log("transferAddress :", transferAddress);
@@ -31,9 +33,17 @@ const MyJewelry = () => {
     } catch (error) {
       console.error('转移失败:', error);
       message.error('转移失败');
+    } finally{
+      setIsLoading(false);
     }
 
   };
+
+  const removeSoldJewelry = (jewelryId) => {
+    setJewelryData((prevData) => {
+      return prevData.filter((item) => item.jewelryId !== jewelryId);
+    });
+  };  
 
   const handleTransfer = async (record) => {
     setModalVisible(true);
@@ -46,11 +56,15 @@ const MyJewelry = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
       const userAddress = window.ethereum.selectedAddress;
       await contract.methods.sell(record.jewelryId).send({ from: userAddress });
-      window.location.reload();
+      // window.location.reload();
+      removeSoldJewelry(record.jewelryId);
     } catch (error) {
       message.error("出售失败", error);
+    } finally{
+       setIsLoading(false);
     }
   }
 
@@ -185,6 +199,11 @@ const MyJewelry = () => {
 
   return (
     <div>
+      {isLoading && (
+        <div className="loading-container">
+          <Spin size="large" tip="Loading..."/>
+          </div>
+      )}
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <h1 style={{ color: '#EAEE4A' }}>MyJewelries</h1>
       </div>

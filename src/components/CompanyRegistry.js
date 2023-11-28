@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Select, Modal, Input, Form } from 'antd';
+import { Spin, Table, Button, Select, Modal, Input, Form } from 'antd';
 import { animated } from 'react-spring';
 import '../global.css'
 import Web3 from 'web3';
@@ -18,6 +18,8 @@ const CompanyRegistry = () => {
   //emoji
   const [showEmoji, setShowEmoji] = useState(false);
   const [emoji, setEmoji] = useState('😎');
+  const [isLoading, setIsLoading] = useState(false);
+
 
 
   const handleButtonClick = async () => {
@@ -47,6 +49,7 @@ const CompanyRegistry = () => {
         console.error('合约实例不存在');
         return;
       }
+      setIsLoading(true);
       // 获取当前用户的账户地址
       const userAddress = window.ethereum.selectedAddress;
       // 调用合约的 companyRegister 函数
@@ -61,6 +64,8 @@ const CompanyRegistry = () => {
       setCompanyData(companies);
     } catch (error) {
       console.error('注册失败:', error);
+    }finally{
+      setIsLoading(false);
     }
   };
   const handleCompanyTypeChange = (value) => {
@@ -154,6 +159,11 @@ const CompanyRegistry = () => {
 
   return (
     <div>
+      {isLoading && (
+        <div className="loading-container">
+          <Spin size="large" tip="Loading..."/>
+          </div>
+      )}
       <div style={{ position: 'relative', fontFamily: 'CustomFont, sans-serif' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ marginBottom: '20px', color: '#EAEE4A' }}>
