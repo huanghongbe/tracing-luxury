@@ -115,7 +115,7 @@ const JewelryShop = () => {
       console.log('账户变化:', accounts)
       setUserAddress(userAddress)
       console.log('刷新页面') // 刷新页面并保持在当前页面
-      window.location.reload();
+      // window.location.reload();
     };
 
     // 添加账户变化事件监听器

@@ -155,8 +155,7 @@ const CompanyRegistry = () => {
       },
     },
   ];
-
-
+  
   return (
     <div>
       {isLoading && (

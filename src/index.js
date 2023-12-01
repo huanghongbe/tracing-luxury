@@ -1,37 +1,10 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import './global.css'
-// import App from './components/App'
-// import Login from './components/Login'
-// // const root = ReactDOM.createRoot(document.getElementById('root'));
-// // root.render(
-// //   <React.StrictMode>
-// //     <Login />
-// //   </React.StrictMode>
-// // );
-// import { createRoot } from 'react-dom/client'
-// function Overlay() {
-//   return (
-//     <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-//       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate3d(-50%,-50%,0)' }}>
-//         <h1 style={{ margin: 0, padding: 0, fontSize: '15em', fontWeight: 350, letterSpacing: '-0.05em' }}>Jewelry Shop</h1>
-//       </div>
-//       <div style={{ position: 'absolute', bottom: 200, right: 300, fontSize: '26px', fontWeight: 500 }}>Enter</div>
-//     </div>
-//   )
-// }
-
-// createRoot(document.getElementById('root')).render(
-// <>
-// <Login /> 
-// <Overlay />
-// </>
-// )
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom';
 import './global.css';
 import App from './components/App';
+import App1 from './components/App1';
 import Login from './components/Login';
+import { Modal, Button, Divider } from 'antd';
 
 
 function Overlay({ onEnterClick }) {
@@ -90,19 +63,69 @@ function Overlay({ onEnterClick }) {
 }
 
 function Main() {
+  const [showModal, setShowModal] = useState(false);
+  const [userType, setUserType] = useState(null);
+
+  const handleModalClose = (type) => {
+    setUserType(type);
+    setShowModal(false);
+  };
+  // const handleEnterClick = () => {
+  //   createRoot(document.getElementById('root')).render(
+  //       <React.StrictMode>
+  //         <App />
+  //       </React.StrictMode>
+  //   );
+  // };
   const handleEnterClick = () => {
-    createRoot(document.getElementById('root')).render(
+    setShowModal(true); // 点击 "Enter" 后显示 Modal
+  };
+  useEffect(() => {
+    if (userType === 'company') {
+      createRoot(document.getElementById('root')).render(
         <React.StrictMode>
           <App />
         </React.StrictMode>
-    );
-  };
+      );
+    } else if (userType === 'customer') {
+      createRoot(document.getElementById('root')).render(
+        <React.StrictMode>
+          <App1 />
+        </React.StrictMode>
+      );
+    }
+  }, [userType]);
 
+  // return (
+  //   <React.StrictMode>
+  //     <Login />
+  //     <Overlay onEnterClick={handleEnterClick} />,
+  //   </React.StrictMode>
+  // );
   return (
     <React.StrictMode>
       <Login />
       <Overlay onEnterClick={handleEnterClick} />
-    </React.StrictMode>
+      <Modal
+        title="Choose your identity"
+        visible={showModal}
+        footer={null}
+        closable={false}
+        maskClosable={false}
+        wrapClassName="custom-modal"
+      >
+        <div style={{ marginBottom: '16px', textAlign: 'center' }}>
+          <span style={{ fontWeight: '700', fontSize: '18px' }}>I'M</span>
+        </div>
+        <Button className="enter-button" type="default" size="large" onClick={() => handleModalClose('company')}>
+          Company
+        </Button>
+        <Divider type="vertical" style={{ margin: '0 12px' }} />
+        <Button className="enter-button" type="default" size="large" onClick={() => handleModalClose('customer')}>
+          Customer
+        </Button>
+      </Modal>
+    </React.StrictMode >
   );
 }
 

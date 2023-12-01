@@ -10,7 +10,7 @@ import MyJewelry from './MyJewelry';
 import CompanyRegistry from './CompanyRegistry'
 import JewelryShop from './JewelryShop';
 import Background from './Background';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Web3 from 'web3';
 // import ChainSwitcher from './ChainSwitcher';
 
@@ -70,23 +70,22 @@ const App = () => {
     });
   };
 
-  const handleDisconnect = () => {
-    setIsConnected(false);
-    setUserAddress(null);
-    message.info('BYEBYE~');
-  };
 
   const handleMenuClick = () => {
     setCollapsed(!collapsed);
   }
+
+  const handleExit = () => {
+    window.location.href = 'http://localhost:3000'; // 重定向到首页
+  };
 
   const userMenu = (
     <Menu>
       <Menu.Item className="register-button" key="1" icon={<CopyOutlined />} onClick={handleCopyAddress}>
         Copy Address
       </Menu.Item>
-      <Menu.Item className="register-button" key="2" icon={<DisconnectOutlined />} onClick={handleDisconnect}>
-        Disconnect
+      <Menu.Item className="register-button" key="2" icon={<DisconnectOutlined />} onClick={handleExit}>
+        Exit
       </Menu.Item>
     </Menu>
   );
@@ -166,7 +165,7 @@ const App = () => {
                 </Header>
                 <Content style={{ margin: '24px 16px', padding: 24, minHeight: 280, background: 'transparent' }}>
                   <Routes>
-                    <Route path="/" element={<JewelryShop />} />
+                    <Route path="/" element={<Navigate to="/company-registry" />} />
                     <Route path="/company-registry" element={<CompanyRegistry />} />
                     <Route path="/raw-diamond-registry" element={<RawDiamondRegistry />} />
                     <Route path="/diamond-registry" element={<DiamondRegistry />} />

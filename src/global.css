@@ -47,6 +47,7 @@ html {
   box-shadow: 0 0 10px 3px rgba(107, 106, 106, 0.745);
 }
 
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -171,4 +172,21 @@ html {
     top: 100%;
     opacity: 0;
   }
+}
+
+.custom-modal .ant-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top:-60px;
+  background: rgba(255, 255, 255, 0)!important; /* 设置透明背景 */
+}
+
+.custom-modal .ant-modal-header {
+  background:  rgba(255, 255, 255, 0)!important; /* 使标题文字透明 */
+}
+
+.enter-button{
+  background: rgba(255, 255, 255, 0)!important;
 }
