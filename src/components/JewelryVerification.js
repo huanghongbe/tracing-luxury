@@ -133,7 +133,9 @@ const JewelryVerification = () => {
         price
       }
       // console.log(JSON.stringify(jewelry));
-
+      if(miningCompanyName === '' || cuttingCompanyName === '' || gradingLabCompanyName ==='' || manufacturerCompanyName === ''){
+        message.error('This is a fake jewelry!');
+      }
       setJewelryInfo(jewelry);
     } catch (error) {
       console.error('Verification failed', error);
