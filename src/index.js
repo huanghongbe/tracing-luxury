@@ -11,9 +11,9 @@ function Overlay({ onEnterClick }) {
   const [jewelryText, setJewelryText] = useState('');
   const [shopText, setShopText] = useState('');
   const [enterText, setEnterText] = useState('');
-  const [indexJ, setIndexJ] = useState(0); // Jewelry 的索引
-  const [indexS, setIndexS] = useState(0); // Shop 的索引
-  const [indexE, setIndexE] = useState(0); // Enter 的索引
+  const [indexJ, setIndexJ] = useState(0); 
+  const [indexS, setIndexS] = useState(0); 
+  const [indexE, setIndexE] = useState(0); 
   const jewelryFull = 'Jewelry';
   const shopFull = 'Shop';
   const enterFull = 'Enter';
@@ -70,15 +70,8 @@ function Main() {
     setUserType(type);
     setShowModal(false);
   };
-  // const handleEnterClick = () => {
-  //   createRoot(document.getElementById('root')).render(
-  //       <React.StrictMode>
-  //         <App />
-  //       </React.StrictMode>
-  //   );
-  // };
   const handleEnterClick = () => {
-    setShowModal(true); // 点击 "Enter" 后显示 Modal
+    setShowModal(true); 
   };
   useEffect(() => {
     if (userType === 'company') {
@@ -96,12 +89,7 @@ function Main() {
     }
   }, [userType]);
 
-  // return (
-  //   <React.StrictMode>
-  //     <Login />
-  //     <Overlay onEnterClick={handleEnterClick} />,
-  //   </React.StrictMode>
-  // );
+
   return (
     <React.StrictMode>
       <Login />

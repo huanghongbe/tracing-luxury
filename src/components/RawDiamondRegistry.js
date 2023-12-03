@@ -91,7 +91,7 @@ const RawDiamondRegistry = () => {
       message.success('Cutting successfully!🎉');
     } catch (error) {
       console.error('切割失败:', error);
-      message.error('切割失败');
+      message.error('Cutting failed');
     } finally{
       setIsLoading(false);
     }
@@ -117,7 +117,7 @@ const RawDiamondRegistry = () => {
       // message.success('原石注册成功');
     } catch (error) {
       console.error('注册失败:', error);
-      message.error('原石注册失败');
+      message.error('Registry failed');
     } finally{
       setIsLoading(false);
     }
@@ -195,14 +195,14 @@ const RawDiamondRegistry = () => {
       key: 'minedTime',
       render: (minedTime) => {
         if (minedTime) {
-          const minedTimeNumber = Number(minedTime); // 显式将 minedTime 转换为 Number 类型
-          const dateTime = new Date(minedTimeNumber * 1000); // 将时间戳转换为 JavaScript 的 Date 对象
-          const year = dateTime.getFullYear(); // 获取年份
-          const month = (dateTime.getMonth() + 1).toString().padStart(2, '0'); // 获取月份（加1，因为月份从0开始，然后使用padStart补零）
-          const day = dateTime.getDate().toString().padStart(2, '0'); // 获取日期
-          const hours = dateTime.getHours().toString().padStart(2, '0'); // 获取小时
-          const minutes = dateTime.getMinutes().toString().padStart(2, '0'); // 获取分钟
-          const seconds = dateTime.getSeconds().toString().padStart(2, '0'); // 获取秒钟
+          const minedTimeNumber = Number(minedTime); 
+          const dateTime = new Date(minedTimeNumber * 1000); 
+          const year = dateTime.getFullYear(); 
+          const month = (dateTime.getMonth() + 1).toString().padStart(2, '0'); 
+          const day = dateTime.getDate().toString().padStart(2, '0'); 
+          const hours = dateTime.getHours().toString().padStart(2, '0'); 
+          const minutes = dateTime.getMinutes().toString().padStart(2, '0'); 
+          const seconds = dateTime.getSeconds().toString().padStart(2, '0'); 
           const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
           return <span>{formattedDateTime}</span>;
         } else {

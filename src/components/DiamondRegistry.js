@@ -54,7 +54,7 @@ const DiamondRegistry = () => {
   const handleRegister = async (diamondInput, scoreInput, clarity) => {
     try {
       if (!contract) {
-        console.error('合约实例不存在');
+        console.error('Contract instance does not exist');
         return;
       }
       setIsLoading(true);
@@ -66,24 +66,22 @@ const DiamondRegistry = () => {
       if (isNaN(parsedDiamondInput) || isNaN(parsedScore)) {
         console.log(parsedDiamondInput)
         console.log(parsedScore)
-        console.error('输入无效');
+        console.error('invalid input');
         return;
       }
 
       const userAddress = window.ethereum.selectedAddress;
       await contract.methods.diamondRegister(parsedDiamondInput, clarity, parsedScore).send({ from: userAddress });
 
-      console.log('钻石注册成功');
+      console.log('diamond registry success');
       const diamonds = await contract.methods.getAllDiamonds().call();
-      console.log('钻石数组:', diamonds);
-      // 更新react组件状态
+      console.log('diamond array:', diamonds);
       setDiamondData(diamonds);
-      // message.success('钻石注册成功');
       //emojitrue
       setShowEmoji(true);
     } catch (error) {
-      console.error('注册失败:', error);
-      message.error('钻石注册失败');
+      console.error('diamond registry failed:', error);
+      message.error('diamond registry failed');
       setDiamondInput(null);
       setScoreInput(null);
     } finally{

@@ -84,13 +84,10 @@ const CompanyRegistry = () => {
 
   useEffect(() => {
     const connectToWeb3 = async () => {
-      // 检查Web3对象是否已经存在
       if (window.ethereum) {
         try {
-          // 连接到以太坊网络
           const web3 = new Web3(window.ethereum);
           await window.ethereum.enable();
-          // 获取合约实例
           const networkId = await web3.eth.net.getId();
           console.log(networkId);
           const deployedNetwork = CompanyRegistryABI.networks[networkId];
@@ -99,17 +96,16 @@ const CompanyRegistry = () => {
             CompanyRegistryABI.abi,
             deployedNetwork && deployedNetwork.address
           );
-          // 调用合约函数获取公司数组
           const companies = await contract.methods.getAllCompanies().call();
-          console.log('公司数组:', companies);
-          // 更新React组件的状态
+          console.log('company array:', companies);
+
           setCompanyData(companies);
           setContract(contract);
         } catch (error) {
-          console.error('连接到以太坊网络时出错:', error);
+          console.error('failed to connect to the  ethereum network:', error);
         }
       } else {
-        console.error('未检测到以太坊提供者');
+        console.error('no provider');
       }
     };
     connectToWeb3();

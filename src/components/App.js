@@ -32,14 +32,11 @@ const App = () => {
     if (window.ethereum) {
       const web3Instance = new Web3(window.ethereum);
       setWeb3(web3Instance);
-
-      // 监听MetaMask账户变化事件
       window.ethereum.on('accountsChanged', (accounts) => {
         if (accounts.length > 0) {
           setUserAddress(accounts[0]);
           setIsConnected(true);
         } else {
-          // 用户断开连接时的处理
           setIsConnected(false);
           setUserAddress(null);
           message.info('BYEBYE~');
@@ -68,15 +65,10 @@ const App = () => {
     navigator.clipboard.writeText(userAddress).then(() => {
       message.success('Address copied to clipboard!');
     });
-  };
-
-
-  const handleMenuClick = () => {
-    setCollapsed(!collapsed);
-  }
+  };  
 
   const handleExit = () => {
-    window.location.href = 'http://localhost:3000'; // 重定向到首页
+    window.location.href = 'http://localhost:3000'; 
   };
 
   const userMenu = (
@@ -89,6 +81,10 @@ const App = () => {
       </Menu.Item>
     </Menu>
   );
+
+  const handleMenuClick = () => {
+    setCollapsed(!collapsed);
+  }
 
   // const iconUrlMap = {
   //   company: 'https://img.icons8.com/arcade/64/skyscrapers.png' ,
