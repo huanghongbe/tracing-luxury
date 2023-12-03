@@ -48,16 +48,16 @@ const JewelryVerification = () => {
       const result = await contract.methods.jewelryVerify(jewelryId).call();
       // setJewelryInfo(result);
       console.log(result);
-      //直接获取
+  
       const jewelryIdResult = result.jewelryId.toString();
       const owner = result.owner.toString();
       const price = result.price.toString();
-      //manufaturer属性
+      //manufaturer
       const manufacturerCompanyId = result.manufacturer.companyId.toString();
       const manufacturerCompanyType = result.manufacturer.companyType.toString();
       const manufacturerAddr = result.manufacturer.addr.toString();
       const manufacturerCompanyName = result.manufacturer.companyName.toString();
-      // diamond属性
+      // diamond
       const uniqueId = result.diamond.uniqueId.toString();
       const clarity = result.diamond.clarity.toString();
       const grade = result.diamond.grade.toString();
@@ -67,7 +67,7 @@ const JewelryVerification = () => {
       const gradingLabAddr = result.diamond.gradingLab.addr.toString();
       const gradingLabCompanyName = result.diamond.gradingLab.companyName.toString();
 
-      // rawDiamond属性
+      // rawDiamond
       const rawId = result.diamond.rawDiamond.rawId.toString();
       const rawDiamondColor = result.diamond.rawDiamond.rawDiamondColor.toString();
       const cuttingGrade = result.diamond.rawDiamond.cuttingGrade.toString();

@@ -26,13 +26,13 @@ const MyJewelry = () => {
       console.log("transferAddress :", transferAddress);
       await contract.methods.transferTo(selectedJewelryId, transferAddress).send({ from: userAddress });
 
-      message.success('转移成功');
+      message.success('Transfer successfully');
       const jewelries = await contract.methods.getMyJewels().call({ from: userAddress });
       setJewelryData(jewelries);
       setModalVisible(false);
     } catch (error) {
       console.error('转移失败:', error);
-      message.error('转移失败');
+      message.error('Failed to transfer');
     } finally{
       setIsLoading(false);
     }
@@ -62,7 +62,7 @@ const MyJewelry = () => {
       // window.location.reload();
       removeSoldJewelry(record.jewelryId);
     } catch (error) {
-      message.error("出售失败", error);
+      message.error("Failed to sale", error);
     } finally{
        setIsLoading(false);
     }

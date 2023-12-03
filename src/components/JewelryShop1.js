@@ -32,15 +32,14 @@ const JewelryShop = () => {
             await contract.methods.jewelryPurchase(record.jewelryId).send({ from: userAddress, value: jewelryPriceInWei });
             // 支付成功后的处理逻辑
             console.log('购买成功');
-            // 更新公司数据或执行其他操作
             const jewelries = await contract.methods.getAllJewels().call();
             console.log('珠宝数组:', jewelries);
             // 更新React组件的状态
             setJewelryData(jewelries);
-            message.success('购买成功');
+            message.success('Purchase successfully');
         } catch (error) {
             console.error('购买失败:', error);
-            message.error('购买失败');
+            message.error('Failed to purchase');
         } finally {
             setIsLoading(false);
         }
@@ -75,7 +74,6 @@ const JewelryShop = () => {
                         JewelryShopABI.abi,
                         deployedNetwork && deployedNetwork.address
                     );
-                    // 调用合约函数获取公司数组
                     const jewelries = await contract.methods.getAllJewels().call();
                     console.log('珠宝数组:', jewelries);
                     const accounts = await web3.eth.getAccounts();
